@@ -1,0 +1,10 @@
+generate.py
+config.py
+*.json
+ESTRATEGIA.md
+__pycache__/
+.porkbun_keys
+proveedores/
+precios_modelo.py
+GUIA_PRECIOS.md
+*.log
