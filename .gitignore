@@ -8,3 +8,4 @@ proveedores/
 precios_modelo.py
 GUIA_PRECIOS.md
 *.log
+assets_src/

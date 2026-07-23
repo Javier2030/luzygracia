@@ -2,9 +2,9 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<title>Envíos y pagos | Luz y Gracia</title><meta name="description" content="Envíos a toda Colombia y al exterior. Pagos por transferencia, tarjeta, PSE o Nequi coordinados por WhatsApp.">
+<title>Envíos, pagos y devoluciones | Luz y Gracia</title><meta name="description" content="Costos y plazos de envío, tiempo de personalización, medios de pago, garantía, devoluciones y derecho de retracto de 5 días hábiles (Ley 1480 de 2011).">
 <link rel="canonical" href="https://luzygracia.com/envios.html">
-<meta property="og:title" content="Envíos y pagos | Luz y Gracia"><meta property="og:description" content="Envíos a toda Colombia y al exterior. Pagos por transferencia, tarjeta, PSE o Nequi coordinados por WhatsApp.">
+<meta property="og:title" content="Envíos, pagos y devoluciones | Luz y Gracia"><meta property="og:description" content="Costos y plazos de envío, tiempo de personalización, medios de pago, garantía, devoluciones y derecho de retracto de 5 días hábiles (Ley 1480 de 2011).">
 <meta property="og:type" content="website"><meta property="og:url" content="https://luzygracia.com/envios.html">
 <meta property="og:site_name" content="Luz y Gracia"><meta property="og:image" content="https://luzygracia.com/img/og.jpg">
 <meta name="theme-color" content="#1a2238">
@@ -128,19 +128,14 @@ footer a{color:#c9cde0;font-size:.88rem;display:block;padding:3px 0;font-weight:
 .wafloat:hover{transform:scale(1.08)}
 
 
-/* SELECTOR DE IDIOMA */
-.lang{position:absolute;top:calc(100% + 6px);right:0;z-index:55}
-.langbtn{background:var(--crema);border:1px solid var(--linea);color:var(--tx);border-radius:999px;padding:7px 13px;font-weight:500;font-size:.82rem;cursor:pointer;display:flex;gap:6px;align-items:center;transition:.2s;box-shadow:0 4px 14px -4px rgba(26,34,56,.35)}
-.langbtn:hover{border-color:var(--oro);color:var(--oro)}
-.langmenu{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--linea);border-radius:14px;box-shadow:var(--sombra);padding:6px;min-width:172px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:.22s;z-index:60}
-.langmenu.open{opacity:1;transform:none;pointer-events:auto}
-.langmenu a{display:flex;gap:10px;align-items:center;padding:9px 12px;border-radius:9px;font-size:.9rem;color:var(--tx);cursor:pointer}
-.langmenu a:hover{background:var(--crema2);color:var(--tinta)}
-/* ocultar TODA la chrome de Google Translate (banner viejo y nuevo) */
-.goog-te-banner-frame,iframe.goog-te-banner-frame,.goog-te-banner-frame.skiptranslate,.VIpgJd-ZVi9od-ORHb-OEVmcd,.VIpgJd-ZVi9od-l4eHX-hSRGPd,.goog-te-gadget-icon,#goog-gt-tt,.goog-te-balloon-frame,.goog-tooltip,.goog-te-spinner-pos{display:none !important;visibility:hidden !important}
-body{top:0 !important;position:static !important}
-.goog-text-highlight{background:none !important;box-shadow:none !important}
-#google_translate_element,.skiptranslate iframe{display:none !important}
+/* GARANTÍAS (hechos verificables — sustituyen a las reseñas) */
+.gar{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.gar div{background:#fff;border:1px solid var(--linea);border-radius:18px;padding:26px 24px}
+.gar .gi{font-size:1.9rem;display:block;margin-bottom:10px}
+.gar b{display:block;font-family:'Playfair Display',serif;color:var(--tinta);font-size:1.08rem;margin-bottom:7px}
+.gar span{color:var(--suave);font-size:.9rem;font-weight:300}
+/* AVISO PENDIENTE (dato que debe confirmar el dueño) */
+.pend{background:#fff8e6;border:1px dashed #d8a72b;color:#8a6100;border-radius:8px;padding:2px 9px;font-size:.86rem;font-weight:500;display:inline-block}
 /* BARRA ANUNCIO */
 .anun{background:linear-gradient(90deg,var(--tinta),var(--tinta2),var(--tinta));background-size:200% 100%;color:var(--oro2);text-align:center;font-size:.8rem;padding:9px 16px;letter-spacing:.6px;font-weight:500;animation:shine 8s linear infinite}
 .anun b{color:#fff;font-weight:600}
@@ -165,18 +160,127 @@ body{top:0 !important;position:static !important}
 .exitleave{color:#8b90a8;font-size:.85rem;cursor:pointer;text-decoration:underline;display:inline-block}
 .exitleave:hover{color:#cfd3e4}
 .exitclose{position:absolute;top:16px;right:18px;background:none;border:none;color:#8b90a8;font-size:1.7rem;cursor:pointer;line-height:1}
-@media(max-width:760px){.hero h1{font-size:2.1rem}nav.main{display:none}.pdp{grid-template-columns:1fr;gap:28px}.fgrid{grid-template-columns:1fr 1fr}.h2c{font-size:1.7rem}section{padding:48px 0}}
-</style></head><body>
-<div class="anun">✦ Envíos a toda <b>Colombia</b> y al <b>mundo</b> · Personalización con tu nombre grabado · Atención por WhatsApp con <b>Johana Heredia</b></div><header><div class="wrap hd">
+/* BARRA FIJA DE COMPRA EN FICHA (móvil) */
+.pdpbar{display:none}
+@media(max-width:900px){
+ /* el CTA debe nacer sobre el fold: primero H1 + precio + WhatsApp, luego la imagen */
+ .pdp{grid-template-columns:1fr;gap:22px}
+ .pdp>.ph{order:2;max-height:42vh;aspect-ratio:auto;min-height:200px}
+ .pdp>.info{order:1}
+ .pdp .ph .ic{font-size:4.4rem}
+ .pdp h1{font-size:1.72rem}
+ .pdp .pr{font-size:1.8rem;margin:10px 0}
+ .pdp .add{max-width:none !important;width:100%}
+ .pdp .btn.wa{margin-left:0 !important;margin-top:10px;display:block;text-align:center}
+ body.haspdp{padding-bottom:84px}
+ body.haspdp .wafloat{display:none}
+ .pdpbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:45;background:rgba(255,255,255,.97);
+  backdrop-filter:blur(10px);border-top:1px solid var(--linea);padding:10px 14px;gap:12px;align-items:center;
+  box-shadow:0 -8px 26px -12px rgba(26,34,56,.4)}
+ .pdpbar .pbp{font-family:'Playfair Display',serif;font-weight:700;color:var(--tinta);font-size:1.18rem;line-height:1.1}
+ .pdpbar .pbp small{display:block;font-family:'Jost',sans-serif;font-weight:400;font-size:.68rem;color:var(--suave);
+  letter-spacing:.3px;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .pdpbar a{margin-left:auto;background:linear-gradient(135deg,#2bd46f,#1eb257);color:#fff;font-weight:600;
+  padding:13px 22px;border-radius:999px;font-size:.94rem;white-space:nowrap;box-shadow:0 8px 20px -8px rgba(37,211,102,.6)}
+ .anun{font-size:.72rem;padding:7px 12px;letter-spacing:.2px} .anun .solodesk{display:none}
+}
+@media(max-width:760px){.hero h1{font-size:2.1rem}nav.main{display:none}.fgrid{grid-template-columns:1fr 1fr}.h2c{font-size:1.7rem}section{padding:48px 0}}
+</style><script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');
+if(!a)return;var d={destino:a.getAttribute('href').indexOf('text=')>-1?'con_mensaje':'directo',pagina:location.pathname};
+try{if(window.gtag)gtag('event','whatsapp_click',d);}catch(x){}
+try{if(window.clarity){clarity('event','whatsapp_click');clarity('set','wa_pagina',location.pathname);}}catch(x){}});
+window.trackPedido=function(total,items){var d={value:total,currency:'COP',items:items,pagina:location.pathname};
+try{if(window.gtag)gtag('event','begin_checkout',d);}catch(x){}
+try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_total',String(total));}}catch(x){}};
+</script></head><body class="">
+<div class="anun">✦ Envíos a toda <b>Colombia</b> y al <b>mundo</b> · Personalización con tu nombre grabado<span class="solodesk"> · Atención por WhatsApp con <b>Johana Heredia</b></span></div><header><div class="wrap hd">
 <a href="/" class="logo"><img src="/img/logo-medallon.png" alt="Luz y Gracia" height="54" style="height:54px;width:auto"><span class="notranslate">Luz <b>y</b> Gracia</span></a>
 <nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/blog.html">Devocional</a></nav>
 <div class="hdr">
 <button class="cartbtn" onclick="openCart()">🛒 Carrito <b id="cc">0</b></button>
-<div class="lang notranslate"><button class="langbtn" onclick="toggleLang(event)">🌐 <span id="langcur">ES</span> ▾</button>
-<div class="langmenu" id="langmenu">
-<a onclick="setLang('es')">🇪🇸 Español</a><a onclick="setLang('en')">🇺🇸 English</a><a onclick="setLang('pt')">🇧🇷 Português</a>
-<a onclick="setLang('fr')">🇫🇷 Français</a><a onclick="setLang('de')">🇩🇪 Deutsch</a><a onclick="setLang('it')">🇮🇹 Italiano</a></div></div>
-</div></div></header><section><div class="wrap" style="max-width:800px"><h1 style="font-size:2rem;margin-bottom:16px">🌎 Envíos y pagos</h1><p style='color:var(--suave)'>Enviamos a <b>toda Colombia</b> y al <b>exterior</b> (EE.UU., España, México y Latinoamérica). Coordinamos el envío y el medio de pago por WhatsApp: transferencia, tarjeta, PSE, Nequi o contraentrega según la zona.</p></div></section><footer><div class="wrap">
+</div></div></header><section><div class="wrap" style="max-width:800px"><h1 style="font-size:2rem;margin-bottom:16px">🌎 Envíos, pagos y devoluciones</h1>
+<p style="color:var(--suave)">Aquí está, sin letra chica, cómo funciona comprar en Luz y Gracia: cuánto cuesta el envío,
+cuánto tarda, cómo pagas y qué puedes hacer si algo no sale bien. Todo pedido se coordina y se confirma por WhatsApp
+con Johana Heredia Arévalo <b>antes</b> de que pagues.</p>
+
+<h2 style="font-size:1.35rem;margin:30px 0 10px">1. Costo del envío</h2>
+<ul style="margin-left:20px;line-height:1.9;color:var(--suave)">
+<li><b>Colombia:</b> <span class="pend">[PENDIENTE: confirmar costo de envío nacional]</span></li>
+<li><b>Envío gratis:</b> <span class="pend">[PENDIENTE: confirmar si hay envío gratis y desde qué monto]</span></li>
+<li><b>Transportadora:</b> <span class="pend">[PENDIENTE: confirmar transportadora(s)]</span></li>
+<li><b>Envíos internacionales</b> (EE.UU., España, México, Ecuador, Perú, Chile): <span class="pend">[PENDIENTE: confirmar costo y plazo de envío internacional]</span>.
+Los impuestos o gastos de aduana del país de destino los asume quien recibe.</li>
+</ul>
+<p style="color:var(--suave);margin-top:10px">El valor exacto del envío para tu dirección te lo confirmamos por WhatsApp
+antes de que hagas cualquier pago.</p>
+
+<h2 style="font-size:1.35rem;margin:30px 0 10px">2. Plazo de entrega</h2>
+<ul style="margin-left:20px;line-height:1.9;color:var(--suave)">
+<li><b>Ciudades principales:</b> <span class="pend">[PENDIENTE: confirmar días hábiles a ciudades principales]</span></li>
+<li><b>Resto del país:</b> <span class="pend">[PENDIENTE: confirmar días hábiles de entrega en Colombia]</span></li>
+<li><b>Internacional:</b> <span class="pend">[PENDIENTE: confirmar costo y plazo de envío internacional]</span></li>
+</ul>
+<p style="color:var(--suave);margin-top:10px">El plazo empieza a contar cuando el pedido queda pagado y, si lleva grabado,
+cuando apruebas el preview. Si tu regalo es para una fecha específica, dinos el día del evento antes de comprar.</p>
+
+<h2 style="font-size:1.35rem;margin:30px 0 10px">3. Plazo de personalización</h2>
+<p style="color:var(--suave)">Los productos con nombre, fecha o versículo grabado requieren tiempo de producción adicional
+al envío: <span class="pend">[PENDIENTE: confirmar días hábiles de producción del grabado]</span>.</p>
+<p style="color:var(--suave);margin-top:8px">El proceso es siempre el mismo: (1) nos das el texto exacto por WhatsApp,
+(2) te enviamos un <b>preview</b> del grabado, (3) tú lo apruebas por escrito, (4) recién ahí se produce.
+Nada se graba sin tu aprobación. Revisa bien la ortografía del preview: un grabado aprobado no se puede deshacer.</p>
+
+<h2 style="font-size:1.35rem;margin:30px 0 10px">4. Medios de pago</h2>
+<ul style="margin-left:20px;line-height:1.9;color:var(--suave)">
+<li><b>Medios habilitados:</b> <span class="pend">[PENDIENTE: confirmar medios de pago habilitados]</span></li>
+<li><b>Contraentrega:</b> <span class="pend">[PENDIENTE: confirmar en qué ciudades hay contraentrega]</span></li>
+</ul>
+<p style="color:var(--suave);margin-top:10px">Nunca te pediremos claves, códigos de verificación ni datos completos de tu
+tarjeta por WhatsApp. Si alguien lo hace en nuestro nombre, no somos nosotros.</p>
+
+<h2 style="font-size:1.35rem;margin:30px 0 10px">5. Derecho de retracto: 5 días hábiles</h2>
+<p style="color:var(--suave)">Por tratarse de una <b>venta a distancia</b>, tienes derecho a retractarte de la compra dentro de
+los <b>cinco (5) días hábiles</b> siguientes a la entrega del producto, según el <b>artículo 47 de la Ley 1480 de 2011</b>
+(Estatuto del Consumidor). Para ejercerlo:</p>
+<ol style="margin:12px 0 0 20px;line-height:1.9;color:var(--suave)">
+<li>Avísanos por WhatsApp dentro de esos 5 días hábiles.</li>
+<li>Devuelve el producto por el mismo medio y en las mismas condiciones en que lo recibiste.</li>
+<li>Los costos de transporte de la devolución los asume el consumidor (así lo establece la misma norma).</li>
+<li>Te devolvemos el dinero pagado dentro de los <b>30 días calendario</b> siguientes, como exige la ley.</li>
+</ol>
+<p style="color:var(--suave);margin-top:12px"><b>Excepción importante y honesta:</b> el mismo artículo 47 excluye del derecho
+de retracto los <b>bienes confeccionados conforme a las especificaciones del consumidor o claramente personalizados</b>.
+Una biblia, una placa o una joya con un nombre grabado entra en esa excepción: no puede revenderse a nadie más.
+Por eso te enviamos el preview y no producimos hasta que lo apruebas. Los productos <b>sin</b> personalizar sí admiten
+retracto normal.</p>
+
+<h2 style="font-size:1.35rem;margin:30px 0 10px">6. Devoluciones, cambios y garantía</h2>
+<ul style="margin-left:20px;line-height:1.9;color:var(--suave)">
+<li><b>Producto defectuoso, dañado en el transporte o distinto al que pediste:</b> lo reponemos o te devolvemos el dinero,
+sin costo para ti. Escríbenos por WhatsApp con fotos dentro de los primeros días tras recibirlo.</li>
+<li><b>Error en el grabado imputable a nosotros</b> (texto distinto al que aprobaste en el preview): lo repetimos sin costo.</li>
+<li><b>Error en el texto que tú aprobaste en el preview:</b> lamentablemente no podemos reponerlo sin costo, porque el
+producto ya fue fabricado a tu medida. Podemos cotizarte una reposición.</li>
+<li><b>Garantía legal:</b> aplica la garantía del artículo 7 de la Ley 1480 de 2011. Cuando el fabricante no indique un
+término distinto, la ley fija <b>un (1) año</b> para productos nuevos.</li>
+<li><b>Reversión del pago:</b> si pagaste con tarjeta o medio electrónico y hubo fraude, operación no solicitada o el
+producto no fue entregado, puedes solicitar la reversión del pago conforme al artículo 51 de la Ley 1480 de 2011.</li>
+<li><b>Dirección para devoluciones:</b> <span class="pend">[PENDIENTE: confirmar dirección física para devoluciones]</span></li>
+</ul>
+
+<h2 style="font-size:1.35rem;margin:30px 0 10px">7. Quién te vende</h2>
+<ul style="margin-left:20px;line-height:1.9;color:var(--suave)">
+<li><b>Tienda:</b> Luz y Gracia — Bogotá, Colombia</li>
+<li><b>Responsable de ventas:</b> Johana Heredia Arévalo</li>
+<li><b>WhatsApp:</b> <a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--oro);font-weight:600">312 629 5392</a></li>
+<li><b>Correo:</b> hola@luzygracia.com</li>
+<li><b>NIT / identificación tributaria:</b> <span class="pend">[PENDIENTE: confirmar NIT / persona natural o jurídica]</span></li>
+</ul>
+<p style="color:var(--suave);margin-top:14px;font-size:.9rem">Los puntos marcados en amarillo están pendientes de
+confirmación y se publicarán en cuanto estén definidos. Preferimos dejarlos visibles antes que publicar un plazo o un
+costo que no podamos cumplir. Mientras tanto, pregúntalos por WhatsApp: te los confirmamos caso por caso antes de pagar.</p>
+</div></section><footer><div class="wrap">
 <div class="fgrid">
 <div><h4 class="notranslate">Luz y Gracia</h4><p style="color:#b8bcd0;font-size:.9rem">Regalos y productos cristianos que iluminan la fe. Envíos a toda Colombia y al mundo.</p>
 <p style="margin-top:12px"><a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--wa);font-weight:700">💬 WhatsApp con Johana: 312 629 5392</a></p></div>
@@ -187,21 +291,7 @@ body{top:0 !important;position:static !important}
 <div class="fbot">© 2026 Luz y Gracia · Bogotá, Colombia · Gerencia: Johana Heredia Arévalo · Hecho con fe para toda Colombia y el mundo</div>
 </div></footer>
 <a class="wafloat" href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" aria-label="WhatsApp">💬</a>
-<div id="google_translate_element"></div>
-<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'es',includedLanguages:'en,pt,fr,de,it,es',autoDisplay:false},'google_translate_element');}</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script>
-var LNG={'es':'ES','en':'EN','pt':'PT','fr':'FR','de':'DE','it':'IT'};
-function toggleLang(e){if(e)e.stopPropagation();document.getElementById('langmenu').classList.toggle('open');}
-document.addEventListener('click',function(){var m=document.getElementById('langmenu');if(m)m.classList.remove('open');});
-function setCookie(v){document.cookie='googtrans='+v+';path=/';document.cookie='googtrans='+v+';path=/;domain=.'+location.hostname;}
-function setLang(l){document.getElementById('langcur').textContent=LNG[l]||l.toUpperCase();document.getElementById('langmenu').classList.remove('open');
- if(l==='es'){setCookie('');try{document.cookie='googtrans=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/';}catch(e){}location.reload();return;}
- var c=document.querySelector('.goog-te-combo');
- if(c){c.value=l;c.dispatchEvent(new Event('change'));}
- else{setCookie('/es/'+l);location.reload();}}
-(function(){var m=document.cookie.match(/googtrans=\/es\/(\w+)/);if(m&&LNG[m[1]]){var el=document.getElementById('langcur');if(el)el.textContent=LNG[m[1]];}})();
-</script><div class="exitov" id="exitov">
+<div class="exitov" id="exitov">
 <div class="exitmodal">
 <button class="exitclose" onclick="closeExit()" aria-label="Cerrar">×</button>
 <img src="/img/logo-medallon.png" alt="Luz y Gracia">
@@ -247,6 +337,8 @@ function openCart(){document.getElementById('cart').classList.add('open');docume
 function closeCart(){document.getElementById('cart').classList.remove('open');document.getElementById('ov').classList.remove('open');}
 function checkoutWA(){if(!CART.length){alert('Añade algún producto primero 🙂');return;}
 var t=CART.reduce((a,x)=>a+x.price*x.q,0);
-var msg='¡Hola Luz y Gracia! 🕊️ Quiero hacer este pedido:%0A%0A'+CART.map(x=>'• '+x.q+'x '+x.name+' — $'+(x.price*x.q).toLocaleString('es-CO')).join('%0A')+'%0A%0ATotal: $'+t.toLocaleString('es-CO')+'%0A%0A¿Me confirman personalización, envío y pago? — Johana de Luz y Gracia 🕊️';
+// El mensaje lo escribe EL CLIENTE, así que lo cierra el cliente (nunca la vendedora).
+var msg='¡Hola Luz y Gracia! 🕊️ Quiero hacer este pedido:%0A%0A'+CART.map(x=>'• '+x.q+'x '+x.name+' — $'+(x.price*x.q).toLocaleString('es-CO')).join('%0A')+'%0A%0ATotal: $'+t.toLocaleString('es-CO')+'%0A%0A¿Me confirmas personalización, costo de envío y forma de pago?%0AMi nombre es ____ y estoy en ____ (ciudad).';
+try{trackPedido(t,CART.map(x=>x.name+' x'+x.q).join(' | '));}catch(e){}
 window.open('https://wa.me/573126295392?text='+msg,'_blank');}
 render();</script></body></html>
