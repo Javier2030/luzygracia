@@ -1,0 +1,333 @@
+# -*- coding: utf-8 -*-
+"""Config ÉLITE de Luz y Gracia — catálogo amplio, ciudades, segmentos, versiones, blog."""
+BRAND = "Luz y Gracia"
+TAGLINE = "Regalos y productos cristianos que iluminan la fe"
+DOMAIN = "luzygracia.com"
+WHATSAPP = "573126295392"   # Johana Heredia Arévalo, gerente de ventas
+GERENTE = "Johana Heredia Arévalo"
+EMAIL = "hola@luzygracia.com"
+CIUDAD = "Bogotá, Colombia"
+COL = {"oro":"#c89a3b","oro2":"#e3c27e","tinta":"#1a2238","tinta2":"#2d3657",
+       "crema":"#faf6ef","crema2":"#f2e9d8","texto":"#2a2f45","suave":"#6b7189","linea":"#e7ddc9","verde_wa":"#25d366"}
+
+CATEGORIAS = [
+    ("biblias","Biblias","Biblias RVR1960, NVI, NTV, de estudio, de promesas e infantiles. La Palabra en la versión que amas."),
+    ("biblias-personalizadas","Biblias personalizadas","Tu biblia con el nombre grabado en oro o láser sobre cuero. El regalo cristiano más especial."),
+    ("devocionales","Devocionales y libros","Devocionales diarios y lecturas para mujeres, hombres, parejas, jóvenes y niños."),
+    ("regalos","Regalos cristianos","Tazas con versículos, velas, tarjetas, agendas y detalles con propósito."),
+    ("ropa","Ropa y accesorios","Camisetas, hoodies y gorras con diseños de fe. Lleva tu testimonio puesto."),
+    ("joyeria","Joyería cristiana","Cruces, collares, anillos y pulseras que recuerdan a quién perteneces."),
+    ("decoracion","Decoración del hogar","Cuadros, placas y láminas con versículos para llenar tu casa de Palabra."),
+    ("ninos","Niños","Biblias infantiles, juguetes y recursos para sembrar la fe desde pequeños."),
+    ("iglesia","Iglesia y ministerio","Copas de comunión, kits de bautismo y recursos para tu congregación."),
+    ("musica","Música y adoración","Recursos de alabanza, cancioneros y contenido para adorar en casa y en la iglesia."),
+    ("agendas","Agendas y papelería","Agendas devocionales, cuadernos de oración y planners cristianos."),
+    ("kits","Kits y cajas de regalo","Combos listos para regalar: biblia + devocional + taza + tarjeta en caja premium."),
+]
+
+OCASIONES = [
+    ("regalos-para-pastores","Regalos para pastores","Detalles con honra para bendecir a quien te pastorea: biblias grabadas, plumas y placas."),
+    ("regalos-bautizo","Regalos de bautizo","Biblias con nombre, cruces y recuerdos personalizados para ese día inolvidable."),
+    ("regalos-primera-comunion","Primera comunión","Regalos cristianos para celebrar el primer encuentro con la mesa del Señor."),
+    ("regalos-boda-cristiana","Bodas cristianas","Biblias de pareja, cuadros y detalles para bendecir el nuevo hogar."),
+    ("regalos-dia-de-la-madre","Día de la madre cristiana","Para la mujer que oró por ti: biblias, devocionales y regalos con amor."),
+    ("regalos-dia-del-padre","Día del padre cristiano","Honra a papá con un regalo que fortalezca su fe y su liderazgo."),
+    ("regalos-quinceanos","Quinceaños cristianos","Biblias y detalles personalizados para celebrar los 15 con propósito."),
+    ("regalos-navidad","Navidad cristiana","Regalos que ponen a Cristo en el centro de la Navidad."),
+    ("kit-devocional","Kits devocionales","Biblia + devocional + taza + tarjeta. Todo listo para regalar o empezar tu tiempo con Dios."),
+]
+
+SEGMENTOS = [
+    ("regalos-cristianos-para-mujer","Regalos cristianos para mujer","Biblias, devocionales, joyería y detalles pensados para la mujer de fe."),
+    ("regalos-cristianos-para-hombre","Regalos cristianos para hombre","Biblias, camisetas y accesorios para el hombre conforme al corazón de Dios."),
+    ("regalos-cristianos-para-jovenes","Regalos cristianos para jóvenes","Diseños frescos, biblias juveniles y detalles para la nueva generación."),
+    ("regalos-cristianos-para-parejas","Regalos cristianos para parejas","Biblias de pareja, cuadros y detalles para hogares edificados en Cristo."),
+    ("regalos-cristianos-para-lideres","Regalos para líderes y maestros","Reconoce a quienes sirven: maestros de escuela dominical, líderes y diáconos."),
+]
+
+VERSIONES = [
+    ("biblia-rvr1960","Biblia Reina-Valera 1960","La versión más amada y usada en el mundo hispano. Clásica, confiable, para toda la vida."),
+    ("biblia-nvi","Biblia NVI","Nueva Versión Internacional: equilibrio entre fidelidad y lectura clara y moderna."),
+    ("biblia-ntv","Biblia NTV","Nueva Traducción Viviente: la más fácil de leer y entender, ideal para nuevos creyentes."),
+    ("biblia-de-estudio","Biblia de Estudio","Con notas, mapas, concordancia y comentarios para profundizar en la Palabra."),
+    ("biblia-de-promesas","Biblia de Promesas","Resalta las promesas de Dios para fortalecer tu fe cada día."),
+    ("biblia-letra-grande","Biblia letra grande","Tipografía amplia y cómoda para una lectura sin esfuerzo."),
+]
+
+# Ciudades/mercados (landings de envío) — Colombia + internacional
+CIUDADES = [
+    ("bogota","Bogotá","la capital"),("medellin","Medellín","Antioquia"),("cali","Cali","el Valle"),
+    ("barranquilla","Barranquilla","la Costa"),("cartagena","Cartagena","la Costa"),
+    ("bucaramanga","Bucaramanga","Santander"),("pereira","Pereira","el Eje Cafetero"),
+    ("cucuta","Cúcuta","Norte de Santander"),("ibague","Ibagué","el Tolima"),
+    ("santa-marta","Santa Marta","el Magdalena"),("villavicencio","Villavicencio","los Llanos"),
+    ("manizales","Manizales","Caldas"),
+]
+PAISES = [
+    ("estados-unidos","Estados Unidos","la comunidad hispana en EE.UU."),
+    ("espana","España","toda España"),("mexico","México","toda la República"),
+    ("ecuador","Ecuador",""),("peru","Perú",""),("chile","Chile",""),
+]
+
+def P(slug,nombre,cat,precio,badge=None,vs=None,desc=""):
+    return (slug,nombre,cat,precio,badge,vs,desc)
+
+PRODUCTOS = [
+ # BIBLIAS
+ P("biblia-nombre-grabado-cuero","Biblia personalizada con nombre grabado (cuero)","biblias-personalizadas",149000,None,"Lámpara es a mis pies tu palabra — Sal 119:105","Biblia RVR1960 en cuero con tu nombre grabado en oro o láser. Te enviamos un preview antes de imprimir. El regalo que se guarda toda la vida."),
+ P("biblia-nombre-foil-oro","Biblia personalizada nombre en foil oro","biblias-personalizadas",139000,None,None,"Tu biblia con el nombre estampado en foil dorado sobre tapa premium. Elegante y duradero."),
+ P("biblia-pareja-grabada","Biblia de pareja con nombres y fecha","biblias-personalizadas",169000,None,"Y los dos serán una sola carne — Gn 2:24","Biblia con los nombres de los novios y la fecha grabados. El regalo de bodas cristiano perfecto."),
+ P("biblia-pastor-grabada","Biblia para pastor personalizada","biblias-personalizadas",179000,None,None,"Biblia de estudio en cuero con el nombre del pastor grabado. Honra a quien te guía en la fe."),
+ P("biblia-bautizo-grabada","Biblia de bautizo personalizada","biblias-personalizadas",129000,None,None,"Biblia con nombre y fecha de bautizo. Un recuerdo eterno de ese día especial."),
+ P("biblia-estudio-rvr60","Biblia de Estudio RVR1960","biblias",129000,None,None,"Biblia de estudio con notas, mapas y concordancia. Tapa dura, letra grande, índice."),
+ P("biblia-rvr1960-tapa-dura","Biblia RVR1960 tapa dura","biblias",69000,None,None,"La versión más amada, en tapa dura resistente. Ideal para tu mesa de noche o la iglesia."),
+ P("biblia-nvi-clasica","Biblia NVI clásica","biblias",75000,None,None,"Nueva Versión Internacional, lectura clara y fiel. Tapa flexible cómoda."),
+ P("biblia-ntv-lectura","Biblia NTV lectura fácil","biblias",79000,None,"","La más fácil de entender, perfecta para nuevos creyentes y jóvenes."),
+ P("biblia-mujer","Biblia para Mujer","biblias",99000,None,None,"Edición con devocionales y notas para el corazón de la mujer de fe."),
+ P("biblia-hombre","Biblia para Hombre","biblias",99000,None,None,"Con estudios sobre liderazgo, integridad y propósito para el hombre de Dios."),
+ P("biblia-promesas","Biblia de Promesas","biblias",89000,None,None,"Resalta las promesas de Dios en cada página para fortalecer tu fe."),
+ P("biblia-letra-grande","Biblia letra grande RVR1960","biblias",95000,None,None,"Tipografía amplia y clara para una lectura cómoda a cualquier edad."),
+ # DEVOCIONALES
+ P("devocional-diario-mujer","Devocional diario para mujeres (365 días)","devocionales",55000,None,None,"Un encuentro diario con Dios durante todo el año. Regalo ideal."),
+ P("devocional-hombre","Devocional para hombres","devocionales",52000,None,None,"Lecturas breves y poderosas para fortalecer al hombre en su caminar."),
+ P("devocional-pareja","Devocional para parejas","devocionales",58000,None,None,"Un tiempo diario para crecer juntos en oración y en amor."),
+ P("devocional-jovenes","Devocional para jóvenes","devocionales",48000,None,None,"Contenido fresco y real para vivir la fe en la juventud."),
+ P("jesus-te-llama","Jesús te llama (devocional)","devocionales",62000,None,None,"El devocional más querido: palabras de aliento como si Jesús te hablara."),
+ P("un-ano-con-dios","Un año con Dios","devocionales",59000,None,None,"365 reflexiones para caminar cerca de Dios todo el año."),
+ # REGALOS
+ P("taza-versiculo","Taza con versículo personalizable","regalos",39000,None,"Todo lo puedo en Cristo — Fil 4:13","Taza de cerámica con el versículo y nombre que elijas. Sublimación de alta definición."),
+ P("taza-fe","Taza 'Ten fe'","regalos",35000,None,None,"Empieza el día recordando en quién confías. Cerámica premium."),
+ P("vela-cristiana","Vela aromática con versículo","regalos",42000,None,None,"Vela de soya con aroma suave y versículo grabado. Para tu tiempo de oración."),
+ P("tarjeta-versiculo","Tarjeta con versículo (pack x6)","regalos",28000,None,None,"Set de tarjetas para bendecir con una palabra en cada ocasión."),
+ P("agenda-cristiana","Agenda devocional 2026","agendas",49000,None,None,"Agenda con espacio de oración, versículo semanal y metas con propósito."),
+ P("cuaderno-oracion","Cuaderno de oración","agendas",32000,None,None,"Registra tus peticiones y las respuestas de Dios. Portada premium."),
+ P("marcalibros-set","Set de marcalibros con versículos","regalos",22000,None,None,"6 marcalibros dorados con versículos para tu biblia y libros."),
+ P("llavero-cruz","Llavero cruz personalizable","regalos",25000,None,None,"Llavero en acero con cruz y nombre grabado. Detalle económico y significativo."),
+ # ROPA
+ P("camiseta-fe","Camiseta 'Fe' unisex","ropa",65000,None,None,"Camiseta premium con diseño de fe. Algodón suave, estampado que dura."),
+ P("camiseta-mujer-virtuosa","Camiseta 'Mujer virtuosa'","ropa",65000,None,"Pr 31:25","Diseño femenino inspirado en Proverbios 31. Corte cómodo."),
+ P("hoodie-cristiano","Hoodie 'Salmo 23'","ropa",119000,None,None,"Buzo con capucha y diseño premium. Abrígate con Palabra."),
+ P("gorra-fe","Gorra 'Bendecido'","ropa",49000,None,None,"Gorra ajustable con bordado. Lleva tu testimonio a donde vayas."),
+ P("camiseta-nino","Camiseta cristiana para niño","ropa",45000,None,None,"Diseños alegres para los pequeños. Algodón suave, colores firmes."),
+ P("camiseta-pareja","Camisetas de pareja cristiana (x2)","ropa",119000,None,None,"Set de dos camisetas para parejas que caminan en fe."),
+ # JOYERÍA
+ P("collar-cruz-acero","Collar con cruz (acero)","joyeria",49000,None,None,"Cruz en acero inoxidable con cadena. No se oxida, no se destiñe."),
+ P("collar-cruz-oro","Collar cruz baño de oro","joyeria",79000,None,None,"Cruz delicada con baño de oro 18k. Elegante para cada día."),
+ P("anillo-versiculo","Anillo con versículo grabado","joyeria",55000,None,None,"Anillo en acero con tu versículo favorito grabado por dentro o fuera."),
+ P("pulsera-fe","Pulsera 'Fe' ajustable","joyeria",39000,None,None,"Pulsera con dije de cruz o pez. Ajustable, para regalar."),
+ P("aretes-cruz","Aretes cruz","joyeria",35000,None,None,"Aretes discretos con forma de cruz. Acero hipoalergénico."),
+ P("dije-pez","Dije pez cristiano (Ichthys)","joyeria",29000,None,None,"El símbolo de los primeros cristianos, en acero con cadena."),
+ # DECORACIÓN
+ P("cuadro-versiculo","Cuadro con versículo","decoracion",79000,None,None,"Lámina enmarcada con el versículo de tu elección. Llena tu hogar de Palabra."),
+ P("placa-hogar","Placa 'Esta casa sirve al Señor'","decoracion",59000,None,"Josué 24:15","Placa en madera con grabado láser para la entrada de tu hogar."),
+ P("lamina-salmo23","Lámina Salmo 23","decoracion",45000,None,None,"Impresión artística del salmo más amado. Lista para enmarcar."),
+ P("reloj-versiculo","Reloj de pared con versículo","decoracion",89000,None,None,"Reloj silencioso con diseño y versículo. Funcional y hermoso."),
+ P("letrero-madera-fe","Letrero de madera 'Familia'","decoracion",65000,None,None,"Letrero rústico grabado para sala o comedor. Personalizable."),
+ P("cojin-versiculo","Cojín con versículo","decoracion",42000,None,None,"Cojín decorativo con versículo. Suave y con funda lavable."),
+ # NIÑOS
+ P("biblia-infantil","Biblia Infantil Ilustrada","ninos",69000,None,None,"Historias bíblicas con ilustraciones para los más pequeños. Tapa acolchada."),
+ P("biblia-colorear","Biblia para colorear","ninos",29000,None,None,"Historias bíblicas para pintar. Diversión con propósito."),
+ P("arca-juguete","Arca de Noé de juguete","ninos",85000,None,None,"Set de arca con animales. Aprende jugando la historia de Noé."),
+ P("devocional-ninos","Devocional para niños","ninos",39000,None,None,"Lecturas cortas y preguntas para el corazón de los pequeños."),
+ P("rompecabezas-biblico","Rompecabezas bíblico","ninos",32000,None,None,"Arma escenas de la Biblia mientras aprendes. Para toda la familia."),
+ # IGLESIA
+ P("copas-comunion","Set de copas de comunión (x40)","iglesia",95000,None,None,"Bandeja y copas para la Santa Cena. Calidad para tu congregación."),
+ P("kit-bautismo","Kit de bautismo","iglesia",120000,None,None,"Todo para celebrar el bautismo con orden y reverencia."),
+ P("sobres-ofrenda","Sobres de ofrenda (pack x100)","iglesia",35000,None,None,"Sobres para diezmos y ofrendas. Diseño sobrio y práctico."),
+ P("cruz-pared-grande","Cruz de pared grande (madera)","iglesia",99000,None,None,"Cruz tallada para el frente de la iglesia o tu hogar."),
+ # MÚSICA / KITS
+ P("cancionero-adoracion","Cancionero de adoración","musica",45000,None,None,"Los himnos y cantos que unen a la iglesia. Acordes incluidos."),
+ P("kit-devocional-completo","Kit Devocional completo","kits",189000,None,None,"Biblia personalizada + devocional + taza con versículo + tarjeta, en caja de regalo."),
+ P("kit-pastor","Kit para pastor","kits",229000,None,None,"Biblia de estudio grabada + pluma + placa + devocional en caja premium."),
+ P("kit-novia-cristiana","Kit para novia cristiana","kits",199000,None,None,"Biblia de pareja + devocional para parejas + detalle. Regalo de bodas completo."),
+ P("kit-mujer-de-dios","Kit 'Mujer de Dios'","kits",169000,None,None,"Biblia para mujer + devocional + joyería + taza. Todo lo que ella ama."),
+]
+
+# TESTIMONIOS: VACÍO A PROPÓSITO. La tienda es nueva y no tiene reseñas reales.
+# Publicar testimonios inventados es publicidad engañosa (Ley 1480/2011, art. 30) y
+# dato estructurado falso para Google. Se llenará SOLO con reseñas reales autorizadas
+# por el cliente (con su nombre y permiso escrito).
+TESTIMONIOS = []
+
+# ── Hechos verificables que reemplazan a las reseñas en la UI ──────────────
+GARANTIAS = [
+ ('📦', 'Pago contraentrega', 'Enviamos por Inter Rapidísimo y le pagas al mensajero cuando el paquete llega a tu puerta. Disponible en 1.013 municipios del país. Los grabados personalizados piden anticipo.'),
+ ("✍️","Preview del grabado antes de producir","Te enviamos una imagen del nombre, fecha o versículo para tu aprobación. Nada se produce sin tu visto bueno."),
+ ("🎁","Personalización incluida","El grabado del nombre está incluido en el precio de los productos personalizables. Sin costos ocultos."),
+ ("💬","Atención por WhatsApp","Hablas directo con Johana Heredia, quien coordina personalización, envío y pago."),
+ ("⚖️","Derecho de retracto de 5 días","Como toda venta a distancia en Colombia, tienes 5 días hábiles para retractarte (Ley 1480/2011, art. 47)."),
+]
+
+# ── Analítica ─────────────────────────────────────────────────────────────
+# Microsoft Clarity (gratis, sin límite de tráfico). El dueño debe crear el proyecto en
+# https://clarity.microsoft.com → Settings → Setup → copiar el "Project ID" (10 chars)
+# y pegarlo aquí abajo reemplazando el marcador. Mientras diga PONER_ID_CLARITY el
+# script NO se inyecta (no rompe nada, simplemente no mide).
+CLARITY_ID = "xrlu4m278k"
+# GA4 opcional: reemplazar por G-XXXXXXXXXX. Vacío o marcador = no se inyecta.
+GA4_ID = "PONER_ID_GA4"
+
+# ── Datos comerciales que SOLO el dueño puede confirmar ───────────────────
+# Cualquier valor que empiece por "[PENDIENTE" se muestra tal cual en la web como
+# marcador visible. NO inventar plazos, costos ni políticas.
+# ── ENVÍOS ────────────────────────────────────────────────────────────────
+# Decisión del dueño (2026-07-24): transportadora nacional = INTER RAPIDÍSIMO,
+# con PAGO CONTRAENTREGA habilitado.
+# Datos de cobertura y tiempos = los que publica la propia transportadora.
+# Lo que sigue en [PENDIENTE] es lo que depende de la tarifa que Inter le dé a
+# ESTA tienda al abrir la cuenta: jamás se publica un precio inventado.
+ENVIOS = {
+ "costo_nacional":      "Se cotiza por ciudad y peso, y te lo confirmamos por WhatsApp ANTES de que pagues nada.",
+ "envio_gratis_desde":  "[PENDIENTE: decidir si hay envío gratis y desde qué monto]",
+ "plazo_nacional":      "1 a 3 días hábiles en ciudades principales; hasta 5 a 8 días hábiles en municipios apartados y zonas de difícil acceso.",
+ "plazo_capitales":     "24 a 72 horas hábiles, contadas desde las 6:00 p. m. del día en que se despacha.",
+ "plazo_personalizacion":"[PENDIENTE: confirmar días hábiles de producción del grabado]",
+ "transportadora":      "Inter Rapidísimo, con cobertura en 1.154 municipios de Colombia.",
+ "costo_internacional": "[PENDIENTE: confirmar costo y plazo de envío internacional]",
+ "medios_pago":         "Pago contraentrega (pagas al recibir), transferencia y Nequi. Se coordina por WhatsApp.",
+ "contraentrega":       "Disponible en 1.013 de los 1.154 municipios que cubre Inter Rapidísimo. Si tu municipio no tiene contraentrega, te lo decimos al cotizar y lo resolvemos por transferencia.",
+ "direccion_devolucion":"[PENDIENTE: confirmar dirección física para devoluciones]",
+ "nit":                 "[PENDIENTE: confirmar NIT / persona natural o jurídica]",
+}
+
+# Productos con grabado personalizado y contraentrega: si el cliente rechaza el
+# paquete, la pieza lleva el nombre de otra persona y NO se puede revender, pero
+# el flete de ida se paga igual. Por eso el grabado pide anticipo.
+CONTRAENTREGA_ANTICIPO = True
+
+# ── Landings locales/internacionales que SÍ se indexan ────────────────────
+# El resto se generan (sirven para enlazar y para tráfico directo) pero salen del
+# sitemap y llevan noindex,follow: eran 94-97% idénticas entre sí (thin content).
+CIUDADES_INDEX = {"bogota", "medellin", "cali", "barranquilla", "bucaramanga"}
+PAISES_INDEX = {"estados-unidos", "espana", "mexico"}
+
+# Contenido único por ciudad indexada (evita duplicación near-exact).
+# Solo datos geográficos verificables; nada de plazos ni precios inventados.
+CIUDAD_TEXTO = {
+ "bogota": "Bogotá es nuestra base: aquí vive y trabaja Johana Heredia, quien coordina cada pedido. "
+           "Eso significa que las biblias con nombre grabado y los kits de regalo salen desde la misma ciudad, "
+           "sin escalas ni intermediarios. Si estás en Chapinero, Suba, Kennedy, Usaquén o en cualquier localidad, "
+           "escríbenos por WhatsApp y te confirmamos la forma de entrega antes de que pagues.",
+ "medellin": "Medellín y el Valle de Aburrá (Envigado, Itagüí, Sabaneta, Bello) reciben los envíos por transportadora "
+             "nacional desde Bogotá. Es una de las plazas cristianas más activas del país, con congregaciones grandes "
+             "que suelen pedir kits para pastores y biblias grabadas para bautizos. Si necesitas varias unidades para "
+             "un grupo o ministerio, cuéntanos cuántas y te armamos el pedido completo por WhatsApp.",
+ "cali": "En Cali y el sur del Valle del Cauca (Palmira, Jamundí, Yumbo) entregamos por transportadora nacional. "
+         "Los pedidos más frecuentes de la zona son biblias personalizadas para quinceaños y regalos de bautizo. "
+         "Si el detalle es para una fecha concreta, dinos el día del evento antes de pedir: así verificamos si "
+         "alcanzamos con el tiempo de grabado o te proponemos una alternativa.",
+ "barranquilla": "Barranquilla y la Costa Caribe (Soledad, Malambo, Puerto Colombia) reciben por transportadora "
+                 "nacional. Para la Costa recomendamos especialmente los productos en acero inoxidable —collares, "
+                 "anillos y pulseras con cruz— porque no se oxidan con la humedad ni con el salitre, a diferencia "
+                 "de los baños de oro sobre metales blandos.",
+ "bucaramanga": "Bucaramanga y su área metropolitana (Floridablanca, Girón, Piedecuesta) reciben por transportadora "
+                "nacional. Santander es zona de fuerte presencia evangélica y allí los pedidos suelen ser biblias de "
+                "estudio con el nombre del pastor grabado y placas de madera para el hogar. Coordinamos la entrega "
+                "y el pago contigo por WhatsApp antes de producir.",
+}
+
+# Selección de catálogo por plaza (criterio de merchandising, coherente con el texto de
+# cada ciudad). Evita que las landings locales muestren la misma parrilla idéntica.
+CIUDAD_DESTACADOS = {
+ "bogota": ["biblia-nombre-grabado-cuero","biblia-pareja-grabada","kit-devocional-completo","biblia-bautizo-grabada",
+            "taza-versiculo","cuadro-versiculo","agenda-cristiana","llavero-cruz"],
+ "medellin": ["kit-pastor","biblia-pastor-grabada","biblia-estudio-rvr60","kit-devocional-completo",
+              "cuadro-versiculo","placa-hogar","devocional-diario-mujer","camiseta-fe"],
+ "cali": ["biblia-nombre-grabado-cuero","biblia-bautizo-grabada","biblia-ntv-lectura","devocional-jovenes",
+          "pulsera-fe","collar-cruz-oro","taza-versiculo","camiseta-mujer-virtuosa"],
+ "barranquilla": ["collar-cruz-acero","anillo-versiculo","aretes-cruz","dije-pez",
+                  "biblia-nombre-grabado-cuero","biblia-ntv-lectura","taza-versiculo","pulsera-fe"],
+ "bucaramanga": ["biblia-pastor-grabada","biblia-estudio-rvr60","kit-pastor","placa-hogar",
+                 "letrero-madera-fe","cuadro-versiculo","biblia-nombre-grabado-cuero","marcalibros-set"],
+}
+PAIS_DESTACADOS = {
+ "estados-unidos": ["biblia-nombre-grabado-cuero","biblia-rvr1960-tapa-dura","biblia-estudio-rvr60","devocional-diario-mujer",
+                    "jesus-te-llama","collar-cruz-oro","kit-devocional-completo","biblia-infantil"],
+ "espana": ["biblia-nombre-grabado-cuero","biblia-nvi-clasica","biblia-ntv-lectura","devocional-pareja",
+            "collar-cruz-acero","anillo-versiculo","marcalibros-set","cuaderno-oracion"],
+ "mexico": ["biblia-nombre-grabado-cuero","biblia-promesas","biblia-letra-grande","devocional-hombre",
+            "taza-versiculo","cuadro-versiculo","llavero-cruz","kit-mujer-de-dios"],
+}
+
+PAIS_TEXTO = {
+ "estados-unidos": "Enviamos a la comunidad hispana en Estados Unidos: biblias en español con el nombre grabado, "
+                   "devocionales y regalos cristianos que son difíciles de conseguir en librerías locales. El envío "
+                   "internacional se cotiza caso por caso según peso, destino y aduana; te pasamos el valor exacto "
+                   "por WhatsApp antes de que pagues nada.",
+ "espana": "Enviamos a España productos cristianos en español, incluyendo biblias personalizadas con nombre grabado. "
+           "Ten en cuenta que las compras desde fuera de la UE pueden generar IVA y gastos de despacho al ingresar; "
+           "te explicamos el costo total estimado por WhatsApp antes de confirmar el pedido.",
+ "mexico": "Enviamos a toda la República Mexicana biblias personalizadas, devocionales y regalos cristianos. "
+           "El costo y el plazo del envío internacional dependen del peso y del destino, así que los cotizamos "
+           "contigo por WhatsApp antes de cualquier pago.",
+}
+
+# Contenido único por versión/tipo de biblia (datos editoriales verificables).
+VERSIONES_DETALLE = {
+ "biblia-rvr1960": ("La Reina-Valera 1960 es la revisión que las Sociedades Bíblicas Unidas publicaron en 1960 sobre "
+   "la traducción de Casiodoro de Reina (1569) y la revisión de Cipriano de Valera (1602). Conserva el castellano "
+   "clásico —el «vosotros», el «Jehová»— y es la versión que se cita de memoria en la mayoría de las iglesias "
+   "hispanohablantes. Si vas a regalar una biblia y no sabes qué versión usa la persona, esta es la apuesta segura.",
+   [("¿Por qué la RVR1960 usa un lenguaje tan antiguo?","Porque parte del texto de 1569 y sus revisiones conservaron deliberadamente el castellano literario. Esa es también su fortaleza: los versículos memorizados en congregaciones hispanas casi siempre son de esta versión."),
+    ("¿Sirve para alguien que empieza a leer la Biblia?","Es legible, pero si la persona nunca ha leído la Biblia, la NTV o la NVI le resultarán más fáciles. Para regalar a un creyente de años, la RVR1960 suele ser la preferida.")]),
+ "biblia-nvi": ("La Nueva Versión Internacional en español publicó su Nuevo Testamento en 1979 y la Biblia completa en "
+   "1999, traducida directamente de los idiomas originales por un equipo de biblistas hispanohablantes. Busca el "
+   "equilibrio entre fidelidad al texto original y castellano actual: usa «ustedes» en vez de «vosotros» y "
+   "«SEÑOR» en vez de «Jehová». Es la versión más usada en estudios bíblicos y grupos pequeños.",
+   [("¿La NVI es una traducción del inglés?","No. La NVI en español se tradujo de los idiomas originales (hebreo, arameo y griego) por un comité de eruditos hispanohablantes, no del texto inglés."),
+    ("¿En qué se diferencia de la RVR1960?","En el castellano: la NVI usa lenguaje contemporáneo y estructura de frase más corta. El contenido bíblico es el mismo; cambia la forma de decirlo.")]),
+ "biblia-ntv": ("La Nueva Traducción Viviente en español fue publicada por Tyndale en 2010. Su criterio es la "
+   "equivalencia dinámica: traduce el sentido de cada pasaje a un castellano natural en lugar de calcar la "
+   "estructura del original. Es la más fácil de leer en voz alta y la que menos fricción genera en alguien que "
+   "nunca ha abierto una Biblia, en adolescentes y en lectura familiar.",
+   [("¿La NTV es menos fiel por ser más fácil?","Es una traducción por equivalencia dinámica: prioriza el sentido sobre la estructura literal. Para estudio profundo muchos la combinan con una versión más literal como la RVR1960."),
+    ("¿Para quién la recomiendan?","Para nuevos creyentes, jóvenes y lectura en familia. También para quien quiere leer la Biblia completa por primera vez sin trabarse.")]),
+ "biblia-de-estudio": ("Una biblia de estudio no es otra traducción: es una edición que añade al texto bíblico notas al "
+   "pie, introducciones a cada libro, mapas, cronologías, concordancia e índices temáticos. Existen ediciones de "
+   "estudio en RVR1960, NVI y NTV. Pesa y cuesta más que una biblia de lectura, y es la que suelen pedir pastores, "
+   "maestros de escuela dominical y líderes que preparan enseñanza.",
+   [("¿Qué trae exactamente una biblia de estudio?","Notas explicativas al pie de página, introducción a cada libro, mapas, líneas de tiempo, concordancia e índice temático, además del texto bíblico completo."),
+    ("¿Vale la pena si solo quiero leer?","Si tu objetivo es lectura devocional diaria, una biblia de lectura con letra cómoda es más liviana y más barata. La de estudio se justifica cuando preparas enseñanza o quieres profundizar.")]),
+ "biblia-de-promesas": ("La Biblia de Promesas es una edición que resalta tipográficamente los pasajes que expresan "
+   "promesas de Dios y suele incluir un índice temático para ubicarlas por necesidad (temor, provisión, sanidad, "
+   "familia). El texto bíblico es completo; lo distinto es el resaltado y los índices. Es una edición muy pedida "
+   "como regalo para alguien que atraviesa una temporada difícil.",
+   [("¿Cambia el texto bíblico?","No. El texto es el de la versión base; lo que añade la edición es el resaltado de los pasajes de promesa y los índices temáticos para encontrarlos rápido."),
+    ("¿Para qué ocasión se suele regalar?","Es frecuente regalarla a alguien en enfermedad, duelo o una etapa de incertidumbre, precisamente por el índice de promesas por tema.")]),
+ "biblia-letra-grande": ("«Letra grande» se refiere al tamaño del tipo de imprenta, que en estas ediciones ronda los "
+   "11 a 14 puntos frente a los 7 u 8 puntos de una biblia compacta. Se traduce en más páginas y más peso, a cambio "
+   "de una lectura sin esfuerzo. Es la edición indicada para personas mayores, para quien lee mucho tiempo seguido "
+   "y para biblias de púlpito.",
+   [("¿Cuánto más grande es la letra?","Estas ediciones suelen usar entre 11 y 14 puntos, frente a los 7-8 puntos de una biblia compacta. Antes de comprar te confirmamos el tamaño exacto de la edición disponible."),
+    ("¿Pesa mucho más?","Sí: más tamaño de letra significa más páginas. Es una biblia pensada para la mesa de noche, el escritorio o el púlpito, no para llevar en el bolso.")]),
+}
+
+# Páginas huérfanas de versiones anteriores del sitio → redirección 301 (vía meta refresh
+# + canonical, que es lo máximo que permite GitHub Pages en un sitio estático).
+REDIRECCIONES = {
+ "producto/biblia-pareja.html": "/producto/biblia-pareja-grabada.html",
+ "producto/collar-cruz.html":   "/producto/collar-cruz-acero.html",
+}
+
+BLOG = [
+ ("que-regalar-a-un-pastor","Qué regalar a un pastor: 15 ideas con significado","regalos para pastores","regalos-para-pastores",
+  "Honrar a quien te pastorea es bíblico: <b>“Los ancianos que gobiernan bien, sean tenidos por dignos de doble honor”</b> (1 Timoteo 5:17). Un buen regalo para un pastor no tiene que ser costoso, tiene que ser <b>significativo</b>.<br><br>Aquí 15 ideas que sí bendicen: 1) una <b>biblia de estudio con su nombre grabado</b> en cuero; 2) una pluma fina para sus notas y sermones; 3) una placa de madera con su versículo favorito; 4) un kit devocional completo; 5) un cuadro para su oficina; 6) un llavero grabado con la fecha de su aniversario ministerial; 7) una taza personalizada; 8) un set de marcalibros dorados; 9) un devocional para líderes; 10) una agenda con su nombre; 11) una biblia de púlpito letra grande; 12) un cuadro con Salmo 23; 13) una cruz de pared; 14) un vale para su esposa también (¡no la olvides!); 15) una tarjeta escrita a mano con un versículo.<br><br>El detalle que más marca: la <b>personalización</b>. Un objeto con su nombre y una palabra de Dios se convierte en un recuerdo para toda la vida."),
+ ("versiculos-para-regalar","30 versículos para regalar y grabar en un detalle","versículos para regalar","regalos",
+  "Un versículo bien elegido acompaña toda la vida. Estos son ideales para grabar en una biblia, taza, cuadro o joya, según la ocasión:<br><br><b>Para dar ánimo:</b> Filipenses 4:13, Isaías 41:10, Josué 1:9, Salmo 46:1, 2 Timoteo 1:7.<br><b>Para bodas:</b> Génesis 2:24, Eclesiastés 4:12, 1 Corintios 13:4-7, Rut 1:16.<br><b>Para bautizos y niños:</b> Proverbios 22:6, Salmo 127:3, 1 Samuel 1:27.<br><b>Para agradecer:</b> 1 Tesalonicenses 5:18, Salmo 100:4, Colosenses 3:17.<br><b>Para el futuro:</b> Jeremías 29:11, Proverbios 3:5-6, Romanos 8:28, Salmo 37:4.<br><b>Para mujeres:</b> Proverbios 31:25, Salmo 46:5, Proverbios 31:30.<br><br>Consejo: elige un versículo que conecte con la historia de la persona. Ese detalle personal es lo que lo vuelve inolvidable."),
+ ("como-elegir-biblia","¿Qué biblia comprar? Guía RVR1960, NVI y NTV","qué biblia comprar","biblias",
+  "Elegir una biblia depende de qué buscas. Aquí la guía rápida de las versiones más usadas en español:<br><br><b>Reina-Valera 1960 (RVR1960):</b> la más tradicional y amada del mundo hispano. Lenguaje clásico y reverente. Ideal si creciste con ella o para regalar algo atemporal.<br><b>Nueva Versión Internacional (NVI):</b> equilibra fidelidad al original con lectura clara y moderna. Excelente para estudio y para todas las edades.<br><b>Nueva Traducción Viviente (NTV):</b> la más fácil de leer y entender. Perfecta para nuevos creyentes, jóvenes y para quienes quieren una lectura fluida.<br><br><b>¿De estudio o de lectura?</b> Si quieres profundizar, una <b>biblia de estudio</b> trae notas, mapas y concordancia. Si es para leer devocionalmente, una de lectura con letra cómoda basta.<br><br>Y si es un regalo: una <b>biblia personalizada con el nombre grabado</b> convierte cualquier versión en un tesoro para toda la vida."),
+ ("regalos-para-mujer-cristiana","Los mejores regalos para una mujer cristiana","regalos para mujer cristiana","regalos-cristianos-para-mujer",
+  "La mujer de fe atesora lo que la acerca a Dios. <b>“Engañosa es la gracia, y vana la hermosura; la mujer que teme a Jehová, ésa será alabada”</b> (Proverbios 31:30).<br><br>Los regalos que más aman: 1) una <b>biblia para mujer</b> con devocionales; 2) un devocional diario femenino; 3) joyería con cruz (collar, anillo o pulsera); 4) una taza con su versículo; 5) un cuadro con Proverbios 31; 6) una agenda devocional; 7) una vela con versículo para su tiempo de oración; 8) un kit completo “Mujer de Dios”.<br><br>Para el Día de la Madre, un cumpleaños o solo para bendecir: lo que hace especial el regalo es que hable a su corazón y a su fe. La personalización con su nombre lo eleva aún más."),
+ ("significado-nombres-biblicos","El significado de 20 nombres bíblicos hermosos","significado de nombres bíblicos","biblias-personalizadas",
+  "Los nombres bíblicos cargan bendición y son perfectos para grabar en una biblia personalizada:<br><br><b>Ana</b> (gracia) · <b>David</b> (amado) · <b>Samuel</b> (Dios escucha) · <b>Sara</b> (princesa) · <b>Josué</b> (Dios salva) · <b>Débora</b> (abeja) · <b>Rut</b> (amiga, compañera) · <b>Daniel</b> (Dios es mi juez) · <b>Ester</b> (estrella) · <b>Elías</b> (mi Dios es Jehová) · <b>Noemí</b> (dulzura) · <b>Gabriel</b> (fortaleza de Dios) · <b>Raquel</b> (oveja) · <b>Isaac</b> (risa) · <b>Lea</b> (fatigada, tierna) · <b>Josías</b> (Jehová sana) · <b>Abigail</b> (alegría del padre) · <b>Miqueas</b> (¿quién como Dios?) · <b>Priscila</b> (antigua, venerable) · <b>Timoteo</b> (honra a Dios).<br><br>Grabar el nombre en la biblia no es solo marcar propiedad: es recordar que Dios llama a cada persona por su nombre."),
+ ("ideas-regalos-bautizo","Ideas de regalos para un bautizo cristiano","regalos para bautizo","regalos-bautizo",
+  "El bautizo marca una decisión eterna y merece un regalo que dure. <b>“Arrepentíos, y bautícese cada uno de vosotros”</b> (Hechos 2:38).<br><br>Los regalos que dejan huella: 1) una <b>biblia con nombre y fecha de bautizo</b> grabados; 2) una cruz (collar o de pared); 3) un cuadro con el versículo del día; 4) un kit de bautizo; 5) un devocional para comenzar el caminar; 6) una placa recordatoria; 7) una tarjeta con una bendición escrita.<br><br>Lo más valorado es lo personalizado: que el regalo tenga el nombre y la fecha convierte el bautizo en un recuerdo tangible para toda la vida."),
+ ("devocional-del-dia","Devocional del día: empieza tu mañana con Dios","devocional del día","devocionales",
+  "Comenzar el día con la Palabra cambia todo. <b>“De mañana hazme oír tu misericordia, porque en ti he confiado”</b> (Salmo 143:8).<br><br>Un devocional diario te da tres cosas cada mañana: una <b>pausa</b> para respirar en Dios, una <b>promesa</b> para sostener tu día, y una <b>oración</b> para entregarle lo que viene.<br><br>Cómo crear el hábito: 1) elige una hora fija (la mañana es ideal); 2) ten tu biblia y devocional en un lugar visible; 3) empieza con 5 minutos, no te exijas más; 4) anota una frase que te hable; 5) ora con tus propias palabras. En 21 días se vuelve costumbre.<br><br>Los devocionales más amados en español: “Jesús te llama”, devocionales diarios para mujeres y hombres, y planes de un año. Un buen devocional es también el regalo perfecto para animar a alguien a acercarse a Dios."),
+ ("regalos-cristianos-economicos","10 regalos cristianos económicos que encantan","regalos cristianos economicos","regalos",
+  "No necesitas gastar mucho para bendecir. Con menos de $40.000 puedes dar algo que toque el corazón:<br><br>1) Una <b>taza con versículo</b> personalizada; 2) un <b>llavero con cruz</b> grabada con el nombre; 3) un set de marcalibros dorados; 4) una vela con versículo; 5) una pulsera de fe; 6) unos aretes con cruz; 7) una tarjeta con una bendición; 8) un dije pez cristiano; 9) un cuaderno de oración; 10) una lámina con el Salmo 23 lista para enmarcar.<br><br>El secreto no es el precio, es la intención. Un pequeño detalle con una palabra de Dios y el nombre de la persona vale más que muchos regalos caros. Perfecto para amor y amistad, cumpleaños, o solo para decir “estoy orando por ti”."),
+ ("regalos-dia-del-padre-cristiano","Regalos para el Día del Padre cristiano","regalos dia del padre cristiano","regalos-dia-del-padre",
+  "Honra a papá con un regalo que fortalezca su fe y su liderazgo. <b>“Instruye al niño en su camino”</b> (Proverbios 22:6) — muchos lo aprendimos de nuestro padre.<br><br>Ideas que le encantarán: 1) una <b>biblia para hombre</b> con estudios de liderazgo; 2) una biblia con su nombre grabado; 3) un devocional para hombres; 4) una camiseta o gorra con diseño de fe; 5) un llavero grabado; 6) una placa “Esta casa sirve al Señor”; 7) un kit “Hombre de Dios”.<br><br>Al padre creyente lo que más lo marca es saber que su familia valora su fe. Un regalo con propósito se lo recuerda cada día."),
+ ("regalos-boda-cristiana-ideas","Los mejores regalos para una boda cristiana","regalos boda cristiana","regalos-boda-cristiana",
+  "Bendecir un nuevo hogar es sembrar en su futuro. <b>“Cordón de tres dobleces no se rompe pronto”</b> (Eclesiastés 4:12) — Dios en el centro del matrimonio.<br><br>Regalos que los novios atesoran: 1) una <b>biblia de pareja con sus nombres y la fecha</b> grabados; 2) un cuadro con su versículo de bodas; 3) un devocional para parejas; 4) una placa para su hogar; 5) copas o un detalle para su primer hogar; 6) un kit para novia cristiana.<br><br>El regalo perfecto para una boda cristiana no es el más caro, es el que les recuerda cada día que su amor está fundado en Cristo."),
+]

@@ -63,6 +63,11 @@ section{padding:64px 0}
 .card{background:#fff;border:1px solid var(--linea);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.28s}
 .card:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .card .ph{aspect-ratio:1;position:relative;overflow:hidden;background:linear-gradient(150deg,#fff 0,var(--crema2) 60%,#efe4cf 100%);display:flex;align-items:center;justify-content:center}
+.card .ph img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .35s}
+.card:hover .ph img{transform:scale(1.05)}
+.pdp .ph img{width:100%;height:100%;object-fit:contain;padding:22px}
+/* el medallon de marca solo va sobre el marcador, no encima de una foto real */
+.card .ph:has(img):after,.pdp .ph:has(img):after{display:none}
 .card .ph .ic{font-size:3.2rem;filter:drop-shadow(0 6px 14px rgba(0,0,0,.12));transition:.35s}
 .card:hover .ph .ic{transform:scale(1.08) rotate(-2deg)}
 .card .ph:after{content:"";position:absolute;bottom:14px;right:14px;width:34px;height:34px;background:url(/img/logo-medallon.png) center/contain no-repeat;opacity:.22}
@@ -198,7 +203,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 </script></head><body class="">
 <div class="anun">✦ Envíos a toda <b>Colombia</b> y al <b>mundo</b> · Personalización con tu nombre grabado<span class="solodesk"> · Atención por WhatsApp con <b>Johana Heredia</b></span></div><header><div class="wrap hd">
 <a href="/" class="logo"><img src="/img/logo-medallon.png" alt="Luz y Gracia" width="110" height="54" fetchpriority="high" decoding="async" style="height:54px;width:auto"><span class="notranslate">Luz <b>y</b> Gracia</span></a>
-<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/blog.html">Devocional</a></nav>
+<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/blog.html">Devocional</a></nav>
 <div class="hdr">
 <button class="cartbtn" onclick="openCart()">🛒 Carrito <b id="cc">0</b></button>
 </div></div></header>
@@ -207,25 +212,62 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <h1 style="color:#fff;font-size:2.1rem;margin:6px 0 10px">Devocionales y libros</h1>
 <p style="color:#d9dcea;max-width:660px">Devocionales diarios y lecturas para mujeres, hombres, parejas, jóvenes y niños.</p></div></section>
 
-<section><div class="wrap"><h2 class="h2c">Devocionales y libros: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/devocional-diario-mujer.html"><div class="ph"><span class="ic">🕊️</span></div></a>
-<div class="bd"><a href="/producto/devocional-diario-mujer.html"><h3>Devocional diario para mujeres (365 días)</h3></a>
-<div class="pr">$55.000</div>
-<button class="add" onclick='add("devocional-diario-mujer","Devocional diario para mujeres (365 d\u00edas)",55000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/devocional-hombre.html"><div class="ph"><span class="ic">🕊️</span></div></a>
-<div class="bd"><a href="/producto/devocional-hombre.html"><h3>Devocional para hombres</h3></a>
-<div class="pr">$52.000</div>
-<button class="add" onclick='add("devocional-hombre","Devocional para hombres",52000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/devocional-pareja.html"><div class="ph"><span class="ic">🕊️</span></div></a>
-<div class="bd"><a href="/producto/devocional-pareja.html"><h3>Devocional para parejas</h3></a>
-<div class="pr">$58.000</div>
-<button class="add" onclick='add("devocional-pareja","Devocional para parejas",58000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/devocional-jovenes.html"><div class="ph"><span class="ic">🕊️</span></div></a>
-<div class="bd"><a href="/producto/devocional-jovenes.html"><h3>Devocional para jóvenes</h3></a>
-<div class="pr">$48.000</div>
-<button class="add" onclick='add("devocional-jovenes","Devocional para j\u00f3venes",48000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/jesus-te-llama.html"><div class="ph"><span class="ic">🕊️</span></div></a>
-<div class="bd"><a href="/producto/jesus-te-llama.html"><h3>Jesús te llama (devocional)</h3></a>
-<div class="pr">$62.000</div>
-<button class="add" onclick='add("jesus-te-llama","Jes\u00fas te llama (devocional)",62000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/un-ano-con-dios.html"><div class="ph"><span class="ic">🕊️</span></div></a>
-<div class="bd"><a href="/producto/un-ano-con-dios.html"><h3>Un año con Dios</h3></a>
-<div class="pr">$59.000</div>
-<button class="add" onclick='add("un-ano-con-dios","Un a\u00f1o con Dios",59000)'>🛒 Añadir</button></div></div></div></div></section>
+
+<section><div class="wrap"><h2 class='h2c'>Devocionales y libros: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/a-sus-pies-meditaciones-diarias-con-jesus.html"><div class="ph"><img src="/img/p/a-sus-pies-meditaciones-diarias-con-jesus.webp" alt="A Sus Pies Meditaciones Diarias Con Jesus" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/a-sus-pies-meditaciones-diarias-con-jesus.html"><h3>A Sus Pies Meditaciones Diarias Con Jesus</h3></a>
+<div class="pr">$41.800</div>
+<button class="add" onclick='add("a-sus-pies-meditaciones-diarias-con-jesus","A Sus Pies Meditaciones Diarias Con Jesus",41800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/truth-365-devocionales-para-adolescentes.html"><div class="ph"><img src="/img/p/truth-365-devocionales-para-adolescentes.webp" alt="#Truth 365 Devocionales Para Adolescentes" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/truth-365-devocionales-para-adolescentes.html"><h3>#Truth 365 Devocionales Para Adolescentes</h3></a>
+<div class="pr">$37.700</div>
+<button class="add" onclick='add("truth-365-devocionales-para-adolescentes","#Truth 365 Devocionales Para Adolescentes",37700)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/oraciones-por-mi-bebita-tapa-dura.html"><div class="ph"><img src="/img/p/oraciones-por-mi-bebita-tapa-dura.webp" alt="Oraciones Por Mi Bebita Tapa Dura" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/oraciones-por-mi-bebita-tapa-dura.html"><h3>Oraciones Por Mi Bebita Tapa Dura</h3></a>
+<div class="pr">$49.900</div>
+<button class="add" onclick='add("oraciones-por-mi-bebita-tapa-dura","Oraciones Por Mi Bebita Tapa Dura",49900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/tu-oracion-victoria-cada-dia.html"><div class="ph"><img src="/img/p/tu-oracion-victoria-cada-dia.webp" alt="Tu Oracion Victoria Cada Dia" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/tu-oracion-victoria-cada-dia.html"><h3>Tu Oracion Victoria Cada Dia</h3></a>
+<div class="pr">$14.000</div>
+<button class="add" onclick='add("tu-oracion-victoria-cada-dia","Tu Oracion Victoria Cada Dia",14000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/tu-oracion-diaria.html"><div class="ph"><img src="/img/p/tu-oracion-diaria.webp" alt="Tu Oracion Diaria" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/tu-oracion-diaria.html"><h3>Tu Oracion Diaria</h3></a>
+<div class="pr">$14.000</div>
+<button class="add" onclick='add("tu-oracion-diaria","Tu Oracion Diaria",14000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/secretos-de-la-oracion-y-la-intercesion.html"><div class="ph"><img src="/img/p/secretos-de-la-oracion-y-la-intercesion.webp" alt="Secretos De La Oracion Y La Intercesion" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/secretos-de-la-oracion-y-la-intercesion.html"><h3>Secretos De La Oracion Y La Intercesion</h3></a>
+<div class="pr">$33.900</div>
+<button class="add" onclick='add("secretos-de-la-oracion-y-la-intercesion","Secretos De La Oracion Y La Intercesion",33900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/clama-a-mi-acercate-al-dios-que-escucha-y-responde-tus-oraci.html"><div class="ph"><img src="/img/p/clama-a-mi-acercate-al-dios-que-escucha-y-responde-tus-oraci.webp" alt="Clama A Mi Acercate Al Dios Que Escucha Y Responde Tus Oraciones" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/clama-a-mi-acercate-al-dios-que-escucha-y-responde-tus-oraci.html"><h3>Clama A Mi Acercate Al Dios Que Escucha Y Responde Tus Oraciones</h3></a>
+<div class="pr">$70.400</div>
+<button class="add" onclick='add("clama-a-mi-acercate-al-dios-que-escucha-y-responde-tus-oraci","Clama A Mi Acercate Al Dios Que Escucha Y Responde Tus Oraciones",70400)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/un-ano-con-dios-365-devocionales-para-la-mujer.html"><div class="ph"><img src="/img/p/un-ano-con-dios-365-devocionales-para-la-mujer.webp" alt="Un Año Con Dios 365 Devocionales Para La Mujer" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/un-ano-con-dios-365-devocionales-para-la-mujer.html"><h3>Un Año Con Dios 365 Devocionales Para La Mujer</h3></a>
+<div class="pr">$73.100</div>
+<button class="add" onclick='add("un-ano-con-dios-365-devocionales-para-la-mujer","Un A\u00f1o Con Dios 365 Devocionales Para La Mujer",73100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/poder-de-la-mujer-que-ora-libro-de-oraciones-bolsilibro.html"><div class="ph"><img src="/img/p/poder-de-la-mujer-que-ora-libro-de-oraciones-bolsilibro.webp" alt="Poder De La Mujer Que Ora Libro De Oraciones Bolsilibro" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/poder-de-la-mujer-que-ora-libro-de-oraciones-bolsilibro.html"><h3>Poder De La Mujer Que Ora Libro De Oraciones Bolsilibro</h3></a>
+<div class="pr">$34.500</div>
+<button class="add" onclick='add("poder-de-la-mujer-que-ora-libro-de-oraciones-bolsilibro","Poder De La Mujer Que Ora Libro De Oraciones Bolsilibro",34500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/tu-oracion-victoria-jovencitas.html"><div class="ph"><img src="/img/p/tu-oracion-victoria-jovencitas.webp" alt="Tu Oracion Victoria Jovencitas" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/tu-oracion-victoria-jovencitas.html"><h3>Tu Oracion Victoria Jovencitas</h3></a>
+<div class="pr">$14.000</div>
+<button class="add" onclick='add("tu-oracion-victoria-jovencitas","Tu Oracion Victoria Jovencitas",14000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/desafio-del-amor-para-cada-dia-devocionales-diarios-para-par.html"><div class="ph"><img src="/img/p/desafio-del-amor-para-cada-dia-devocionales-diarios-para-par.webp" alt="Desafio Del Amor Para Cada Dia Devocionales Diarios Para Parejas" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/desafio-del-amor-para-cada-dia-devocionales-diarios-para-par.html"><h3>Desafio Del Amor Para Cada Dia Devocionales Diarios Para Parejas</h3></a>
+<div class="pr">$70.400</div>
+<button class="add" onclick='add("desafio-del-amor-para-cada-dia-devocionales-diarios-para-par","Desafio Del Amor Para Cada Dia Devocionales Diarios Para Parejas",70400)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/oraciones-poder-hombres-victoriosos.html"><div class="ph"><img src="/img/p/oraciones-poder-hombres-victoriosos.webp" alt="Oraciones Poder Hombres Victoriosos" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/oraciones-poder-hombres-victoriosos.html"><h3>Oraciones Poder Hombres Victoriosos</h3></a>
+<div class="pr">$14.000</div>
+<button class="add" onclick='add("oraciones-poder-hombres-victoriosos","Oraciones Poder Hombres Victoriosos",14000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/devocional-angelitos-mdd.html"><div class="ph"><img src="/img/p/devocional-angelitos-mdd.webp" alt="Devocional Angelitos MDD" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/devocional-angelitos-mdd.html"><h3>Devocional Angelitos MDD</h3></a>
+<div class="pr">$17.100</div>
+<button class="add" onclick='add("devocional-angelitos-mdd","Devocional Angelitos MDD",17100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/un-ano-en-sus-caminos-365-devocionales-para-crecer-en-sabidu.html"><div class="ph"><img src="/img/p/un-ano-en-sus-caminos-365-devocionales-para-crecer-en-sabidu.webp" alt="Un Año En Sus Caminos 365 Devocionales Para Crecer En Sabiduria" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/un-ano-en-sus-caminos-365-devocionales-para-crecer-en-sabidu.html"><h3>Un Año En Sus Caminos 365 Devocionales Para Crecer En Sabiduria</h3></a>
+<div class="pr">$79.200</div>
+<button class="add" onclick='add("un-ano-en-sus-caminos-365-devocionales-para-crecer-en-sabidu","Un A\u00f1o En Sus Caminos 365 Devocionales Para Crecer En Sabiduria",79200)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/sopa-de-letras-devocional-de-manana-y-tarde-para-paz-y-biene.html"><div class="ph"><img src="/img/p/sopa-de-letras-devocional-de-manana-y-tarde-para-paz-y-biene.webp" alt="Sopa De Letras Devocional De Mañana Y Tarde Para Paz Y Bienestar Letra Grande" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/sopa-de-letras-devocional-de-manana-y-tarde-para-paz-y-biene.html"><h3>Sopa De Letras Devocional De Mañana Y Tarde Para Paz Y Bienestar Letra Grande</h3></a>
+<div class="pr">$65.000</div>
+<button class="add" onclick='add("sopa-de-letras-devocional-de-manana-y-tarde-para-paz-y-biene","Sopa De Letras Devocional De Ma\u00f1ana Y Tarde Para Paz Y Bienestar Letra Grande",65000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr056czlg-gris-negro-canto-plateado-oraciones.html"><div class="ph"><img src="/img/p/biblia-rvr056czlg-gris-negro-canto-plateado-oraciones.webp" alt="Biblia RVR056cZLG Gris Negro Canto Plateado Oraciones" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-rvr056czlg-gris-negro-canto-plateado-oraciones.html"><h3>Biblia RVR056cZLG Gris Negro Canto Plateado Oraciones</h3></a>
+<div class="pr">$139.000</div>
+<button class="add" onclick='add("biblia-rvr056czlg-gris-negro-canto-plateado-oraciones","Biblia RVR056cZLG Gris Negro Canto Plateado Oraciones",139000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/un-ano-de-esperanza-365-devocionales-para-animar-tu-alma.html"><div class="ph"><img src="/img/p/un-ano-de-esperanza-365-devocionales-para-animar-tu-alma.webp" alt="Un Año De Esperanza 365 Devocionales Para Animar Tu Alma" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/un-ano-de-esperanza-365-devocionales-para-animar-tu-alma.html"><h3>Un Año De Esperanza 365 Devocionales Para Animar Tu Alma</h3></a>
+<div class="pr">$79.200</div>
+<button class="add" onclick='add("un-ano-de-esperanza-365-devocionales-para-animar-tu-alma","Un A\u00f1o De Esperanza 365 Devocionales Para Animar Tu Alma",79200)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/poder-de-la-oracion-por-tus-hijos-adultos-bolsillo.html"><div class="ph"><img src="/img/p/poder-de-la-oracion-por-tus-hijos-adultos-bolsillo.webp" alt="Poder De La Oracion Por Tus Hijos Adultos Bolsillo" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/poder-de-la-oracion-por-tus-hijos-adultos-bolsillo.html"><h3>Poder De La Oracion Por Tus Hijos Adultos Bolsillo</h3></a>
+<div class="pr">$33.100</div>
+<button class="add" onclick='add("poder-de-la-oracion-por-tus-hijos-adultos-bolsillo","Poder De La Oracion Por Tus Hijos Adultos Bolsillo",33100)'>🛒 Añadir</button></div></div></div></div></section>
 <section><div class="wrap" style="max-width:780px"><h2 class="h2c" style="font-size:1.5rem">Guías que te ayudan a elegir</h2><ul style="margin:18px 0 0 20px;line-height:2.1"><li><a href="/blog/devocional-del-dia.html" style="color:var(--oro);font-weight:600">Devocional del día: empieza tu mañana con Dios</a></li></ul></div></section>
 <section style="background:var(--crema2)"><div class="wrap" style="max-width:780px">
 <h2 class="h2c">Preguntas frecuentes</h2><div style="margin-top:24px"><details><summary>¿Hacen envíos de devocionales y libros a toda Colombia y al exterior?</summary><p>Sí, enviamos a todo el país y también a EE.UU., España, México y toda Latinoamérica. Coordinamos todo por WhatsApp con Johana.</p></details><details><summary>¿Puedo personalizar con un nombre, fecha o versículo?</summary><p>¡Claro! Muchos productos se personalizan. Te enviamos un preview del grabado antes de imprimir.</p></details><details><summary>¿Puedo pagar contraentrega?</summary><p>Sí. Enviamos por Inter Rapidísimo con pago contraentrega en 1.013 municipios de Colombia: le pagas al mensajero cuando recibes. Los productos con grabado personalizado piden un anticipo, porque no se pueden revender si se rechaza el paquete.</p></details><details><summary>¿Cómo compro y cómo pago?</summary><p>Añade al carrito y finaliza por WhatsApp. Pagas contraentrega al recibir, o por transferencia o Nequi si lo prefieres.</p></details></div></div></section>
@@ -233,7 +275,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <div class="fgrid">
 <div><h3 class="notranslate">Luz y Gracia</h3><p style="color:#b8bcd0;font-size:.9rem">Regalos y productos cristianos que iluminan la fe. Envíos a toda Colombia y al mundo.</p>
 <p style="margin-top:12px"><a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--wa);font-weight:700">💬 WhatsApp con Johana: 312 629 5392</a></p></div>
-<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/decoracion.html">Decoración del hogar</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a><a href="/kits.html">Kits y cajas de regalo</a></div>
+<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a></div>
 <div><h3>Ocasiones</h3><a href="/regalos-para-pastores.html">Regalos para pastores</a><a href="/regalos-bautizo.html">Regalos de bautizo</a><a href="/regalos-primera-comunion.html">Primera comunión</a><a href="/regalos-boda-cristiana.html">Bodas cristianas</a><a href="/regalos-dia-de-la-madre.html">Día de la madre cristiana</a><a href="/regalos-dia-del-padre.html">Día del padre cristiano</a><a href="/regalos-quinceanos.html">Quinceaños cristianos</a><a href="/regalos-navidad.html">Navidad cristiana</a><a href="/kit-devocional.html">Kits devocionales</a></div>
 <div><h3>Ayuda</h3><a href="/personalizacion.html">Cómo personalizar</a><a href="/envios.html">Envíos y pagos</a><a href="/nosotros.html">Nosotros</a><a href="/blog.html">Devocional</a></div>
 </div>

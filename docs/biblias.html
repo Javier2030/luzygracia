@@ -63,6 +63,11 @@ section{padding:64px 0}
 .card{background:#fff;border:1px solid var(--linea);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.28s}
 .card:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .card .ph{aspect-ratio:1;position:relative;overflow:hidden;background:linear-gradient(150deg,#fff 0,var(--crema2) 60%,#efe4cf 100%);display:flex;align-items:center;justify-content:center}
+.card .ph img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .35s}
+.card:hover .ph img{transform:scale(1.05)}
+.pdp .ph img{width:100%;height:100%;object-fit:contain;padding:22px}
+/* el medallon de marca solo va sobre el marcador, no encima de una foto real */
+.card .ph:has(img):after,.pdp .ph:has(img):after{display:none}
 .card .ph .ic{font-size:3.2rem;filter:drop-shadow(0 6px 14px rgba(0,0,0,.12));transition:.35s}
 .card:hover .ph .ic{transform:scale(1.08) rotate(-2deg)}
 .card .ph:after{content:"";position:absolute;bottom:14px;right:14px;width:34px;height:34px;background:url(/img/logo-medallon.png) center/contain no-repeat;opacity:.22}
@@ -198,7 +203,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 </script></head><body class="">
 <div class="anun">✦ Envíos a toda <b>Colombia</b> y al <b>mundo</b> · Personalización con tu nombre grabado<span class="solodesk"> · Atención por WhatsApp con <b>Johana Heredia</b></span></div><header><div class="wrap hd">
 <a href="/" class="logo"><img src="/img/logo-medallon.png" alt="Luz y Gracia" width="110" height="54" fetchpriority="high" decoding="async" style="height:54px;width:auto"><span class="notranslate">Luz <b>y</b> Gracia</span></a>
-<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/blog.html">Devocional</a></nav>
+<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/blog.html">Devocional</a></nav>
 <div class="hdr">
 <button class="cartbtn" onclick="openCart()">🛒 Carrito <b id="cc">0</b></button>
 </div></div></header>
@@ -207,31 +212,98 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <h1 style="color:#fff;font-size:2.1rem;margin:6px 0 10px">Biblias</h1>
 <p style="color:#d9dcea;max-width:660px">Biblias RVR1960, NVI, NTV, de estudio, de promesas e infantiles. La Palabra en la versión que amas.</p></div></section>
 
-<section><div class="wrap"><h2 class="h2c">Biblias: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/biblia-estudio-rvr60.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-estudio-rvr60.html"><h3>Biblia de Estudio RVR1960</h3></a>
-<div class="pr">$129.000</div>
-<button class="add" onclick='add("biblia-estudio-rvr60","Biblia de Estudio RVR1960",129000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr1960-tapa-dura.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-rvr1960-tapa-dura.html"><h3>Biblia RVR1960 tapa dura</h3></a>
-<div class="pr">$69.000</div>
-<button class="add" onclick='add("biblia-rvr1960-tapa-dura","Biblia RVR1960 tapa dura",69000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nvi-clasica.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-nvi-clasica.html"><h3>Biblia NVI clásica</h3></a>
-<div class="pr">$75.000</div>
-<button class="add" onclick='add("biblia-nvi-clasica","Biblia NVI cl\u00e1sica",75000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-ntv-lectura.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-ntv-lectura.html"><h3>Biblia NTV lectura fácil</h3></a>
-<div class="pr">$79.000</div>
-<button class="add" onclick='add("biblia-ntv-lectura","Biblia NTV lectura f\u00e1cil",79000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-mujer.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-mujer.html"><h3>Biblia para Mujer</h3></a>
-<div class="pr">$99.000</div>
-<button class="add" onclick='add("biblia-mujer","Biblia para Mujer",99000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-hombre.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-hombre.html"><h3>Biblia para Hombre</h3></a>
-<div class="pr">$99.000</div>
-<button class="add" onclick='add("biblia-hombre","Biblia para Hombre",99000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-promesas.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-promesas.html"><h3>Biblia de Promesas</h3></a>
-<div class="pr">$89.000</div>
-<button class="add" onclick='add("biblia-promesas","Biblia de Promesas",89000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-letra-grande.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-letra-grande.html"><h3>Biblia letra grande RVR1960</h3></a>
-<div class="pr">$95.000</div>
-<button class="add" onclick='add("biblia-letra-grande","Biblia letra grande RVR1960",95000)'>🛒 Añadir</button></div></div></div></div></section>
+
+<section><div class="wrap"><h2 class='h2c'>Biblias: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/biblia-economica-ntv-edicion-semillas-nueva-azul-rustica.html"><div class="ph"><img src="/img/p/biblia-economica-ntv-edicion-semillas-nueva-azul-rustica.webp" alt="Biblia Economica NTV Edicion Semillas Nueva Azul Rustica" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-economica-ntv-edicion-semillas-nueva-azul-rustica.html"><h3>Biblia Economica NTV Edicion Semillas Nueva Azul Rustica</h3></a>
+<div class="pr">$16.500</div>
+<button class="add" onclick='add("biblia-economica-ntv-edicion-semillas-nueva-azul-rustica","Biblia Economica NTV Edicion Semillas Nueva Azul Rustica",16500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr060e-misionera-nuevo-creyente-azul-rosada.html"><div class="ph"><img src="/img/p/biblia-rvr060e-misionera-nuevo-creyente-azul-rosada.webp" alt="Biblia RVR060e Misionera Nuevo Creyente Azul-Rosada" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-rvr060e-misionera-nuevo-creyente-azul-rosada.html"><h3>Biblia RVR060e Misionera Nuevo Creyente Azul-Rosada</h3></a>
+<div class="pr">$15.500</div>
+<button class="add" onclick='add("biblia-rvr060e-misionera-nuevo-creyente-azul-rosada","Biblia RVR060e Misionera Nuevo Creyente Azul-Rosada",15500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-thompson-edicion-milenio-tapa-dura.html"><div class="ph"><img src="/img/p/biblia-thompson-edicion-milenio-tapa-dura.webp" alt="Biblia Thompson Edicion Milenio Tapa Dura" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-thompson-edicion-milenio-tapa-dura.html"><h3>Biblia Thompson Edicion Milenio Tapa Dura</h3></a>
+<div class="pr">$238.900</div>
+<button class="add" onclick='add("biblia-thompson-edicion-milenio-tapa-dura","Biblia Thompson Edicion Milenio Tapa Dura",238900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nvi-revision-2022-artistica-tapa-dura-canto-diseno-pj.html"><div class="ph"><img src="/img/p/biblia-nvi-revision-2022-artistica-tapa-dura-canto-diseno-pj.webp" alt="Biblia NVI Revision 2022 Artistica Tapa Dura Canto Diseño PJR" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-nvi-revision-2022-artistica-tapa-dura-canto-diseno-pj.html"><h3>Biblia NVI Revision 2022 Artistica Tapa Dura Canto Diseño PJR</h3></a>
+<div class="pr">$180.000</div>
+<button class="add" onclick='add("biblia-nvi-revision-2022-artistica-tapa-dura-canto-diseno-pj","Biblia NVI Revision 2022 Artistica Tapa Dura Canto Dise\u00f1o PJR",180000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr60-misionera-flores-blanco.html"><div class="ph"><img src="/img/p/biblia-rvr60-misionera-flores-blanco.webp" alt="Biblia RVR60 Misionera Flores Blanco" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-rvr60-misionera-flores-blanco.html"><h3>Biblia RVR60 Misionera Flores Blanco</h3></a>
+<div class="pr">$15.500</div>
+<button class="add" onclick='add("biblia-rvr60-misionera-flores-blanco","Biblia RVR60 Misionera Flores Blanco",15500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/22-llaves-para-abrir-la-biblia.html"><div class="ph"><img src="/img/p/22-llaves-para-abrir-la-biblia.webp" alt="22 Llaves Para Abrir La Biblia" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/22-llaves-para-abrir-la-biblia.html"><h3>22 Llaves Para Abrir La Biblia</h3></a>
+<div class="pr">$26.700</div>
+<button class="add" onclick='add("22-llaves-para-abrir-la-biblia","22 Llaves Para Abrir La Biblia",26700)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr60-l-g-bronce-td-leon-de-juda-ed-especial.html"><div class="ph"><img src="/img/p/biblia-rvr60-l-g-bronce-td-leon-de-juda-ed-especial.webp" alt="Biblia RVR60 L.G Bronce TD Leon de Juda Ed. Especial" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-rvr60-l-g-bronce-td-leon-de-juda-ed-especial.html"><h3>Biblia RVR60 L.G Bronce TD Leon de Juda Ed. Especial</h3></a>
+<div class="pr">$154.800</div>
+<button class="add" onclick='add("biblia-rvr60-l-g-bronce-td-leon-de-juda-ed-especial","Biblia RVR60 L.G Bronce TD Leon de Juda Ed. Especial",154800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-bilingue-rvr-nkjv-tapa-dura.html"><div class="ph"><img src="/img/p/biblia-bilingue-rvr-nkjv-tapa-dura.webp" alt="Biblia Bilingue RVR-NKJV Tapa Dura" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-bilingue-rvr-nkjv-tapa-dura.html"><h3>Biblia Bilingue RVR-NKJV Tapa Dura</h3></a>
+<div class="pr">$154.000</div>
+<button class="add" onclick='add("biblia-bilingue-rvr-nkjv-tapa-dura","Biblia Bilingue RVR-NKJV Tapa Dura",154000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-catolica-preciosos-momentos-catolica-azul-celeste.html"><div class="ph"><img src="/img/p/biblia-catolica-preciosos-momentos-catolica-azul-celeste.webp" alt="Biblia Catolica Preciosos Momentos Catolica Azul Celeste" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-catolica-preciosos-momentos-catolica-azul-celeste.html"><h3>Biblia Catolica Preciosos Momentos Catolica Azul Celeste</h3></a>
+<div class="pr">$230.000</div>
+<button class="add" onclick='add("biblia-catolica-preciosos-momentos-catolica-azul-celeste","Biblia Catolica Preciosos Momentos Catolica Azul Celeste",230000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-tla60ue-misionera-rustica-verde-oscuro.html"><div class="ph"><img src="/img/p/biblia-tla60ue-misionera-rustica-verde-oscuro.webp" alt="Biblia TLA60ue Misionera Rustica Verde Oscuro" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-tla60ue-misionera-rustica-verde-oscuro.html"><h3>Biblia TLA60ue Misionera Rustica Verde Oscuro</h3></a>
+<div class="pr">$15.000</div>
+<button class="add" onclick='add("biblia-tla60ue-misionera-rustica-verde-oscuro","Biblia TLA60ue Misionera Rustica Verde Oscuro",15000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-tla60ue-misionera-rustica-azul-verde.html"><div class="ph"><img src="/img/p/biblia-tla60ue-misionera-rustica-azul-verde.webp" alt="Biblia TLA60ue Misionera Rustica Azul Verde" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-tla60ue-misionera-rustica-azul-verde.html"><h3>Biblia TLA60ue Misionera Rustica Azul Verde</h3></a>
+<div class="pr">$15.000</div>
+<button class="add" onclick='add("biblia-tla60ue-misionera-rustica-azul-verde","Biblia TLA60ue Misionera Rustica Azul Verde",15000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr60-manual-letra-grande-semil-piel-lavanda-indice-c.html"><div class="ph"><img src="/img/p/biblia-rvr60-manual-letra-grande-semil-piel-lavanda-indice-c.webp" alt="Biblia RVR60 Manual Letra Grande Semil Piel Lavanda Indice Cierre" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-rvr60-manual-letra-grande-semil-piel-lavanda-indice-c.html"><h3>Biblia RVR60 Manual Letra Grande Semil Piel Lavanda Indice Cierre</h3></a>
+<div class="pr">$165.500</div>
+<button class="add" onclick='add("biblia-rvr60-manual-letra-grande-semil-piel-lavanda-indice-c","Biblia RVR60 Manual Letra Grande Semil Piel Lavanda Indice Cierre",165500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-tla60ue-misionera-rustica-mujer.html"><div class="ph"><img src="/img/p/biblia-tla60ue-misionera-rustica-mujer.webp" alt="Biblia TLA60ue Misionera Rustica Mujer" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-tla60ue-misionera-rustica-mujer.html"><h3>Biblia TLA60ue Misionera Rustica Mujer</h3></a>
+<div class="pr">$15.000</div>
+<button class="add" onclick='add("biblia-tla60ue-misionera-rustica-mujer","Biblia TLA60ue Misionera Rustica Mujer",15000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-catolica-edicion-economica-td.html"><div class="ph"><img src="/img/p/biblia-catolica-edicion-economica-td.webp" alt="Biblia Catolica Edicion Economica TD" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-catolica-edicion-economica-td.html"><h3>Biblia Catolica Edicion Economica TD</h3></a>
+<div class="pr">$114.500</div>
+<button class="add" onclick='add("biblia-catolica-edicion-economica-td","Biblia Catolica Edicion Economica TD",114500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-para-todas.html"><div class="ph"><img src="/img/p/biblia-para-todas.webp" alt="Biblia Para Todas" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-para-todas.html"><h3>Biblia Para Todas</h3></a>
+<div class="pr">$74.000</div>
+<button class="add" onclick='add("biblia-para-todas","Biblia Para Todas",74000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nvi-texto-revisado-2022-una-columna-con-referencias-p.html"><div class="ph"><img src="/img/p/biblia-nvi-texto-revisado-2022-una-columna-con-referencias-p.webp" alt="Biblia NVI Texto Revisado 2022 Una Columna Con Referencias Piel" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-nvi-texto-revisado-2022-una-columna-con-referencias-p.html"><h3>Biblia NVI Texto Revisado 2022 Una Columna Con Referencias Piel</h3></a>
+<div class="pr">$208.000</div>
+<button class="add" onclick='add("biblia-nvi-texto-revisado-2022-una-columna-con-referencias-p","Biblia NVI Texto Revisado 2022 Una Columna Con Referencias Piel",208000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nvi-revision-2022-tamano-manual-azul-cruz-rustica.html"><div class="ph"><img src="/img/p/biblia-nvi-revision-2022-tamano-manual-azul-cruz-rustica.webp" alt="Biblia NVI Revision 2022 Tamaño Manual Azul Cruz Rustica" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-nvi-revision-2022-tamano-manual-azul-cruz-rustica.html"><h3>Biblia NVI Revision 2022 Tamaño Manual Azul Cruz Rustica</h3></a>
+<div class="pr">$45.500</div>
+<button class="add" onclick='add("biblia-nvi-revision-2022-tamano-manual-azul-cruz-rustica","Biblia NVI Revision 2022 Tama\u00f1o Manual Azul Cruz Rustica",45500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-el-mensaje-td-rosa-floral.html"><div class="ph"><img src="/img/p/biblia-el-mensaje-td-rosa-floral.webp" alt="Biblia El Mensaje TD Rosa Floral" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-el-mensaje-td-rosa-floral.html"><h3>Biblia El Mensaje TD Rosa Floral</h3></a>
+<div class="pr">$109.000</div>
+<button class="add" onclick='add("biblia-el-mensaje-td-rosa-floral","Biblia El Mensaje TD Rosa Floral",109000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-el-mensaje-td-azul.html"><div class="ph"><img src="/img/p/biblia-el-mensaje-td-azul.webp" alt="Biblia El Mensaje TD Azul" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-el-mensaje-td-azul.html"><h3>Biblia El Mensaje TD Azul</h3></a>
+<div class="pr">$109.000</div>
+<button class="add" onclick='add("biblia-el-mensaje-td-azul","Biblia El Mensaje TD Azul",109000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nvi-revision-2022-azul-juvenil-rustica.html"><div class="ph"><img src="/img/p/biblia-nvi-revision-2022-azul-juvenil-rustica.webp" alt="Biblia NVI Revision 2022 Azul Juvenil Rustica" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-nvi-revision-2022-azul-juvenil-rustica.html"><h3>Biblia NVI Revision 2022 Azul Juvenil Rustica</h3></a>
+<div class="pr">$45.500</div>
+<button class="add" onclick='add("biblia-nvi-revision-2022-azul-juvenil-rustica","Biblia NVI Revision 2022 Azul Juvenil Rustica",45500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-inspira-ntv-semipiel-paraiso-floral.html"><div class="ph"><img src="/img/p/biblia-inspira-ntv-semipiel-paraiso-floral.webp" alt="Biblia Inspira NTV Semipiel Paraiso Floral" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-inspira-ntv-semipiel-paraiso-floral.html"><h3>Biblia Inspira NTV Semipiel Paraiso Floral</h3></a>
+<div class="pr">$208.300</div>
+<button class="add" onclick='add("biblia-inspira-ntv-semipiel-paraiso-floral","Biblia Inspira NTV Semipiel Paraiso Floral",208300)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr-de-referencia-thompson-tapa-dura.html"><div class="ph"><img src="/img/p/biblia-rvr-de-referencia-thompson-tapa-dura.webp" alt="Biblia RVR De Referencia Thompson Tapa Dura" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-rvr-de-referencia-thompson-tapa-dura.html"><h3>Biblia RVR De Referencia Thompson Tapa Dura</h3></a>
+<div class="pr">$232.000</div>
+<button class="add" onclick='add("biblia-rvr-de-referencia-thompson-tapa-dura","Biblia RVR De Referencia Thompson Tapa Dura",232000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-inspira-espanol-ntv-dorada-semi-piel-filament.html"><div class="ph"><img src="/img/p/biblia-inspira-espanol-ntv-dorada-semi-piel-filament.webp" alt="Biblia Inspira Español NTV Dorada Semi Piel Filament" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-inspira-espanol-ntv-dorada-semi-piel-filament.html"><h3>Biblia Inspira Español NTV Dorada Semi Piel Filament</h3></a>
+<div class="pr">$208.300</div>
+<button class="add" onclick='add("biblia-inspira-espanol-ntv-dorada-semi-piel-filament","Biblia Inspira Espa\u00f1ol NTV Dorada Semi Piel Filament",208300)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr60-letra-gigante-floral-simil-piel.html"><div class="ph"><img src="/img/p/biblia-rvr60-letra-gigante-floral-simil-piel.webp" alt="Biblia RVR60 Letra Gigante Floral Simil Piel" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-rvr60-letra-gigante-floral-simil-piel.html"><h3>Biblia RVR60 Letra Gigante Floral Simil Piel</h3></a>
+<div class="pr">$209.800</div>
+<button class="add" onclick='add("biblia-rvr60-letra-gigante-floral-simil-piel","Biblia RVR60 Letra Gigante Floral Simil Piel",209800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nvi-ultrafina-compacta-piel-especial-azul-marino-text.html"><div class="ph"><img src="/img/p/biblia-nvi-ultrafina-compacta-piel-especial-azul-marino-text.webp" alt="Biblia NVI Ultrafina Compacta Piel Especial Azul Marino Texto 2022" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-nvi-ultrafina-compacta-piel-especial-azul-marino-text.html"><h3>Biblia NVI Ultrafina Compacta Piel Especial Azul Marino Texto 2022</h3></a>
+<div class="pr">$109.000</div>
+<button class="add" onclick='add("biblia-nvi-ultrafina-compacta-piel-especial-azul-marino-text","Biblia NVI Ultrafina Compacta Piel Especial Azul Marino Texto 2022",109000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-del-ministro-edicion-ampliada-negro-piel-fabricada.html"><div class="ph"><img src="/img/p/biblia-del-ministro-edicion-ampliada-negro-piel-fabricada.webp" alt="Biblia Del Ministro Edicion Ampliada Negro Piel Fabricada" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-del-ministro-edicion-ampliada-negro-piel-fabricada.html"><h3>Biblia Del Ministro Edicion Ampliada Negro Piel Fabricada</h3></a>
+<div class="pr">$167.200</div>
+<button class="add" onclick='add("biblia-del-ministro-edicion-ampliada-negro-piel-fabricada","Biblia Del Ministro Edicion Ampliada Negro Piel Fabricada",167200)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr062lg-blanco-canto-blanco.html"><div class="ph"><img src="/img/p/biblia-rvr062lg-blanco-canto-blanco.webp" alt="Biblia RVR062LG Blanco Canto Blanco" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-rvr062lg-blanco-canto-blanco.html"><h3>Biblia RVR062LG Blanco Canto Blanco</h3></a>
+<div class="pr">$73.000</div>
+<button class="add" onclick='add("biblia-rvr062lg-blanco-canto-blanco","Biblia RVR062LG Blanco Canto Blanco",73000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-el-mensaje-td-gris.html"><div class="ph"><img src="/img/p/biblia-el-mensaje-td-gris.webp" alt="Biblia El Mensaje TD Gris" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-el-mensaje-td-gris.html"><h3>Biblia El Mensaje TD Gris</h3></a>
+<div class="pr">$109.000</div>
+<button class="add" onclick='add("biblia-el-mensaje-td-gris","Biblia El Mensaje TD Gris",109000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-ntv-edicion-premio-y-regalo-negro-vinilo.html"><div class="ph"><img src="/img/p/biblia-ntv-edicion-premio-y-regalo-negro-vinilo.webp" alt="Biblia NTV Edicion Premio Y Regalo Negro Vinilo" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-ntv-edicion-premio-y-regalo-negro-vinilo.html"><h3>Biblia NTV Edicion Premio Y Regalo Negro Vinilo</h3></a>
+<div class="pr">$62.800</div>
+<button class="add" onclick='add("biblia-ntv-edicion-premio-y-regalo-negro-vinilo","Biblia NTV Edicion Premio Y Regalo Negro Vinilo",62800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-ntv-lavanda-valor-premium-filament.html"><div class="ph"><img src="/img/p/biblia-ntv-lavanda-valor-premium-filament.webp" alt="Biblia NTV Lavanda Valor Premium Filament" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-ntv-lavanda-valor-premium-filament.html"><h3>Biblia NTV Lavanda Valor Premium Filament</h3></a>
+<div class="pr">$79.200</div>
+<button class="add" onclick='add("biblia-ntv-lavanda-valor-premium-filament","Biblia NTV Lavanda Valor Premium Filament",79200)'>🛒 Añadir</button></div></div></div></div></section>
 <section><div class="wrap" style="max-width:780px"><h2 class="h2c" style="font-size:1.5rem">Guías que te ayudan a elegir</h2><ul style="margin:18px 0 0 20px;line-height:2.1"><li><a href="/blog/como-elegir-biblia.html" style="color:var(--oro);font-weight:600">¿Qué biblia comprar? Guía RVR1960, NVI y NTV</a></li></ul></div></section>
 <section style="background:var(--crema2)"><div class="wrap" style="max-width:780px">
 <h2 class="h2c">Preguntas frecuentes</h2><div style="margin-top:24px"><details><summary>¿Hacen envíos de biblias a toda Colombia y al exterior?</summary><p>Sí, enviamos a todo el país y también a EE.UU., España, México y toda Latinoamérica. Coordinamos todo por WhatsApp con Johana.</p></details><details><summary>¿Puedo personalizar con un nombre, fecha o versículo?</summary><p>¡Claro! Muchos productos se personalizan. Te enviamos un preview del grabado antes de imprimir.</p></details><details><summary>¿Puedo pagar contraentrega?</summary><p>Sí. Enviamos por Inter Rapidísimo con pago contraentrega en 1.013 municipios de Colombia: le pagas al mensajero cuando recibes. Los productos con grabado personalizado piden un anticipo, porque no se pueden revender si se rechaza el paquete.</p></details><details><summary>¿Cómo compro y cómo pago?</summary><p>Añade al carrito y finaliza por WhatsApp. Pagas contraentrega al recibir, o por transferencia o Nequi si lo prefieres.</p></details></div></div></section>
@@ -239,7 +311,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <div class="fgrid">
 <div><h3 class="notranslate">Luz y Gracia</h3><p style="color:#b8bcd0;font-size:.9rem">Regalos y productos cristianos que iluminan la fe. Envíos a toda Colombia y al mundo.</p>
 <p style="margin-top:12px"><a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--wa);font-weight:700">💬 WhatsApp con Johana: 312 629 5392</a></p></div>
-<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/decoracion.html">Decoración del hogar</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a><a href="/kits.html">Kits y cajas de regalo</a></div>
+<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a></div>
 <div><h3>Ocasiones</h3><a href="/regalos-para-pastores.html">Regalos para pastores</a><a href="/regalos-bautizo.html">Regalos de bautizo</a><a href="/regalos-primera-comunion.html">Primera comunión</a><a href="/regalos-boda-cristiana.html">Bodas cristianas</a><a href="/regalos-dia-de-la-madre.html">Día de la madre cristiana</a><a href="/regalos-dia-del-padre.html">Día del padre cristiano</a><a href="/regalos-quinceanos.html">Quinceaños cristianos</a><a href="/regalos-navidad.html">Navidad cristiana</a><a href="/kit-devocional.html">Kits devocionales</a></div>
 <div><h3>Ayuda</h3><a href="/personalizacion.html">Cómo personalizar</a><a href="/envios.html">Envíos y pagos</a><a href="/nosotros.html">Nosotros</a><a href="/blog.html">Devocional</a></div>
 </div>

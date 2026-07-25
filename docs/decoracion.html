@@ -11,7 +11,7 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Decoración Cristiana para el Hogar | Luz y Gracia"><meta name="twitter:description" content="Cuadros, placas y láminas con versículos para llenar tu casa de Palabra. Envíos a toda Colombia y al exterior. Compra fácil por WhatsApp."><meta name="twitter:image" content="https://luzygracia.com/img/og.jpg">
 <meta name="theme-color" content="#1a2238">
 <link rel="icon" type="image/png" href="/img/favicon.png"><link rel="apple-touch-icon" href="/img/logo-medallon.png">
-<meta name="robots" content="index,follow"><style>
+<meta name="robots" content="noindex,follow"><style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--oro:#c89a3b;--oro2:#e3c27e;--tinta:#1a2238;--tinta2:#2d3657;
 --crema:#faf6ef;--crema2:#f2e9d8;--tx:#2a2f45;--suave:#6b7189;
@@ -63,6 +63,11 @@ section{padding:64px 0}
 .card{background:#fff;border:1px solid var(--linea);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.28s}
 .card:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .card .ph{aspect-ratio:1;position:relative;overflow:hidden;background:linear-gradient(150deg,#fff 0,var(--crema2) 60%,#efe4cf 100%);display:flex;align-items:center;justify-content:center}
+.card .ph img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .35s}
+.card:hover .ph img{transform:scale(1.05)}
+.pdp .ph img{width:100%;height:100%;object-fit:contain;padding:22px}
+/* el medallon de marca solo va sobre el marcador, no encima de una foto real */
+.card .ph:has(img):after,.pdp .ph:has(img):after{display:none}
 .card .ph .ic{font-size:3.2rem;filter:drop-shadow(0 6px 14px rgba(0,0,0,.12));transition:.35s}
 .card:hover .ph .ic{transform:scale(1.08) rotate(-2deg)}
 .card .ph:after{content:"";position:absolute;bottom:14px;right:14px;width:34px;height:34px;background:url(/img/logo-medallon.png) center/contain no-repeat;opacity:.22}
@@ -198,7 +203,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 </script></head><body class="">
 <div class="anun">✦ Envíos a toda <b>Colombia</b> y al <b>mundo</b> · Personalización con tu nombre grabado<span class="solodesk"> · Atención por WhatsApp con <b>Johana Heredia</b></span></div><header><div class="wrap hd">
 <a href="/" class="logo"><img src="/img/logo-medallon.png" alt="Luz y Gracia" width="110" height="54" fetchpriority="high" decoding="async" style="height:54px;width:auto"><span class="notranslate">Luz <b>y</b> Gracia</span></a>
-<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/blog.html">Devocional</a></nav>
+<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/blog.html">Devocional</a></nav>
 <div class="hdr">
 <button class="cartbtn" onclick="openCart()">🛒 Carrito <b id="cc">0</b></button>
 </div></div></header>
@@ -207,25 +212,11 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <h1 style="color:#fff;font-size:2.1rem;margin:6px 0 10px">Decoración del hogar</h1>
 <p style="color:#d9dcea;max-width:660px">Cuadros, placas y láminas con versículos para llenar tu casa de Palabra.</p></div></section>
 
-<section><div class="wrap"><h2 class="h2c">Decoración del hogar: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/cuadro-versiculo.html"><div class="ph"><span class="ic">🖼️</span></div></a>
-<div class="bd"><a href="/producto/cuadro-versiculo.html"><h3>Cuadro con versículo</h3></a>
-<div class="pr">$79.000</div>
-<button class="add" onclick='add("cuadro-versiculo","Cuadro con vers\u00edculo",79000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/placa-hogar.html"><div class="ph"><span class="ic">🖼️</span></div></a>
-<div class="bd"><a href="/producto/placa-hogar.html"><h3>Placa &#x27;Esta casa sirve al Señor&#x27;</h3></a><div class="vs">“Josué 24:15”</div>
-<div class="pr">$59.000</div>
-<button class="add" onclick='add("placa-hogar","Placa 'Esta casa sirve al Se\u00f1or'",59000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/lamina-salmo23.html"><div class="ph"><span class="ic">🖼️</span></div></a>
-<div class="bd"><a href="/producto/lamina-salmo23.html"><h3>Lámina Salmo 23</h3></a>
-<div class="pr">$45.000</div>
-<button class="add" onclick='add("lamina-salmo23","L\u00e1mina Salmo 23",45000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/reloj-versiculo.html"><div class="ph"><span class="ic">🖼️</span></div></a>
-<div class="bd"><a href="/producto/reloj-versiculo.html"><h3>Reloj de pared con versículo</h3></a>
-<div class="pr">$89.000</div>
-<button class="add" onclick='add("reloj-versiculo","Reloj de pared con vers\u00edculo",89000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/letrero-madera-fe.html"><div class="ph"><span class="ic">🖼️</span></div></a>
-<div class="bd"><a href="/producto/letrero-madera-fe.html"><h3>Letrero de madera &#x27;Familia&#x27;</h3></a>
-<div class="pr">$65.000</div>
-<button class="add" onclick='add("letrero-madera-fe","Letrero de madera 'Familia'",65000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/cojin-versiculo.html"><div class="ph"><span class="ic">🖼️</span></div></a>
-<div class="bd"><a href="/producto/cojin-versiculo.html"><h3>Cojín con versículo</h3></a>
-<div class="pr">$42.000</div>
-<button class="add" onclick='add("cojin-versiculo","Coj\u00edn con vers\u00edculo",42000)'>🛒 Añadir</button></div></div></div></div></section>
+<section><div class="wrap" style="max-width:760px;text-align:center"><div style="background:var(--crema2);border-left:3px solid var(--oro);padding:18px 22px;text-align:left;line-height:1.8;color:var(--tx)"><b>Estamos surtiendo esta línea.</b> Todavía no tenemos decoración del hogar en catálogo, y preferimos decírtelo antes que mostrarte otra cosa. Si buscas algo puntual, <a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--wa);font-weight:700">escríbele a Johana por WhatsApp</a> y te decimos si podemos conseguirlo.</div><h2 class="h2c" style="font-size:1.4rem;margin-top:30px">Lo que sí tenemos hoy</h2><div class="chips" style="justify-content:center;margin-top:16px"><a href="/biblias.html" class="chip">Biblias</a><a href="/biblias-personalizadas.html" class="chip">Biblias personalizadas</a><a href="/devocionales.html" class="chip">Devocionales y libros</a><a href="/regalos.html" class="chip">Regalos cristianos</a><a href="/decoracion.html" class="chip">Decoración del hogar</a><a href="/ninos.html" class="chip">Niños</a><a href="/iglesia.html" class="chip">Iglesia y ministerio</a><a href="/musica.html" class="chip">Música y adoración</a><a href="/agendas.html" class="chip">Agendas y papelería</a></div></div></section>
+<section><div class="wrap"><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/mi-primera-biblia-en-cuadros-tapa-dura.html"><div class="ph"><img src="/img/p/mi-primera-biblia-en-cuadros-tapa-dura.webp" alt="Mi Primera Biblia En Cuadros Tapa Dura" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/mi-primera-biblia-en-cuadros-tapa-dura.html"><h3>Mi Primera Biblia En Cuadros Tapa Dura</h3></a>
+<div class="pr">$74.700</div>
+<button class="add" onclick='add("mi-primera-biblia-en-cuadros-tapa-dura","Mi Primera Biblia En Cuadros Tapa Dura",74700)'>🛒 Añadir</button></div></div></div></div></section>
 
 <section style="background:var(--crema2)"><div class="wrap" style="max-width:780px">
 <h2 class="h2c">Preguntas frecuentes</h2><div style="margin-top:24px"><details><summary>¿Hacen envíos de decoración del hogar a toda Colombia y al exterior?</summary><p>Sí, enviamos a todo el país y también a EE.UU., España, México y toda Latinoamérica. Coordinamos todo por WhatsApp con Johana.</p></details><details><summary>¿Puedo personalizar con un nombre, fecha o versículo?</summary><p>¡Claro! Muchos productos se personalizan. Te enviamos un preview del grabado antes de imprimir.</p></details><details><summary>¿Puedo pagar contraentrega?</summary><p>Sí. Enviamos por Inter Rapidísimo con pago contraentrega en 1.013 municipios de Colombia: le pagas al mensajero cuando recibes. Los productos con grabado personalizado piden un anticipo, porque no se pueden revender si se rechaza el paquete.</p></details><details><summary>¿Cómo compro y cómo pago?</summary><p>Añade al carrito y finaliza por WhatsApp. Pagas contraentrega al recibir, o por transferencia o Nequi si lo prefieres.</p></details></div></div></section>
@@ -233,7 +224,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <div class="fgrid">
 <div><h3 class="notranslate">Luz y Gracia</h3><p style="color:#b8bcd0;font-size:.9rem">Regalos y productos cristianos que iluminan la fe. Envíos a toda Colombia y al mundo.</p>
 <p style="margin-top:12px"><a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--wa);font-weight:700">💬 WhatsApp con Johana: 312 629 5392</a></p></div>
-<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/decoracion.html">Decoración del hogar</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a><a href="/kits.html">Kits y cajas de regalo</a></div>
+<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a></div>
 <div><h3>Ocasiones</h3><a href="/regalos-para-pastores.html">Regalos para pastores</a><a href="/regalos-bautizo.html">Regalos de bautizo</a><a href="/regalos-primera-comunion.html">Primera comunión</a><a href="/regalos-boda-cristiana.html">Bodas cristianas</a><a href="/regalos-dia-de-la-madre.html">Día de la madre cristiana</a><a href="/regalos-dia-del-padre.html">Día del padre cristiano</a><a href="/regalos-quinceanos.html">Quinceaños cristianos</a><a href="/regalos-navidad.html">Navidad cristiana</a><a href="/kit-devocional.html">Kits devocionales</a></div>
 <div><h3>Ayuda</h3><a href="/personalizacion.html">Cómo personalizar</a><a href="/envios.html">Envíos y pagos</a><a href="/nosotros.html">Nosotros</a><a href="/blog.html">Devocional</a></div>
 </div>

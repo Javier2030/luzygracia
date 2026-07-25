@@ -63,6 +63,11 @@ section{padding:64px 0}
 .card{background:#fff;border:1px solid var(--linea);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.28s}
 .card:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .card .ph{aspect-ratio:1;position:relative;overflow:hidden;background:linear-gradient(150deg,#fff 0,var(--crema2) 60%,#efe4cf 100%);display:flex;align-items:center;justify-content:center}
+.card .ph img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .35s}
+.card:hover .ph img{transform:scale(1.05)}
+.pdp .ph img{width:100%;height:100%;object-fit:contain;padding:22px}
+/* el medallon de marca solo va sobre el marcador, no encima de una foto real */
+.card .ph:has(img):after,.pdp .ph:has(img):after{display:none}
 .card .ph .ic{font-size:3.2rem;filter:drop-shadow(0 6px 14px rgba(0,0,0,.12));transition:.35s}
 .card:hover .ph .ic{transform:scale(1.08) rotate(-2deg)}
 .card .ph:after{content:"";position:absolute;bottom:14px;right:14px;width:34px;height:34px;background:url(/img/logo-medallon.png) center/contain no-repeat;opacity:.22}
@@ -198,7 +203,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 </script></head><body class="">
 <div class="anun">✦ Envíos a toda <b>Colombia</b> y al <b>mundo</b> · Personalización con tu nombre grabado<span class="solodesk"> · Atención por WhatsApp con <b>Johana Heredia</b></span></div><header><div class="wrap hd">
 <a href="/" class="logo"><img src="/img/logo-medallon.png" alt="Luz y Gracia" width="110" height="54" fetchpriority="high" decoding="async" style="height:54px;width:auto"><span class="notranslate">Luz <b>y</b> Gracia</span></a>
-<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/blog.html">Devocional</a></nav>
+<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/blog.html">Devocional</a></nav>
 <div class="hdr">
 <button class="cartbtn" onclick="openCart()">🛒 Carrito <b id="cc">0</b></button>
 </div></div></header>
@@ -207,19 +212,62 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <h1 style="color:#fff;font-size:2.1rem;margin:6px 0 10px">Iglesia y ministerio</h1>
 <p style="color:#d9dcea;max-width:660px">Copas de comunión, kits de bautismo y recursos para tu congregación.</p></div></section>
 
-<section><div class="wrap"><h2 class="h2c">Iglesia y ministerio: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/copas-comunion.html"><div class="ph"><span class="ic">⛪</span></div></a>
-<div class="bd"><a href="/producto/copas-comunion.html"><h3>Set de copas de comunión (x40)</h3></a>
-<div class="pr">$95.000</div>
-<button class="add" onclick='add("copas-comunion","Set de copas de comuni\u00f3n (x40)",95000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/kit-bautismo.html"><div class="ph"><span class="ic">⛪</span></div></a>
-<div class="bd"><a href="/producto/kit-bautismo.html"><h3>Kit de bautismo</h3></a>
-<div class="pr">$120.000</div>
-<button class="add" onclick='add("kit-bautismo","Kit de bautismo",120000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/sobres-ofrenda.html"><div class="ph"><span class="ic">⛪</span></div></a>
-<div class="bd"><a href="/producto/sobres-ofrenda.html"><h3>Sobres de ofrenda (pack x100)</h3></a>
-<div class="pr">$35.000</div>
-<button class="add" onclick='add("sobres-ofrenda","Sobres de ofrenda (pack x100)",35000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/cruz-pared-grande.html"><div class="ph"><span class="ic">⛪</span></div></a>
-<div class="bd"><a href="/producto/cruz-pared-grande.html"><h3>Cruz de pared grande (madera)</h3></a>
-<div class="pr">$99.000</div>
-<button class="add" onclick='add("cruz-pared-grande","Cruz de pared grande (madera)",99000)'>🛒 Añadir</button></div></div></div></div></section>
+
+<section><div class="wrap"><h2 class='h2c'>Iglesia y ministerio: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/una-fe-sencilla-dos-en-uno-incluye-guia-de-estudio.html"><div class="ph"><img src="/img/p/una-fe-sencilla-dos-en-uno-incluye-guia-de-estudio.webp" alt="Una Fe Sencilla Dos En Uno Incluye Guia de Estudio" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/una-fe-sencilla-dos-en-uno-incluye-guia-de-estudio.html"><h3>Una Fe Sencilla Dos En Uno Incluye Guia de Estudio</h3></a>
+<div class="pr">$41.800</div>
+<button class="add" onclick='add("una-fe-sencilla-dos-en-uno-incluye-guia-de-estudio","Una Fe Sencilla Dos En Uno Incluye Guia de Estudio",41800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-del-pescador-edicion-ministerial.html"><div class="ph"><img src="/img/p/biblia-del-pescador-edicion-ministerial.webp" alt="Biblia Del Pescador Edicion Ministerial" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-del-pescador-edicion-ministerial.html"><h3>Biblia Del Pescador Edicion Ministerial</h3></a>
+<div class="pr">$44.800</div>
+<button class="add" onclick='add("biblia-del-pescador-edicion-ministerial","Biblia Del Pescador Edicion Ministerial",44800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nvi-edicion-ministerial-unidad-rustica.html"><div class="ph"><img src="/img/p/biblia-nvi-edicion-ministerial-unidad-rustica.webp" alt="Biblia NVI Edicion Ministerial Unidad Rustica" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-nvi-edicion-ministerial-unidad-rustica.html"><h3>Biblia NVI Edicion Ministerial Unidad Rustica</h3></a>
+<div class="pr">$39.900</div>
+<button class="add" onclick='add("biblia-nvi-edicion-ministerial-unidad-rustica","Biblia NVI Edicion Ministerial Unidad Rustica",39900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/vida-del-pastor-la.html"><div class="ph"><img src="/img/p/vida-del-pastor-la.webp" alt="Vida Del Pastor La" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/vida-del-pastor-la.html"><h3>Vida Del Pastor La</h3></a>
+<div class="pr">$57.500</div>
+<button class="add" onclick='add("vida-del-pastor-la","Vida Del Pastor La",57500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/arte-del-discipulado-el.html"><div class="ph"><img src="/img/p/arte-del-discipulado-el.webp" alt="Arte Del Discipulado El" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/arte-del-discipulado-el.html"><h3>Arte Del Discipulado El</h3></a>
+<div class="pr">$48.400</div>
+<button class="add" onclick='add("arte-del-discipulado-el","Arte Del Discipulado El",48400)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/una-guia-de-supervivencia-pastoral.html"><div class="ph"><img src="/img/p/una-guia-de-supervivencia-pastoral.webp" alt="Una Guia De Supervivencia Pastoral" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/una-guia-de-supervivencia-pastoral.html"><h3>Una Guia De Supervivencia Pastoral</h3></a>
+<div class="pr">$57.100</div>
+<button class="add" onclick='add("una-guia-de-supervivencia-pastoral","Una Guia De Supervivencia Pastoral",57100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/como-pastorear-el-corazon-de-tu-hijo.html"><div class="ph"><img src="/img/p/como-pastorear-el-corazon-de-tu-hijo.webp" alt="Como Pastorear El Corazon De Tu Hijo" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/como-pastorear-el-corazon-de-tu-hijo.html"><h3>Como Pastorear El Corazon De Tu Hijo</h3></a>
+<div class="pr">$60.000</div>
+<button class="add" onclick='add("como-pastorear-el-corazon-de-tu-hijo","Como Pastorear El Corazon De Tu Hijo",60000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/proyecto-discipulado-adolescentes.html"><div class="ph"><img src="/img/p/proyecto-discipulado-adolescentes.webp" alt="Proyecto Discipulado-Adolescentes" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/proyecto-discipulado-adolescentes.html"><h3>Proyecto Discipulado-Adolescentes</h3></a>
+<div class="pr">$64.800</div>
+<button class="add" onclick='add("proyecto-discipulado-adolescentes","Proyecto Discipulado-Adolescentes",64800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/proyecto-discipulado-preadolescentes.html"><div class="ph"><img src="/img/p/proyecto-discipulado-preadolescentes.webp" alt="Proyecto Discipulado-Preadolescentes" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/proyecto-discipulado-preadolescentes.html"><h3>Proyecto Discipulado-Preadolescentes</h3></a>
+<div class="pr">$64.800</div>
+<button class="add" onclick='add("proyecto-discipulado-preadolescentes","Proyecto Discipulado-Preadolescentes",64800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-dhh060klg-colores-yo-soy-el-buen-pastor-periodico.html"><div class="ph"><img src="/img/p/biblia-dhh060klg-colores-yo-soy-el-buen-pastor-periodico.webp" alt="Biblia DHH060KLG Colores Yo Soy El Buen Pastor Periodico" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-dhh060klg-colores-yo-soy-el-buen-pastor-periodico.html"><h3>Biblia DHH060KLG Colores Yo Soy El Buen Pastor Periodico</h3></a>
+<div class="pr">$22.000</div>
+<button class="add" onclick='add("biblia-dhh060klg-colores-yo-soy-el-buen-pastor-periodico","Biblia DHH060KLG Colores Yo Soy El Buen Pastor Periodico",22000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/proyecto-discipulado-ninos.html"><div class="ph"><img src="/img/p/proyecto-discipulado-ninos.webp" alt="Proyecto Discipulado Niños" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/proyecto-discipulado-ninos.html"><h3>Proyecto Discipulado Niños</h3></a>
+<div class="pr">$61.400</div>
+<button class="add" onclick='add("proyecto-discipulado-ninos","Proyecto Discipulado Ni\u00f1os",61400)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/liderazgo-espiritual.html"><div class="ph"><img src="/img/p/liderazgo-espiritual.webp" alt="Liderazgo Espiritual" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/liderazgo-espiritual.html"><h3>Liderazgo Espiritual</h3></a>
+<div class="pr">$70.400</div>
+<button class="add" onclick='add("liderazgo-espiritual","Liderazgo Espiritual",70400)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/proyecto-discipulado-jovenes.html"><div class="ph"><img src="/img/p/proyecto-discipulado-jovenes.webp" alt="Proyecto Discipulado-Jovenes" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/proyecto-discipulado-jovenes.html"><h3>Proyecto Discipulado-Jovenes</h3></a>
+<div class="pr">$63.100</div>
+<button class="add" onclick='add("proyecto-discipulado-jovenes","Proyecto Discipulado-Jovenes",63100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/21-leyes-irrefutables-del-liderazgo-25-aniversario.html"><div class="ph"><img src="/img/p/21-leyes-irrefutables-del-liderazgo-25-aniversario.webp" alt="21 Leyes Irrefutables Del Liderazgo 25 Aniversario" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/21-leyes-irrefutables-del-liderazgo-25-aniversario.html"><h3>21 Leyes Irrefutables Del Liderazgo 25 Aniversario</h3></a>
+<div class="pr">$88.000</div>
+<button class="add" onclick='add("21-leyes-irrefutables-del-liderazgo-25-aniversario","21 Leyes Irrefutables Del Liderazgo 25 Aniversario",88000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/de-pastores-y-predicadores.html"><div class="ph"><img src="/img/p/de-pastores-y-predicadores.webp" alt="De Pastores Y Predicadores" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/de-pastores-y-predicadores.html"><h3>De Pastores Y Predicadores</h3></a>
+<div class="pr">$75.100</div>
+<button class="add" onclick='add("de-pastores-y-predicadores","De Pastores Y Predicadores",75100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/liderazgo-biblico-de-ancianos.html"><div class="ph"><img src="/img/p/liderazgo-biblico-de-ancianos.webp" alt="Liderazgo Biblico De Ancianos" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/liderazgo-biblico-de-ancianos.html"><h3>Liderazgo Biblico De Ancianos</h3></a>
+<div class="pr">$75.000</div>
+<button class="add" onclick='add("liderazgo-biblico-de-ancianos","Liderazgo Biblico De Ancianos",75000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/liderazgo-generacional.html"><div class="ph"><img src="/img/p/liderazgo-generacional.webp" alt="Liderazgo Generacional" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/liderazgo-generacional.html"><h3>Liderazgo Generacional</h3></a>
+<div class="pr">$58.200</div>
+<button class="add" onclick='add("liderazgo-generacional","Liderazgo Generacional",58200)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/liderazgo-con-proposito-rustica.html"><div class="ph"><img src="/img/p/liderazgo-con-proposito-rustica.webp" alt="Liderazgo Con Proposito Rustica" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/liderazgo-con-proposito-rustica.html"><h3>Liderazgo Con Proposito Rustica</h3></a>
+<div class="pr">$70.400</div>
+<button class="add" onclick='add("liderazgo-con-proposito-rustica","Liderazgo Con Proposito Rustica",70400)'>🛒 Añadir</button></div></div></div></div></section>
 
 <section style="background:var(--crema2)"><div class="wrap" style="max-width:780px">
 <h2 class="h2c">Preguntas frecuentes</h2><div style="margin-top:24px"><details><summary>¿Hacen envíos de iglesia y ministerio a toda Colombia y al exterior?</summary><p>Sí, enviamos a todo el país y también a EE.UU., España, México y toda Latinoamérica. Coordinamos todo por WhatsApp con Johana.</p></details><details><summary>¿Puedo personalizar con un nombre, fecha o versículo?</summary><p>¡Claro! Muchos productos se personalizan. Te enviamos un preview del grabado antes de imprimir.</p></details><details><summary>¿Puedo pagar contraentrega?</summary><p>Sí. Enviamos por Inter Rapidísimo con pago contraentrega en 1.013 municipios de Colombia: le pagas al mensajero cuando recibes. Los productos con grabado personalizado piden un anticipo, porque no se pueden revender si se rechaza el paquete.</p></details><details><summary>¿Cómo compro y cómo pago?</summary><p>Añade al carrito y finaliza por WhatsApp. Pagas contraentrega al recibir, o por transferencia o Nequi si lo prefieres.</p></details></div></div></section>
@@ -227,7 +275,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <div class="fgrid">
 <div><h3 class="notranslate">Luz y Gracia</h3><p style="color:#b8bcd0;font-size:.9rem">Regalos y productos cristianos que iluminan la fe. Envíos a toda Colombia y al mundo.</p>
 <p style="margin-top:12px"><a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--wa);font-weight:700">💬 WhatsApp con Johana: 312 629 5392</a></p></div>
-<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/decoracion.html">Decoración del hogar</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a><a href="/kits.html">Kits y cajas de regalo</a></div>
+<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a></div>
 <div><h3>Ocasiones</h3><a href="/regalos-para-pastores.html">Regalos para pastores</a><a href="/regalos-bautizo.html">Regalos de bautizo</a><a href="/regalos-primera-comunion.html">Primera comunión</a><a href="/regalos-boda-cristiana.html">Bodas cristianas</a><a href="/regalos-dia-de-la-madre.html">Día de la madre cristiana</a><a href="/regalos-dia-del-padre.html">Día del padre cristiano</a><a href="/regalos-quinceanos.html">Quinceaños cristianos</a><a href="/regalos-navidad.html">Navidad cristiana</a><a href="/kit-devocional.html">Kits devocionales</a></div>
 <div><h3>Ayuda</h3><a href="/personalizacion.html">Cómo personalizar</a><a href="/envios.html">Envíos y pagos</a><a href="/nosotros.html">Nosotros</a><a href="/blog.html">Devocional</a></div>
 </div>

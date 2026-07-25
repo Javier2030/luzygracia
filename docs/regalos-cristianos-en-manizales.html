@@ -63,6 +63,11 @@ section{padding:64px 0}
 .card{background:#fff;border:1px solid var(--linea);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.28s}
 .card:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .card .ph{aspect-ratio:1;position:relative;overflow:hidden;background:linear-gradient(150deg,#fff 0,var(--crema2) 60%,#efe4cf 100%);display:flex;align-items:center;justify-content:center}
+.card .ph img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .35s}
+.card:hover .ph img{transform:scale(1.05)}
+.pdp .ph img{width:100%;height:100%;object-fit:contain;padding:22px}
+/* el medallon de marca solo va sobre el marcador, no encima de una foto real */
+.card .ph:has(img):after,.pdp .ph:has(img):after{display:none}
 .card .ph .ic{font-size:3.2rem;filter:drop-shadow(0 6px 14px rgba(0,0,0,.12));transition:.35s}
 .card:hover .ph .ic{transform:scale(1.08) rotate(-2deg)}
 .card .ph:after{content:"";position:absolute;bottom:14px;right:14px;width:34px;height:34px;background:url(/img/logo-medallon.png) center/contain no-repeat;opacity:.22}
@@ -198,46 +203,46 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 </script></head><body class="">
 <div class="anun">✦ Envíos a toda <b>Colombia</b> y al <b>mundo</b> · Personalización con tu nombre grabado<span class="solodesk"> · Atención por WhatsApp con <b>Johana Heredia</b></span></div><header><div class="wrap hd">
 <a href="/" class="logo"><img src="/img/logo-medallon.png" alt="Luz y Gracia" width="110" height="54" fetchpriority="high" decoding="async" style="height:54px;width:auto"><span class="notranslate">Luz <b>y</b> Gracia</span></a>
-<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/blog.html">Devocional</a></nav>
+<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/blog.html">Devocional</a></nav>
 <div class="hdr">
 <button class="cartbtn" onclick="openCart()">🛒 Carrito <b id="cc">0</b></button>
 </div></div></header>
 <section style="background:linear-gradient(135deg,var(--tinta),var(--tinta2));color:#fff;padding:46px 0">
 <div class="wrap"><div class="eyebrow" style="color:var(--oro2);text-align:left">Envíos a Manizales</div>
 <h1 style="color:#fff;font-size:2rem;margin:6px 0 10px">Regalos y productos cristianos en Manizales</h1>
-<p style="color:#d9dcea;max-width:680px">Llevamos la Palabra y los mejores regalos cristianos a Manizales y Caldas: biblias personalizadas con nombre grabado, devocionales, ropa, joyería y decoración. Con Luz y Gracia compras fácil y recibes en la ciudad y sus alrededores con acompañamiento por WhatsApp.</p></div></section>
+<p style="color:#d9dcea;max-width:680px">Llevamos la Palabra y los mejores regalos cristianos a Manizales y Caldas: biblias personalizadas con nombre grabado, devocionales, material para niños y regalos con propósito. Con Luz y Gracia compras fácil y recibes en la ciudad y sus alrededores con acompañamiento por WhatsApp.</p></div></section>
 
-<section><div class="wrap"><h2 class="h2c">Catálogo con envío a Manizales</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/biblia-nombre-grabado-cuero.html"><div class="ph"><span class="ic">✝️</span></div></a>
-<div class="bd"><a href="/producto/biblia-nombre-grabado-cuero.html"><h3>Biblia personalizada con nombre grabado (cuero)</h3></a><div class="vs">“Lámpara es a mis pies tu palabra — Sal 119:105”</div>
-<div class="pr">$149.000</div>
-<button class="add" onclick='add("biblia-nombre-grabado-cuero","Biblia personalizada con nombre grabado (cuero)",149000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nombre-foil-oro.html"><div class="ph"><span class="ic">✝️</span></div></a>
-<div class="bd"><a href="/producto/biblia-nombre-foil-oro.html"><h3>Biblia personalizada nombre en foil oro</h3></a>
-<div class="pr">$139.000</div>
-<button class="add" onclick='add("biblia-nombre-foil-oro","Biblia personalizada nombre en foil oro",139000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-pareja-grabada.html"><div class="ph"><span class="ic">✝️</span></div></a>
-<div class="bd"><a href="/producto/biblia-pareja-grabada.html"><h3>Biblia de pareja con nombres y fecha</h3></a><div class="vs">“Y los dos serán una sola carne — Gn 2:24”</div>
-<div class="pr">$169.000</div>
-<button class="add" onclick='add("biblia-pareja-grabada","Biblia de pareja con nombres y fecha",169000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-pastor-grabada.html"><div class="ph"><span class="ic">✝️</span></div></a>
-<div class="bd"><a href="/producto/biblia-pastor-grabada.html"><h3>Biblia para pastor personalizada</h3></a>
-<div class="pr">$179.000</div>
-<button class="add" onclick='add("biblia-pastor-grabada","Biblia para pastor personalizada",179000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-bautizo-grabada.html"><div class="ph"><span class="ic">✝️</span></div></a>
-<div class="bd"><a href="/producto/biblia-bautizo-grabada.html"><h3>Biblia de bautizo personalizada</h3></a>
-<div class="pr">$129.000</div>
-<button class="add" onclick='add("biblia-bautizo-grabada","Biblia de bautizo personalizada",129000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-estudio-rvr60.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-estudio-rvr60.html"><h3>Biblia de Estudio RVR1960</h3></a>
-<div class="pr">$129.000</div>
-<button class="add" onclick='add("biblia-estudio-rvr60","Biblia de Estudio RVR1960",129000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-rvr1960-tapa-dura.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-rvr1960-tapa-dura.html"><h3>Biblia RVR1960 tapa dura</h3></a>
-<div class="pr">$69.000</div>
-<button class="add" onclick='add("biblia-rvr1960-tapa-dura","Biblia RVR1960 tapa dura",69000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-nvi-clasica.html"><div class="ph"><span class="ic">📖</span></div></a>
-<div class="bd"><a href="/producto/biblia-nvi-clasica.html"><h3>Biblia NVI clásica</h3></a>
-<div class="pr">$75.000</div>
-<button class="add" onclick='add("biblia-nvi-clasica","Biblia NVI cl\u00e1sica",75000)'>🛒 Añadir</button></div></div></div></div></section>
+<section><div class="wrap"><h2 class="h2c">Catálogo con envío a Manizales</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/agendas-tu-ancla.html"><div class="ph"><img src="/img/p/agendas-tu-ancla.webp" alt="Agendas Tu Ancla" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/agendas-tu-ancla.html"><h3>Agendas Tu Ancla</h3></a>
+<div class="pr">$31.000</div>
+<button class="add" onclick='add("agendas-tu-ancla","Agendas Tu Ancla",31000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/cinco-lenguajes-del-amor-cuaderno-de-ejercicios.html"><div class="ph"><img src="/img/p/cinco-lenguajes-del-amor-cuaderno-de-ejercicios.webp" alt="Cinco Lenguajes Del Amor Cuaderno De Ejercicios" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/cinco-lenguajes-del-amor-cuaderno-de-ejercicios.html"><h3>Cinco Lenguajes Del Amor Cuaderno De Ejercicios</h3></a>
+<div class="pr">$53.100</div>
+<button class="add" onclick='add("cinco-lenguajes-del-amor-cuaderno-de-ejercicios","Cinco Lenguajes Del Amor Cuaderno De Ejercicios",53100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/relaciones-emocionalmente-sanas-cuaderno-de-trabajo.html"><div class="ph"><img src="/img/p/relaciones-emocionalmente-sanas-cuaderno-de-trabajo.webp" alt="Relaciones Emocionalmente Sanas Cuaderno De Trabajo" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/relaciones-emocionalmente-sanas-cuaderno-de-trabajo.html"><h3>Relaciones Emocionalmente Sanas Cuaderno De Trabajo</h3></a>
+<div class="pr">$83.600</div>
+<button class="add" onclick='add("relaciones-emocionalmente-sanas-cuaderno-de-trabajo","Relaciones Emocionalmente Sanas Cuaderno De Trabajo",83600)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/1-de-corintios-capitulo-13-cuaderno-para-colorear-y-de-activ.html"><div class="ph"><img src="/img/p/1-de-corintios-capitulo-13-cuaderno-para-colorear-y-de-activ.webp" alt="1 De Corintios, Capitulo 13 Cuaderno Para Colorear Y De Actividades Bilingue" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/1-de-corintios-capitulo-13-cuaderno-para-colorear-y-de-activ.html"><h3>1 De Corintios, Capitulo 13 Cuaderno Para Colorear Y De Actividades Bilingue</h3></a>
+<div class="pr">$11.900</div>
+<button class="add" onclick='add("1-de-corintios-capitulo-13-cuaderno-para-colorear-y-de-activ","1 De Corintios, Capitulo 13 Cuaderno Para Colorear Y De Actividades Bilingue",11900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/proverbios-cuaderno-para-colorear-y-de-actividades-bilingue.html"><div class="ph"><img src="/img/p/proverbios-cuaderno-para-colorear-y-de-actividades-bilingue.webp" alt="Proverbios Cuaderno Para Colorear Y De Actividades Bilingue" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/proverbios-cuaderno-para-colorear-y-de-actividades-bilingue.html"><h3>Proverbios Cuaderno Para Colorear Y De Actividades Bilingue</h3></a>
+<div class="pr">$11.900</div>
+<button class="add" onclick='add("proverbios-cuaderno-para-colorear-y-de-actividades-bilingue","Proverbios Cuaderno Para Colorear Y De Actividades Bilingue",11900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/salmo-100-cuaderno-para-colorear-y-de-actividades-bilingue.html"><div class="ph"><img src="/img/p/salmo-100-cuaderno-para-colorear-y-de-actividades-bilingue.webp" alt="Salmo 100 Cuaderno Para Colorear Y De Actividades Bilingue" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/salmo-100-cuaderno-para-colorear-y-de-actividades-bilingue.html"><h3>Salmo 100 Cuaderno Para Colorear Y De Actividades Bilingue</h3></a>
+<div class="pr">$11.900</div>
+<button class="add" onclick='add("salmo-100-cuaderno-para-colorear-y-de-actividades-bilingue","Salmo 100 Cuaderno Para Colorear Y De Actividades Bilingue",11900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/salmo-119-cuaderno-para-colorear-y-de-actividades-bilingue.html"><div class="ph"><img src="/img/p/salmo-119-cuaderno-para-colorear-y-de-actividades-bilingue.webp" alt="Salmo 119 Cuaderno Para Colorear Y De Actividades Bilingue" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/salmo-119-cuaderno-para-colorear-y-de-actividades-bilingue.html"><h3>Salmo 119 Cuaderno Para Colorear Y De Actividades Bilingue</h3></a>
+<div class="pr">$11.900</div>
+<button class="add" onclick='add("salmo-119-cuaderno-para-colorear-y-de-actividades-bilingue","Salmo 119 Cuaderno Para Colorear Y De Actividades Bilingue",11900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/salmo-121-cuaderno-para-colorear-y-de-actividades.html"><div class="ph"><img src="/img/p/salmo-121-cuaderno-para-colorear-y-de-actividades.webp" alt="Salmo 121 Cuaderno Para Colorear Y De Actividades" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/salmo-121-cuaderno-para-colorear-y-de-actividades.html"><h3>Salmo 121 Cuaderno Para Colorear Y De Actividades</h3></a>
+<div class="pr">$11.900</div>
+<button class="add" onclick='add("salmo-121-cuaderno-para-colorear-y-de-actividades","Salmo 121 Cuaderno Para Colorear Y De Actividades",11900)'>🛒 Añadir</button></div></div></div></div></section>
 <section style="background:var(--crema2)"><div class="wrap" style="max-width:780px"><h2 class="h2c">Preguntas frecuentes — Manizales</h2><div style="margin-top:24px"><details><summary>¿Envían productos cristianos a Manizales?</summary><p>Sí. Enviamos biblias personalizadas, devocionales y regalos cristianos a Manizales y Caldas y a todo Colombia. Coordinamos entrega y pago por WhatsApp.</p></details><details><summary>¿Cuánto tarda el envío a Manizales?</summary><p>Los tiempos varían según el producto y si lleva personalización; te confirmamos el plazo exacto por WhatsApp antes de comprar.</p></details><details><summary>¿Puedo personalizar mi biblia con nombre?</summary><p>Sí, grabamos nombre, fecha o versículo y te enviamos un preview antes de imprimir.</p></details></div></div></section>
 <footer><div class="wrap">
 <div class="fgrid">
 <div><h3 class="notranslate">Luz y Gracia</h3><p style="color:#b8bcd0;font-size:.9rem">Regalos y productos cristianos que iluminan la fe. Envíos a toda Colombia y al mundo.</p>
 <p style="margin-top:12px"><a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--wa);font-weight:700">💬 WhatsApp con Johana: 312 629 5392</a></p></div>
-<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/decoracion.html">Decoración del hogar</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a><a href="/kits.html">Kits y cajas de regalo</a></div>
+<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a></div>
 <div><h3>Ocasiones</h3><a href="/regalos-para-pastores.html">Regalos para pastores</a><a href="/regalos-bautizo.html">Regalos de bautizo</a><a href="/regalos-primera-comunion.html">Primera comunión</a><a href="/regalos-boda-cristiana.html">Bodas cristianas</a><a href="/regalos-dia-de-la-madre.html">Día de la madre cristiana</a><a href="/regalos-dia-del-padre.html">Día del padre cristiano</a><a href="/regalos-quinceanos.html">Quinceaños cristianos</a><a href="/regalos-navidad.html">Navidad cristiana</a><a href="/kit-devocional.html">Kits devocionales</a></div>
 <div><h3>Ayuda</h3><a href="/personalizacion.html">Cómo personalizar</a><a href="/envios.html">Envíos y pagos</a><a href="/nosotros.html">Nosotros</a><a href="/blog.html">Devocional</a></div>
 </div>

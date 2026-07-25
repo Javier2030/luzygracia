@@ -63,6 +63,11 @@ section{padding:64px 0}
 .card{background:#fff;border:1px solid var(--linea);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.28s}
 .card:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .card .ph{aspect-ratio:1;position:relative;overflow:hidden;background:linear-gradient(150deg,#fff 0,var(--crema2) 60%,#efe4cf 100%);display:flex;align-items:center;justify-content:center}
+.card .ph img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .35s}
+.card:hover .ph img{transform:scale(1.05)}
+.pdp .ph img{width:100%;height:100%;object-fit:contain;padding:22px}
+/* el medallon de marca solo va sobre el marcador, no encima de una foto real */
+.card .ph:has(img):after,.pdp .ph:has(img):after{display:none}
 .card .ph .ic{font-size:3.2rem;filter:drop-shadow(0 6px 14px rgba(0,0,0,.12));transition:.35s}
 .card:hover .ph .ic{transform:scale(1.08) rotate(-2deg)}
 .card .ph:after{content:"";position:absolute;bottom:14px;right:14px;width:34px;height:34px;background:url(/img/logo-medallon.png) center/contain no-repeat;opacity:.22}
@@ -198,7 +203,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 </script></head><body class="">
 <div class="anun">✦ Envíos a toda <b>Colombia</b> y al <b>mundo</b> · Personalización con tu nombre grabado<span class="solodesk"> · Atención por WhatsApp con <b>Johana Heredia</b></span></div><header><div class="wrap hd">
 <a href="/" class="logo"><img src="/img/logo-medallon.png" alt="Luz y Gracia" width="110" height="54" fetchpriority="high" decoding="async" style="height:54px;width:auto"><span class="notranslate">Luz <b>y</b> Gracia</span></a>
-<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/blog.html">Devocional</a></nav>
+<nav class="main"><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/blog.html">Devocional</a></nav>
 <div class="hdr">
 <button class="cartbtn" onclick="openCart()">🛒 Carrito <b id="cc">0</b></button>
 </div></div></header>
@@ -207,22 +212,98 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <h1 style="color:#fff;font-size:2.1rem;margin:6px 0 10px">Niños</h1>
 <p style="color:#d9dcea;max-width:660px">Biblias infantiles, juguetes y recursos para sembrar la fe desde pequeños.</p></div></section>
 
-<section><div class="wrap"><h2 class="h2c">Niños: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/biblia-infantil.html"><div class="ph"><span class="ic">🧸</span></div></a>
-<div class="bd"><a href="/producto/biblia-infantil.html"><h3>Biblia Infantil Ilustrada</h3></a>
-<div class="pr">$69.000</div>
-<button class="add" onclick='add("biblia-infantil","Biblia Infantil Ilustrada",69000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-colorear.html"><div class="ph"><span class="ic">🧸</span></div></a>
-<div class="bd"><a href="/producto/biblia-colorear.html"><h3>Biblia para colorear</h3></a>
+
+<section><div class="wrap"><h2 class='h2c'>Niños: nuestra selección</h2><div class="prods" style="margin-top:24px"><div class="card"><a href="/producto/biblia-para-los-bebes-mas-historias-tapa-dura-amarillo.html"><div class="ph"><img src="/img/p/biblia-para-los-bebes-mas-historias-tapa-dura-amarillo.webp" alt="Biblia Para Los Bebes Mas Historias Tapa Dura Amarillo" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-para-los-bebes-mas-historias-tapa-dura-amarillo.html"><h3>Biblia Para Los Bebes Mas Historias Tapa Dura Amarillo</h3></a>
+<div class="pr">$37.500</div>
+<button class="add" onclick='add("biblia-para-los-bebes-mas-historias-tapa-dura-amarillo","Biblia Para Los Bebes Mas Historias Tapa Dura Amarillo",37500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-para-los-bebes-tapa-dura-azul.html"><div class="ph"><img src="/img/p/biblia-para-los-bebes-tapa-dura-azul.webp" alt="Biblia Para Los Bebes Tapa Dura Azul" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-para-los-bebes-tapa-dura-azul.html"><h3>Biblia Para Los Bebes Tapa Dura Azul</h3></a>
+<div class="pr">$37.500</div>
+<button class="add" onclick='add("biblia-para-los-bebes-tapa-dura-azul","Biblia Para Los Bebes Tapa Dura Azul",37500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-ilustrada-para-pequenos-la.html"><div class="ph"><img src="/img/p/biblia-ilustrada-para-pequenos-la.webp" alt="Biblia Ilustrada Para Pequeños La" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-ilustrada-para-pequenos-la.html"><h3>Biblia Ilustrada Para Pequeños La</h3></a>
+<div class="pr">$45.500</div>
+<button class="add" onclick='add("biblia-ilustrada-para-pequenos-la","Biblia Ilustrada Para Peque\u00f1os La",45500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-para-pequenines.html"><div class="ph"><img src="/img/p/biblia-para-pequenines.webp" alt="Biblia Para Pequeñines" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-para-pequenines.html"><h3>Biblia Para Pequeñines</h3></a>
+<div class="pr">$47.500</div>
+<button class="add" onclick='add("biblia-para-pequenines","Biblia Para Peque\u00f1ines",47500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-para-preescolares-tapa-dura-blanco.html"><div class="ph"><img src="/img/p/biblia-para-preescolares-tapa-dura-blanco.webp" alt="Biblia Para Preescolares Tapa Dura Blanco" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-para-preescolares-tapa-dura-blanco.html"><h3>Biblia Para Preescolares Tapa Dura Blanco</h3></a>
+<div class="pr">$46.500</div>
+<button class="add" onclick='add("biblia-para-preescolares-tapa-dura-blanco","Biblia Para Preescolares Tapa Dura Blanco",46500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/joel-un-nino-de-galilea-guia-amo.html"><div class="ph"><img src="/img/p/joel-un-nino-de-galilea-guia-amo.webp" alt="Joel Un Niño De Galilea Guia AMO" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/joel-un-nino-de-galilea-guia-amo.html"><h3>Joel Un Niño De Galilea Guia AMO</h3></a>
+<div class="pr">$30.000</div>
+<button class="add" onclick='add("joel-un-nino-de-galilea-guia-amo","Joel Un Ni\u00f1o De Galilea Guia AMO",30000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/ninos-en-la-biblia-los.html"><div class="ph"><img src="/img/p/ninos-en-la-biblia-los.webp" alt="Niños En La Biblia Los" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/ninos-en-la-biblia-los.html"><h3>Niños En La Biblia Los</h3></a>
+<div class="pr">$39.600</div>
+<button class="add" onclick='add("ninos-en-la-biblia-los","Ni\u00f1os En La Biblia Los",39600)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/mi-pequena-biblia-de-rompecabezas-e-imagenes.html"><div class="ph"><img src="/img/p/mi-pequena-biblia-de-rompecabezas-e-imagenes.webp" alt="Mi Pequeña Biblia De Rompecabezas E Imagenes" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/mi-pequena-biblia-de-rompecabezas-e-imagenes.html"><h3>Mi Pequeña Biblia De Rompecabezas E Imagenes</h3></a>
+<div class="pr">$54.300</div>
+<button class="add" onclick='add("mi-pequena-biblia-de-rompecabezas-e-imagenes","Mi Peque\u00f1a Biblia De Rompecabezas E Imagenes",54300)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/seis-maneras-de-conservar-al-nino-bueno-que-hay-en-tu-hijo-b.html"><div class="ph"><img src="/img/p/seis-maneras-de-conservar-al-nino-bueno-que-hay-en-tu-hijo-b.webp" alt="Seis Maneras De Conservar Al Niño Bueno Que Hay En Tu Hijo Bolsilibro" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/seis-maneras-de-conservar-al-nino-bueno-que-hay-en-tu-hijo-b.html"><h3>Seis Maneras De Conservar Al Niño Bueno Que Hay En Tu Hijo Bolsilibro</h3></a>
+<div class="pr">$16.100</div>
+<button class="add" onclick='add("seis-maneras-de-conservar-al-nino-bueno-que-hay-en-tu-hijo-b","Seis Maneras De Conservar Al Ni\u00f1o Bueno Que Hay En Tu Hijo Bolsilibro",16100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/porque-dios-me-hizo-nina.html"><div class="ph"><img src="/img/p/porque-dios-me-hizo-nina.webp" alt="Porque Dios Me Hizo Niña" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/porque-dios-me-hizo-nina.html"><h3>Porque Dios Me Hizo Niña</h3></a>
+<div class="pr">$38.600</div>
+<button class="add" onclick='add("porque-dios-me-hizo-nina","Porque Dios Me Hizo Ni\u00f1a",38600)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/bach-el-nino-de-turingia-guia-amo.html"><div class="ph"><img src="/img/p/bach-el-nino-de-turingia-guia-amo.webp" alt="Bach El Niño De Turingia Guia AMO" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/bach-el-nino-de-turingia-guia-amo.html"><h3>Bach El Niño De Turingia Guia AMO</h3></a>
+<div class="pr">$30.000</div>
+<button class="add" onclick='add("bach-el-nino-de-turingia-guia-amo","Bach El Ni\u00f1o De Turingia Guia AMO",30000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/bach-el-nino-de-turingia.html"><div class="ph"><img src="/img/p/bach-el-nino-de-turingia.webp" alt="Bach El Niño De Turingia" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/bach-el-nino-de-turingia.html"><h3>Bach El Niño De Turingia</h3></a>
 <div class="pr">$29.000</div>
-<button class="add" onclick='add("biblia-colorear","Biblia para colorear",29000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/arca-juguete.html"><div class="ph"><span class="ic">🧸</span></div></a>
-<div class="bd"><a href="/producto/arca-juguete.html"><h3>Arca de Noé de juguete</h3></a>
+<button class="add" onclick='add("bach-el-nino-de-turingia","Bach El Ni\u00f1o De Turingia",29000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-junior.html"><div class="ph"><img src="/img/p/biblia-junior.webp" alt="Biblia Junior" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-junior.html"><h3>Biblia Junior</h3></a>
+<div class="pr">$49.500</div>
+<button class="add" onclick='add("biblia-junior","Biblia Junior",49500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-de-promesas-para-ninas-rosa-tapa-dura-rvr1960.html"><div class="ph"><img src="/img/p/biblia-de-promesas-para-ninas-rosa-tapa-dura-rvr1960.webp" alt="Biblia De Promesas Para Niñas Rosa Tapa Dura RVR1960" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-de-promesas-para-ninas-rosa-tapa-dura-rvr1960.html"><h3>Biblia De Promesas Para Niñas Rosa Tapa Dura RVR1960</h3></a>
+<div class="pr">$74.500</div>
+<button class="add" onclick='add("biblia-de-promesas-para-ninas-rosa-tapa-dura-rvr1960","Biblia De Promesas Para Ni\u00f1as Rosa Tapa Dura RVR1960",74500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/fundamentos-firmes-edicion-para-ninos-desde-la-creacion-hast.html"><div class="ph"><img src="/img/p/fundamentos-firmes-edicion-para-ninos-desde-la-creacion-hast.webp" alt="Fundamentos Firmes Edicion Para Niños Desde La Creacion Hasta Cristo PaqueteX 06" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/fundamentos-firmes-edicion-para-ninos-desde-la-creacion-hast.html"><h3>Fundamentos Firmes Edicion Para Niños Desde La Creacion Hasta Cristo PaqueteX 06</h3></a>
+<div class="pr">$176.600</div>
+<button class="add" onclick='add("fundamentos-firmes-edicion-para-ninos-desde-la-creacion-hast","Fundamentos Firmes Edicion Para Ni\u00f1os Desde La Creacion Hasta Cristo PaqueteX 06",176600)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/porque-dios-me-hizo-nino.html"><div class="ph"><img src="/img/p/porque-dios-me-hizo-nino.webp" alt="Porque Dios Me Hizo Niño" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/porque-dios-me-hizo-nino.html"><h3>Porque Dios Me Hizo Niño</h3></a>
+<div class="pr">$38.600</div>
+<button class="add" onclick='add("porque-dios-me-hizo-nino","Porque Dios Me Hizo Ni\u00f1o",38600)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-de-promesas-para-ninas-lila-tapa-dura-ntv.html"><div class="ph"><img src="/img/p/biblia-de-promesas-para-ninas-lila-tapa-dura-ntv.webp" alt="Biblia De Promesas Para Niñas Lila Tapa Dura NTV" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-de-promesas-para-ninas-lila-tapa-dura-ntv.html"><h3>Biblia De Promesas Para Niñas Lila Tapa Dura NTV</h3></a>
 <div class="pr">$85.000</div>
-<button class="add" onclick='add("arca-juguete","Arca de No\u00e9 de juguete",85000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/devocional-ninos.html"><div class="ph"><span class="ic">🧸</span></div></a>
-<div class="bd"><a href="/producto/devocional-ninos.html"><h3>Devocional para niños</h3></a>
-<div class="pr">$39.000</div>
-<button class="add" onclick='add("devocional-ninos","Devocional para ni\u00f1os",39000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/rompecabezas-biblico.html"><div class="ph"><span class="ic">🧸</span></div></a>
-<div class="bd"><a href="/producto/rompecabezas-biblico.html"><h3>Rompecabezas bíblico</h3></a>
-<div class="pr">$32.000</div>
-<button class="add" onclick='add("rompecabezas-biblico","Rompecabezas b\u00edblico",32000)'>🛒 Añadir</button></div></div></div></div></section>
+<button class="add" onclick='add("biblia-de-promesas-para-ninas-lila-tapa-dura-ntv","Biblia De Promesas Para Ni\u00f1as Lila Tapa Dura NTV",85000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/seis-maneras-de-conservar-la-pequena-que-hay-en-tu-hija.html"><div class="ph"><img src="/img/p/seis-maneras-de-conservar-la-pequena-que-hay-en-tu-hija.webp" alt="Seis Maneras De Conservar La Pequeña Que Hay En Tu Hija" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/seis-maneras-de-conservar-la-pequena-que-hay-en-tu-hija.html"><h3>Seis Maneras De Conservar La Pequeña Que Hay En Tu Hija</h3></a>
+<div class="pr">$26.800</div>
+<button class="add" onclick='add("seis-maneras-de-conservar-la-pequena-que-hay-en-tu-hija","Seis Maneras De Conservar La Peque\u00f1a Que Hay En Tu Hija",26800)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-de-promesas-para-ninos-azul-tapa-dura-rvr1960.html"><div class="ph"><img src="/img/p/biblia-de-promesas-para-ninos-azul-tapa-dura-rvr1960.webp" alt="Biblia De Promesas Para Niños Azul Tapa Dura RVR1960" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-de-promesas-para-ninos-azul-tapa-dura-rvr1960.html"><h3>Biblia De Promesas Para Niños Azul Tapa Dura RVR1960</h3></a>
+<div class="pr">$74.500</div>
+<button class="add" onclick='add("biblia-de-promesas-para-ninos-azul-tapa-dura-rvr1960","Biblia De Promesas Para Ni\u00f1os Azul Tapa Dura RVR1960",74500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/como-liderar-grupos-pequenos.html"><div class="ph"><img src="/img/p/como-liderar-grupos-pequenos.webp" alt="Como Liderar Grupos Pequeños" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/como-liderar-grupos-pequenos.html"><h3>Como Liderar Grupos Pequeños</h3></a>
+<div class="pr">$32.100</div>
+<button class="add" onclick='add("como-liderar-grupos-pequenos","Como Liderar Grupos Peque\u00f1os",32100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/365-actividades-para-ninos.html"><div class="ph"><img src="/img/p/365-actividades-para-ninos.webp" alt="365 Actividades Para Niños" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/365-actividades-para-ninos.html"><h3>365 Actividades Para Niños</h3></a>
+<div class="pr">$69.000</div>
+<button class="add" onclick='add("365-actividades-para-ninos","365 Actividades Para Ni\u00f1os",69000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/separador-en-3d-para-ninos.html"><div class="ph"><img src="/img/p/separador-en-3d-para-ninos.webp" alt="Separador En 3D Para Niños" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/separador-en-3d-para-ninos.html"><h3>Separador En 3D Para Niños</h3></a>
+<div class="pr">$15.600</div>
+<button class="add" onclick='add("separador-en-3d-para-ninos","Separador En 3D Para Ni\u00f1os",15600)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/separador-en-3d-para-ninos-temporada-b.html"><div class="ph"><img src="/img/p/separador-en-3d-para-ninos-temporada-b.webp" alt="Separador En 3D Para Niños Temporada B" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/separador-en-3d-para-ninos-temporada-b.html"><h3>Separador En 3D Para Niños Temporada B</h3></a>
+<div class="pr">$15.600</div>
+<button class="add" onclick='add("separador-en-3d-para-ninos-temporada-b","Separador En 3D Para Ni\u00f1os Temporada B",15600)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/oraciones-diarias-ninos-ninas.html"><div class="ph"><img src="/img/p/oraciones-diarias-ninos-ninas.webp" alt="Oraciones Diarias Ninos Ninas" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/oraciones-diarias-ninos-ninas.html"><h3>Oraciones Diarias Ninos Ninas</h3></a>
+<div class="pr">$14.000</div>
+<button class="add" onclick='add("oraciones-diarias-ninos-ninas","Oraciones Diarias Ninos Ninas",14000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/cuando-los-ninos-oran-bolsilibro.html"><div class="ph"><img src="/img/p/cuando-los-ninos-oran-bolsilibro.webp" alt="Cuando Los Niños Oran Bolsilibro" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/cuando-los-ninos-oran-bolsilibro.html"><h3>Cuando Los Niños Oran Bolsilibro</h3></a>
+<div class="pr">$19.300</div>
+<button class="add" onclick='add("cuando-los-ninos-oran-bolsilibro","Cuando Los Ni\u00f1os Oran Bolsilibro",19300)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/manual-biblico-para-ninos-halley.html"><div class="ph"><img src="/img/p/manual-biblico-para-ninos-halley.webp" alt="Manual Biblico Para Niños Halley" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/manual-biblico-para-ninos-halley.html"><h3>Manual Biblico Para Niños Halley</h3></a>
+<div class="pr">$62.000</div>
+<button class="add" onclick='add("manual-biblico-para-ninos-halley","Manual Biblico Para Ni\u00f1os Halley",62000)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/oraciones-por-mi-bebe-tapa-dura.html"><div class="ph"><img src="/img/p/oraciones-por-mi-bebe-tapa-dura.webp" alt="Oraciones Por Mi Bebe Tapa Dura" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/oraciones-por-mi-bebe-tapa-dura.html"><h3>Oraciones Por Mi Bebe Tapa Dura</h3></a>
+<div class="pr">$49.900</div>
+<button class="add" onclick='add("oraciones-por-mi-bebe-tapa-dura","Oraciones Por Mi Bebe Tapa Dura",49900)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/biblia-para-ninas-historias-biblicas-para-madres-e-hijas-tap.html"><div class="ph"><img src="/img/p/biblia-para-ninas-historias-biblicas-para-madres-e-hijas-tap.webp" alt="Biblia Para Niñas Historias Biblicas Para Madres E Hijas Tapa Dura" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/biblia-para-ninas-historias-biblicas-para-madres-e-hijas-tap.html"><h3>Biblia Para Niñas Historias Biblicas Para Madres E Hijas Tapa Dura</h3></a>
+<div class="pr">$67.500</div>
+<button class="add" onclick='add("biblia-para-ninas-historias-biblicas-para-madres-e-hijas-tap","Biblia Para Ni\u00f1as Historias Biblicas Para Madres E Hijas Tapa Dura",67500)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/cinco-lenguajes-del-amor-de-los-ninos-bolsilibro-nuevo.html"><div class="ph"><img src="/img/p/cinco-lenguajes-del-amor-de-los-ninos-bolsilibro-nuevo.webp" alt="Cinco Lenguajes Del Amor De Los Niños Bolsilibro Nuevo" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/cinco-lenguajes-del-amor-de-los-ninos-bolsilibro-nuevo.html"><h3>Cinco Lenguajes Del Amor De Los Niños Bolsilibro Nuevo</h3></a>
+<div class="pr">$33.100</div>
+<button class="add" onclick='add("cinco-lenguajes-del-amor-de-los-ninos-bolsilibro-nuevo","Cinco Lenguajes Del Amor De Los Ni\u00f1os Bolsilibro Nuevo",33100)'>🛒 Añadir</button></div></div><div class="card"><a href="/producto/como-criar-a-un-nino-de-voluntad-firme-bolsilibro-serie-favo.html"><div class="ph"><img src="/img/p/como-criar-a-un-nino-de-voluntad-firme-bolsilibro-serie-favo.webp" alt="Como Criar A Un Niño De Voluntad Firme Bolsilibro Serie Favoritos" width="600" height="600" loading="lazy" decoding="async"></div></a>
+<div class="bd"><a href="/producto/como-criar-a-un-nino-de-voluntad-firme-bolsilibro-serie-favo.html"><h3>Como Criar A Un Niño De Voluntad Firme Bolsilibro Serie Favoritos</h3></a>
+<div class="pr">$33.100</div>
+<button class="add" onclick='add("como-criar-a-un-nino-de-voluntad-firme-bolsilibro-serie-favo","Como Criar A Un Ni\u00f1o De Voluntad Firme Bolsilibro Serie Favoritos",33100)'>🛒 Añadir</button></div></div></div></div></section>
 
 <section style="background:var(--crema2)"><div class="wrap" style="max-width:780px">
 <h2 class="h2c">Preguntas frecuentes</h2><div style="margin-top:24px"><details><summary>¿Hacen envíos de niños a toda Colombia y al exterior?</summary><p>Sí, enviamos a todo el país y también a EE.UU., España, México y toda Latinoamérica. Coordinamos todo por WhatsApp con Johana.</p></details><details><summary>¿Puedo personalizar con un nombre, fecha o versículo?</summary><p>¡Claro! Muchos productos se personalizan. Te enviamos un preview del grabado antes de imprimir.</p></details><details><summary>¿Puedo pagar contraentrega?</summary><p>Sí. Enviamos por Inter Rapidísimo con pago contraentrega en 1.013 municipios de Colombia: le pagas al mensajero cuando recibes. Los productos con grabado personalizado piden un anticipo, porque no se pueden revender si se rechaza el paquete.</p></details><details><summary>¿Cómo compro y cómo pago?</summary><p>Añade al carrito y finaliza por WhatsApp. Pagas contraentrega al recibir, o por transferencia o Nequi si lo prefieres.</p></details></div></div></section>
@@ -230,7 +311,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <div class="fgrid">
 <div><h3 class="notranslate">Luz y Gracia</h3><p style="color:#b8bcd0;font-size:.9rem">Regalos y productos cristianos que iluminan la fe. Envíos a toda Colombia y al mundo.</p>
 <p style="margin-top:12px"><a href="https://wa.me/573126295392?text=Hola%20Johana%20%F0%9F%95%8A%EF%B8%8F%20Quiero%20un%20detalle%20personalizado%20para%20un%20ser%20querido.%20%C2%BFMe%20ayudas%20a%20elegir%3F" style="color:var(--wa);font-weight:700">💬 WhatsApp con Johana: 312 629 5392</a></p></div>
-<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ropa.html">Ropa y accesorios</a><a href="/joyeria.html">Joyería cristiana</a><a href="/decoracion.html">Decoración del hogar</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a><a href="/kits.html">Kits y cajas de regalo</a></div>
+<div><h3>Categorías</h3><a href="/biblias.html">Biblias</a><a href="/biblias-personalizadas.html">Biblias personalizadas</a><a href="/devocionales.html">Devocionales y libros</a><a href="/regalos.html">Regalos cristianos</a><a href="/ninos.html">Niños</a><a href="/iglesia.html">Iglesia y ministerio</a><a href="/musica.html">Música y adoración</a><a href="/agendas.html">Agendas y papelería</a></div>
 <div><h3>Ocasiones</h3><a href="/regalos-para-pastores.html">Regalos para pastores</a><a href="/regalos-bautizo.html">Regalos de bautizo</a><a href="/regalos-primera-comunion.html">Primera comunión</a><a href="/regalos-boda-cristiana.html">Bodas cristianas</a><a href="/regalos-dia-de-la-madre.html">Día de la madre cristiana</a><a href="/regalos-dia-del-padre.html">Día del padre cristiano</a><a href="/regalos-quinceanos.html">Quinceaños cristianos</a><a href="/regalos-navidad.html">Navidad cristiana</a><a href="/kit-devocional.html">Kits devocionales</a></div>
 <div><h3>Ayuda</h3><a href="/personalizacion.html">Cómo personalizar</a><a href="/envios.html">Envíos y pagos</a><a href="/nosotros.html">Nosotros</a><a href="/blog.html">Devocional</a></div>
 </div>
