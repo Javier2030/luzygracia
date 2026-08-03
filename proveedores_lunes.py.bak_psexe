@@ -11,16 +11,11 @@ sesión. Si algo falla NO lo intenta a ciegas: deja el motivo en el log y en
 Telegram, para que no queden mensajes a medio mandar ni duplicados.
 """
 import json, os, subprocess, sys, datetime as dt
-# RUTA ABSOLUTA: bajo cron el PATH no trae el interop de Windows y
-# "powershell.exe" falla con "No such file or directory" — el vigía
-# moría en silencio sin avisar de nada.
-PSEXE = "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
-
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 LOG = "/tmp/proveedores_lunes.log"
 ESTADO = os.path.join(BASE, ".proveedores_enviados.json")
-PS = [PSEXE, "-NoProfile", "-ExecutionPolicy", "Bypass", "-File"]
+PS = ["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File"]
 
 # Cada mensaje pide lo MISMO que ya se le preguntó a CLC, para poder comparar
 # manzanas con manzanas: descuento, mínimo, envío directo al cliente y fotos.
@@ -61,7 +56,7 @@ def _ps(args, timeout=180):
 def _cdp_responde():
     # OJO: desde WSL, 127.0.0.1:9333 NO alcanza el CDP de Windows (queda atado al
     # loopback de Windows). La comprobación tiene que hacerse DESDE PowerShell.
-    r = _ps([PSEXE, "-NoProfile", "-Command",
+    r = _ps(["powershell.exe", "-NoProfile", "-Command",
              "try{(Invoke-WebRequest -UseBasicParsing 'http://127.0.0.1:9333/json/version' "
              "-TimeoutSec 6).StatusCode}catch{0}"], timeout=40)
     return "200" in (r.stdout or "")
@@ -69,7 +64,7 @@ def _cdp_responde():
 def cdp_vivo():
     if _cdp_responde(): return True
     log("puente caído, levantando Edge con CDP…")
-    _ps([PSEXE, "-NoProfile", "-Command",
+    _ps(["powershell.exe", "-NoProfile", "-Command",
         "Start-Process 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe' "
         "-ArgumentList '--remote-debugging-port=9333','--user-data-dir=C:\\temp\\edge_cdp',"
         "'--no-first-run','--restore-last-session'"], timeout=60)
@@ -81,7 +76,7 @@ def cdp_vivo():
 
 def wa_con_sesion():
     # la pestaña de WhatsApp puede no existir tras levantar Edge: se abre primero
-    _ps([PSEXE, "-NoProfile", "-Command",
+    _ps(["powershell.exe", "-NoProfile", "-Command",
          "try{Invoke-WebRequest -UseBasicParsing "
          "'http://127.0.0.1:9333/json/new?https://web.whatsapp.com/' -Method PUT -TimeoutSec 15}catch{}"],
         timeout=60)
@@ -97,17 +92,7 @@ def avisa(txt):
         pass
 
 def main():
-    # ENSAYO EN SECO de verdad. Antes no existía: pasarle --dry lo ignoraba y
-    # mandaba los mensajes igual. Pasó el 25-jul y salieron tres WhatsApp un
-    # sábado en vez del lunes. Ahora cualquier bandera desconocida NO envía.
-    seco = ("--dry" in sys.argv or "--simulacro" in sys.argv)
     hechos = json.load(open(ESTADO)) if os.path.exists(ESTADO) else {}
-    if seco:
-        log("SIMULACRO: no se envía nada")
-        for d in DESTINOS:
-            estado = "ya enviado " + hechos[d["id"]] if hechos.get(d["id"]) else "pendiente"
-            log(f"  {d['nombre']} ({d['tel']}) -> {estado}")
-        return 0
     if not cdp_vivo():
         log("ABORTADO: no hay puente CDP. Nada enviado."); return 1
     if not wa_con_sesion():
