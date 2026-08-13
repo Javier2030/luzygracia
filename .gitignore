@@ -9,3 +9,7 @@ precios_modelo.py
 GUIA_PRECIOS.md
 *.log
 assets_src/
+.build_ebooks/
+ebooks_src/
+ebooks.py
+web_biblioteca.py
