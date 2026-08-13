@@ -234,12 +234,16 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 .dona::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 8% 0%,rgba(200,154,59,.30) 0%,transparent 60%)}
 .dona>*{position:relative;z-index:2}
 .dona h2{color:var(--crema);font-size:1.85rem;line-height:1.18}
-.dona p{color:#cfd4e4;margin-top:12px;line-height:1.72;font-size:.95rem}
+/* Un solo tamaño para todo el mensaje del bloque de aportes. */
+.dona p.mensaje{color:var(--crema);margin-top:14px;line-height:1.66;font-size:1.06rem;font-weight:300}
+.dona p.mensaje:first-child{margin-top:0}
 .dona p b{color:var(--oro2);font-weight:600}
 .pagobox{background:rgba(250,246,239,.07);border:1px solid rgba(227,194,126,.3);border-radius:14px;padding:22px;text-align:center}
 .pagobox .k{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--oro2);margin-bottom:10px}
 .pagobox .num{font-family:'Playfair Display',serif;font-size:1.95rem;font-weight:700;color:var(--crema);letter-spacing:1px}
 .pagobox .med{font-size:.82rem;color:var(--oro2);margin-top:6px;letter-spacing:.06em}
+.pagobox .titular{font-size:.82rem;color:#cfd4e4;margin-top:6px}
+.pagobox .titular b{color:var(--crema);font-weight:600}
 .pagobox .cp{margin-top:14px;width:100%;background:var(--oro);color:var(--tinta);border:0;border-radius:9px;padding:11px;font-weight:700;font-size:.9rem;cursor:pointer;font-family:inherit}
 .pagobox .cp:hover{background:var(--oro2)}
 .pagobox img.qr{width:118px;margin:14px auto 0;background:#fff;padding:7px;border-radius:8px;display:block}
@@ -286,7 +290,7 @@ try{if(window.clarity){clarity('event','checkout_whatsapp');clarity('set','wa_to
 <div class="metaline">
 <span>Colección <b>Niños y Jóvenes</b></span>
 <span><b>10</b> capítulos</span>
-<span>PDF · <b>191 KB</b></span>
+<span>PDF · <b>196 KB</b></span>
 <span>Precio <b>gratis</b></span></div>
 <p style="line-height:1.85">Un libro para jóvenes sobre identidad, comparación y redes sociales, escrito sin pánico moral y sin sermones, con fe honesta y herramientas concretas.</p>
 <div class="promesabox"><div class="k">La promesa de estas páginas</div>
@@ -300,15 +304,16 @@ Jóvenes entre quince y veinticinco años que viven en redes y sienten que su va
 <ol><li><span class="n">01</span><div><b>El espejo que opina</b><span>Por qué esta pantalla no se parece a ningún espejo anterior</span></div></li><li><span class="n">02</span><div><b>Compites contra montajes</b><span>Cómo funciona realmente la comparación en redes</span></div></li><li><span class="n">03</span><div><b>El salario emocional</b><span>Qué te están pagando por publicar y por qué nunca alcanza</span></div></li><li><span class="n">04</span><div><b>El nombre anterior</b><span>Existías antes de tener usuario y eso cambia la conversación</span></div></li><li><span class="n">05</span><div><b>Tu cuerpo no es contenido</b><span>Imagen corporal, filtros y la trampa del retoque</span></div></li><li><span class="n">06</span><div><b>La hora sin testigos</b><span>El scroll de las tres de la mañana y lo que dice de ti</span></div></li><li><span class="n">07</span><div><b>Opinar sin quemarte</b><span>Discusiones, cancelaciones y el costo de subirse al ring</span></div></li><li><span class="n">08</span><div><b>Amistades con notificación</b><span>La diferencia entre contacto y compañía</span></div></li><li><span class="n">09</span><div><b>La herramienta con horario</b><span>Cómo usar la pantalla en vez de ser usado por ella</span></div></li><li><span class="n">10</span><div><b>La versión sin público</b><span>Quién eres cuando nadie está mirando</span></div></li></ol></div>
 </div></div>
 <div class="dona" id="aportar">
-<div><h2>¿Te sirvió este libro?</h2>
-<p>Descargar no te cuesta nada, y así debe ser. Pero si el libro te sirvió, tu aporte
-—del monto que tú decidas— se vuelve comida, útiles escolares y acompañamiento para
-niños de Bogotá.</p>
-<p>Lo que aportes por estos libros se entrega a la <b>Fundación El Alfarero</b>, que trabaja con niños necesitados en Bogotá. Además, el <b>10 % de las ganancias</b> de la tienda se destina a fundaciones cristianas que sirven a la niñez.</p></div>
+<div><p class="mensaje">Este libro es de <b>distribución gratuita</b>.</p>
+<p class="mensaje">Tu aporte voluntario llevará comida, ropa y ayuda a muchos hogares
+de bajos recursos y a madres cabeza de hogar.</p>
+<p class="mensaje">Contamos contigo.</p>
+<p class="mensaje" style="opacity:.82">Lo que aportes se entrega a la <b>Fundación El Alfarero</b>, en Bogotá. Además, el <b>10 % de las ganancias</b> de la tienda se destina a fundaciones cristianas.</p></div>
 <div class="pagobox">
 <div class="k">Aporta desde tu celular</div>
 <div class="num">312 629 5392</div>
 <div class="med">Nequi · Daviplata · Llave</div>
+<div class="titular">a nombre de <b>Johana Heredia</b></div>
 <button class="cp" onclick="copiarNum()">Copiar número</button>
 <img class="qr" src="data:image/png;base64,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" alt="Código QR para aportar" width="118" height="118" loading="lazy">
 </div></div>
