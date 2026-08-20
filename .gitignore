@@ -15,3 +15,15 @@ ebooks.py
 web_biblioteca.py
 web_libros.py
 entregas/
+ropa_modelo.py
+ropa_disenos.py
+ropa_mockup.py
+web_ropa.py
+panel_ventas.py
+vigia_ventas.py
+entregar_libro.py
+.panel_token
+pedidos.json
+vigia_ventas_state.json
+disenos_print/
+.build_ropa/
