@@ -27,3 +27,5 @@ pedidos.json
 vigia_ventas_state.json
 disenos_print/
 .build_ropa/
+generate.py.bak*
+*.bak*
