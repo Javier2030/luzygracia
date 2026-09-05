@@ -59,10 +59,10 @@ def _ps(args, timeout=180):
                           encoding="utf-8", errors="replace", timeout=timeout)
 
 def _cdp_responde():
-    # OJO: desde WSL, 127.0.0.1:9333 NO alcanza el CDP de Windows (queda atado al
+    # OJO: desde WSL, 127.0.0.1:9445 NO alcanza el CDP de Windows (queda atado al
     # loopback de Windows). La comprobación tiene que hacerse DESDE PowerShell.
     r = _ps([PSEXE, "-NoProfile", "-Command",
-             "try{(Invoke-WebRequest -UseBasicParsing 'http://127.0.0.1:9333/json/version' "
+             "try{(Invoke-WebRequest -UseBasicParsing 'http://127.0.0.1:9445/json/version' "
              "-TimeoutSec 6).StatusCode}catch{0}"], timeout=40)
     return "200" in (r.stdout or "")
 
@@ -71,7 +71,7 @@ def cdp_vivo():
     log("puente caído, levantando Edge con CDP…")
     _ps([PSEXE, "-NoProfile", "-Command",
         "Start-Process 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe' "
-        "-ArgumentList '--remote-debugging-port=9333','--user-data-dir=C:\\temp\\edge_cdp',"
+        "-ArgumentList '--remote-debugging-port=9445','--user-data-dir=C:\\temp\\edge_cdp',"
         "'--no-first-run','--restore-last-session'"], timeout=60)
     import time
     for _ in range(15):
@@ -83,7 +83,7 @@ def wa_con_sesion():
     # la pestaña de WhatsApp puede no existir tras levantar Edge: se abre primero
     _ps([PSEXE, "-NoProfile", "-Command",
          "try{Invoke-WebRequest -UseBasicParsing "
-         "'http://127.0.0.1:9333/json/new?https://web.whatsapp.com/' -Method PUT -TimeoutSec 15}catch{}"],
+         "'http://127.0.0.1:9445/json/new?https://web.whatsapp.com/' -Method PUT -TimeoutSec 15}catch{}"],
         timeout=60)
     import time; time.sleep(20)
     r = _ps(PS + ["C:\\temp\\wa_state.ps1"], timeout=120)

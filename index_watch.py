@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 index_watch.py — Vigilante diario de INDEXACIÓN de luzygracia.com.
-Consulta 'site:luzygracia.com' en Google (Edge REAL vía CDP 9333) y cuenta
+Consulta 'site:luzygracia.com' en Google (Edge REAL vía CDP 9445) y cuenta
 cuántas páginas propias tiene Google en el índice. Avisa por Telegram cada vez
 que el número cambia, y un aviso especial cuando la indexación queda COMPLETA
 (>= total de URLs del sitemap). Cuando está completa, deja de repetir (solo
@@ -62,18 +62,15 @@ def fix_interop():
 
 def cdp_alive():
     r = subprocess.run([PS, "-NoProfile", "-Command",
-                        "(Invoke-WebRequest 'http://127.0.0.1:9333/json/version' -UseBasicParsing -TimeoutSec 5).StatusCode"],
+                        "(Invoke-WebRequest 'http://127.0.0.1:9445/json/version' -UseBasicParsing -TimeoutSec 5).StatusCode"],
                        capture_output=True, text=True, errors="replace", timeout=30)
     return "200" in (r.stdout or "")
 
 
 def launch_edge():
-    subprocess.run([PS, "-NoProfile", "-Command",
-                    f"Start-Process -FilePath '{EDGE}' -ArgumentList "
-                    "'--remote-debugging-port=9333','--user-data-dir=C:\\temp\\edge_cdp','--no-first-run',"
-                    "'--disable-background-timer-throttling','about:blank'"],
-                   capture_output=True, text=True, timeout=30)
-    time.sleep(12)
+    # MIGRACIÓN 29-ago-2026: el navegador es Chrome:9445 (lo mantiene vivo el guardián del bufete).
+    # NO se relanza Edge: eran las dos pestañas que el dueño cerraba y volvían a abrirse.
+    print("[migración] 9445 caído: no se relanza Edge"); return False
 
 
 def tg(text):
@@ -121,7 +118,7 @@ def main():
     if not cdp_alive():
         launch_edge()
         if not cdp_alive():
-            tg("🔎 index_watch: no pude levantar Edge CDP (9333). Revisar.")
+            tg("🔎 index_watch: no pude levantar Edge CDP (9445). Revisar.")
             return
 
     d = measure()
