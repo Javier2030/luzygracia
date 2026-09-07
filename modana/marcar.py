@@ -29,10 +29,50 @@ def sellar(im):
     out.paste(lg, ((W-lg.width)//2, H + (franja-lg.height)//2 + 1), lg)
     return out
 
+
+# ── RECORTE DE PUDOR (7-sep-2026, orden del dueño) ────────────────────────────
+# El público de la tienda es cristiano y no le sienta bien la piel expuesta. El
+# recorte se hace ANTES de sellar para que el pie de marca quede pegado a la foto
+# ya recortada. Fracciones (x0,y0,x1,y1) sobre el crop original, elegidas a ojo:
+# se corta por DEBAJO del bajo de la prenda —nunca por encima—, para no perder el
+# largo, que es lo que distingue a un gabán. Donde hay dos modelos y una va más
+# cubierta, el recorte lateral se queda con esa.
+# Lo que el recorte NO puede resolver queda anotado en PIEL_SIN_SOLUCION.
+PUDOR = {
+ "gaban-m-798.webp":    (0.00, 0.00, 0.52, 0.55),
+ "gaban-m-800.webp":    (0.00, 0.00, 1.00, 0.52),
+ "gaban-m-801.webp":    (0.00, 0.00, 1.00, 0.72),
+ "gaban-m-802.webp":    (0.00, 0.00, 1.00, 0.60),
+ "gaban-m-803.webp":    (0.00, 0.00, 1.00, 0.62),
+ "gaban-m-804.webp":    (0.00, 0.00, 1.00, 0.62),
+ "gaban-m-805.webp":    (0.00, 0.00, 0.52, 0.52),
+ "gaban-m-806.webp":    (0.00, 0.00, 1.00, 0.48),
+ "gaban-m-807.webp":    (0.00, 0.00, 1.00, 0.47),
+ "conjunto-m-810.webp": (0.00, 0.00, 1.00, 0.97),
+ "conjunto-m-811.webp": (0.00, 0.00, 1.00, 0.97),
+ "conjunto-m-816.webp": (0.00, 0.00, 1.00, 0.74),
+}
+
+# Fotos donde el top corto deja el abdomen en mitad del encuadre: recortarlo
+# obligaría a cortar la prenda que se vende. Se dejan como están y se avisa;
+# la salida es pedirle al proveedor otra toma, no destrozar la foto.
+PIEL_SIN_SOLUCION = ["gaban-m-795.webp", "gaban-m-796.webp", "gaban-m-799.webp",
+                     "conjunto-m-809.webp", "conjunto-m-812.webp"]
+
+
+def pudor(im, archivo):
+    if archivo not in PUDOR:
+        return im
+    w, h = im.size
+    x0, y0, x1, y1 = PUDOR[archivo]
+    return im.crop((int(w*x0), int(h*y0), int(w*x1), int(h*y1)))
+
+
 if __name__ == "__main__":
     P = json.load(open("productos.json"))
     for p in P:
         im = Image.open(f"crops/p{p['pag']:02d}.png").convert("RGB")
+        im = pudor(im, p["archivo"])
         w,h = im.size
         if h>1500: im = im.resize((int(w*1500/h),1500), Image.LANCZOS)
         sellar(im).save(f"final/{p['archivo']}", "WEBP", quality=86, method=6)
