@@ -1,0 +1,76 @@
+{
+ "name": "Luz y Gracia · Regalos y productos cristianos",
+ "short_name": "Luz y Gracia",
+ "description": "Biblias, camisetas cristianas, regalos y libros. Envío a toda Colombia con pago contraentrega.",
+ "start_url": "/?fuente=app",
+ "scope": "/",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#faf6ee",
+ "theme_color": "#1a2238",
+ "lang": "es-CO",
+ "dir": "ltr",
+ "categories": [
+  "shopping",
+  "lifestyle",
+  "books"
+ ],
+ "icons": [
+  {
+   "src": "/img/app/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/img/app/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/img/app/maskable-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "/img/app/maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "Ropa cristiana",
+   "url": "/ropa-cristiana.html",
+   "icons": [
+    {
+     "src": "/img/app/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Biblias",
+   "url": "/biblias.html",
+   "icons": [
+    {
+     "src": "/img/app/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Libros gratis",
+   "url": "/biblioteca.html",
+   "icons": [
+    {
+     "src": "/img/app/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ]
+}

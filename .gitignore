@@ -1,6 +1,8 @@
 generate.py
 config.py
 *.json
+# el manifiesto de la app SÍ se publica: sin él el navegador no ofrece instalar
+!docs/manifest.json
 ESTRATEGIA.md
 __pycache__/
 .porkbun_keys
