@@ -96,59 +96,18 @@ def tarjeta(slug, titulo, cita, colores, alto, disenos):
   </div></a>"""
 
 
-def pagina_indice():
-    cards = "".join(tarjeta(*c) for c in M.CAMISETAS)
-    nd = M.total_disenos()
-    n = len(M.CAMISETAS)
-    ld = {"@context": "https://schema.org", "@type": "ItemList",
-          "itemListElement": [{"@type": "Product", "name": t,
-                               "image": f"{BASE}/img/camisetas/{s_}.jpg",
-                               "url": f"{BASE}/camiseta/{s_}.html",
-                               "offers": {"@type": "Offer", "price": str(M.PRECIO),
-                                          "priceCurrency": "COP",
-                                          "availability": "https://schema.org/InStock"}}
-                              for s_, t, _c, _co, _a, _d in M.CAMISETAS]}
-    bc = G.crumbs_ld([("Inicio", "/"), ("Camisetas cristianas", "/camisetas-cristianas.html")])
-    G.write("camisetas-cristianas.html", f"""{G.head(
- f"Camisetas cristianas estampadas · {M.cop(M.PRECIO)} — {nd} diseños | {C.BRAND}",
- f"Camisetas cristianas estampadas en {M.TELA.lower()} a {M.cop(M.PRECIO)} cada una. "
- f"{nd} diseños con versículos, tallas {M.TALLAS[0]} a {M.TALLAS[-1]} y envío a toda Colombia con pago contraentrega.",
- "/camisetas-cristianas.html", [ld, bc])}{css()}
-{G.header_html()}
-<div class="bhero"><div class="wrap">
-<div class="eyebrow">Luz y Gracia · Vestir</div>
-<h1>Camisetas cristianas listas para llevar</h1>
-<p class="lead">{nd} diseños para llevar la Palabra puesta, en {M.TELA.lower()}.
-Todas al mismo precio, sin importar el diseño ni el color: lo que ves es lo que pagas.</p>
-<div class="bstats">
-<div><b>{M.cop(M.PRECIO)}</b><span>Cada una</span></div>
-<div><b>{nd}</b><span>Diseños</span></div>
-<div><b>{len(M.TALLAS)}</b><span>Tallas: {" a ".join([M.TALLAS[0], M.TALLAS[-1]])}</span></div>
-<div><b>14</b><span>Colores</span></div>
-</div></div></div>
-<section><div class="wrap">
-<h2 class="h2c">Los diseños</h2>
-<p class="lead">Cada foto es del producto real. Toca la que te guste para ver colores,
-tallas y pedirla por WhatsApp.</p>
-<div class="camgrid">{cards}</div>
-
-<div class="pers">
-<h2>¿Es para tu grupo, tu iglesia o un retiro?</h2>
-<p>Si necesitas varias, escríbenos y cuadramos el precio por cantidad. También podemos
-estampar <b>el nombre de tu ministerio</b> o la fecha del retiro sobre cualquiera de estos
-diseños.</p>
-<a class="btn" href="{wa('Hola, quiero camisetas cristianas para mi grupo o iglesia. Somos aproximadamente ___ personas.')}"
- target="_blank" rel="noopener">Pedir por cantidad</a>
-</div>
-
-<h2 class="h2c">Cómo pedirla</h2>
-<ol class="pasos" style="max-width:70ch;margin:16px auto 0">
-<li>Elige el diseño y entra a su ficha para ver los colores disponibles.</li>
-<li>Escribe por WhatsApp con un clic: el mensaje ya va con el diseño puesto, solo dices color y talla.</li>
-<li>Pagas por Nequi, Daviplata o contraentrega y te llega a toda Colombia.</li>
-</ol>
-</div></section>
-{G.footer_html()}""")
+def redireccion_indice():
+    """La página aparte se retiró el 7-sep-2026: el dueño quiere UNA sola sección
+    de ropa, llamada «Ropa cristiana». Se deja redirección permanente porque la URL
+    ya se envió a los buscadores y no debe quedar en 404."""
+    G.write("camisetas-cristianas.html", """<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://luzygracia.com/ropa-cristiana.html">
+<meta http-equiv="refresh" content="0; url=/ropa-cristiana.html">
+<title>Camisetas cristianas — Luz y Gracia</title></head>
+<body><p>Las camisetas están ahora en <a href="/ropa-cristiana.html">Ropa cristiana</a>.</p></body></html>
+""")
 
 
 def pagina_ficha(slug, titulo, cita, colores, alto, disenos):
@@ -209,10 +168,10 @@ def main():
               if not os.path.exists(os.path.join(G.OUT, "img", "camisetas", f"{c[0]}.jpg"))]
     if faltan:
         print("  ⚠ faltan fotos:", ", ".join(faltan))
-    pagina_indice()
+    redireccion_indice()
     for c in M.CAMISETAS:
         pagina_ficha(*c)
-    print(f"  ✓ camisetas: 1 índice + {len(M.CAMISETAS)} fichas ({M.total_disenos()} diseños)")
+    print(f"  ✓ camisetas: {len(M.CAMISETAS)} fichas ({M.total_disenos()} diseños) + redirección del índice viejo")
 
 
 if __name__ == "__main__":
