@@ -1,0 +1,18 @@
+{
+  "id": "/estudio/",
+  "name": "Estudio Luz y Gracia",
+  "short_name": "Estudio LyG",
+  "description": "Personaliza biblias, envía la propuesta al cliente y la orden al taller.",
+  "start_url": "/estudio/",
+  "scope": "/estudio/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf6ef",
+  "theme_color": "#1a2238",
+  "lang": "es-CO",
+  "icons": [
+    {"src": "/img/app/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/img/app/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/img/app/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

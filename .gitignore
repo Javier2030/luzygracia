@@ -1,0 +1,46 @@
+# OPSEC (1-oct-2026): el repositorio es público; solo se publica el sitio. Todo lo demás queda local.
+/*
+!/docs/
+!/.gitignore
+!/LICENSE
+
+generate.py
+config.py
+*.json
+# el manifiesto de la app SÍ se publica: sin él el navegador no ofrece instalar
+!docs/manifest.json
+ESTRATEGIA.md
+__pycache__/
+.porkbun_keys
+proveedores/
+precios_modelo.py
+GUIA_PRECIOS.md
+*.log
+assets_src/
+.build_ebooks/
+ebooks_src/
+ebooks.py
+web_biblioteca.py
+web_libros.py
+entregas/
+ropa_modelo.py
+ropa_disenos.py
+ropa_mockup.py
+web_ropa.py
+panel_ventas.py
+vigia_ventas.py
+entregar_libro.py
+.panel_token
+pedidos.json
+vigia_ventas_state.json
+disenos_print/
+.build_ropa/
+generate.py.bak*
+*.bak*
+
+# 15-sep-2026: texto de fichas de ropa y su verificador (no se publican)
+ropa_versiculos.py
+verificar_versiculos.py
+
+# 30-sep-2026: texto fuente del blog y de las landings de la ronda SEO 2 (se publica solo el HTML)
+contenido_seo.py

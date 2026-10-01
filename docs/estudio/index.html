@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+<title>Estudio · Luz y Gracia</title>
+<meta name="description" content="Estudio de personalización de biblias de Luz y Gracia.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1a2238">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/app/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Estudio LyG">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--oro:#c89a3b;--oro2:#e3c27e;--tinta:#1a2238;--tinta2:#2d3657;--crema:#faf6ef;--crema2:#f2e9d8;
+--texto:#2a2f45;--suave:#6b7189;--linea:#e7ddc9;--wa:#1faa59;--rojo:#b3261e;--r:14px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html,body{margin:0;height:100%;background:var(--crema);color:var(--texto);
+font:15px/1.45 Jost,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.top{flex:none;display:flex;align-items:center;justify-content:space-between;gap:8px;
+padding:8px 12px;padding-top:max(8px,env(safe-area-inset-top));background:var(--tinta);color:#fff}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{width:34px;height:34px;object-fit:contain}
+.brand b{display:block;font-family:"lg-playfair",Georgia,serif;font-style:italic;font-weight:600;font-size:1.12rem;color:var(--oro2);line-height:1.1}
+.brand span{display:block;font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;opacity:.75}
+.acts{display:flex;gap:6px}
+.acts button{background:rgba(255,255,255,.08);border:1px solid rgba(227,194,126,.35);color:#fff;border-radius:999px;
+padding:7px 12px;font-size:.82rem;white-space:nowrap}
+.acts button:active{background:rgba(227,194,126,.25)}
+.app{flex:1;min-height:0;display:flex;flex-direction:column}
+.stage{flex:none;position:relative;height:44vh;height:42dvh;min-height:190px;
+background:radial-gradient(120% 90% at 50% 30%,#fffdf8 0%,var(--crema2) 100%);border-bottom:1px solid var(--linea)}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.badge{position:absolute;left:10px;top:10px;background:rgba(26,34,56,.86);color:var(--oro2);
+font-size:.72rem;letter-spacing:1px;padding:4px 10px;border-radius:999px;pointer-events:none}
+.hint{position:absolute;right:10px;bottom:8px;font-size:.72rem;color:var(--suave);pointer-events:none}
+.avisos{position:absolute;left:8px;right:8px;bottom:26px;display:flex;flex-direction:column;gap:4px;pointer-events:none}
+.aviso{align-self:flex-start;max-width:100%;background:#fff4e0;border:1px solid #efcf8f;color:#7a4b00;
+font-size:.74rem;line-height:1.3;padding:5px 9px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.side{flex:1;min-height:0;display:flex;flex-direction:column}
+.tabs{flex:none;display:flex;background:#fff;border-bottom:1px solid var(--linea)}
+.tabs button{flex:1;background:none;border:0;padding:11px 4px 10px;font-weight:500;color:var(--suave);
+border-bottom:2.5px solid transparent;font-size:.92rem}
+.tabs button.on{color:var(--tinta);border-bottom-color:var(--oro)}
+.panel{flex:1;min-height:0;overflow-y:auto;padding:14px 14px 24px;-webkit-overflow-scrolling:touch}
+.pn[hidden]{display:none}
+.lbl{display:block;font-size:.74rem;letter-spacing:1.6px;text-transform:uppercase;color:var(--oro);
+font-weight:600;margin:16px 0 8px}
+.lbl:first-child{margin-top:2px}
+.lbl small{text-transform:none;letter-spacing:0;color:var(--suave);font-weight:400;font-size:.78rem}
+.sub{font-size:.8rem;color:var(--suave);margin-top:6px}
+select,input[type=text],input[type=tel],input[type=number],input[type=date],textarea,input:not([type]){
+width:100%;background:#fff;border:1px solid var(--linea);border-radius:10px;padding:10px 11px;outline:none}
+select:focus,input:focus,textarea:focus{border-color:var(--oro)}
+textarea{resize:vertical;min-height:44px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{background:#fff;border:1px solid var(--linea);border-radius:999px;padding:7px 12px;font-size:.86rem;white-space:nowrap}
+.chip.on{background:var(--tinta);border-color:var(--tinta);color:var(--oro2)}
+.chip small{opacity:.7;margin-left:4px}
+.scroll{display:flex;gap:7px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.scroll::-webkit-scrollbar{display:none}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row3{display:grid;grid-template-columns:.7fr 1.3fr 1fr;gap:8px}
+.row2 label,.row3 label,.card>label{display:block;font-size:.8rem;color:var(--suave)}
+.row2 label input,.row3 label input,.row2 label select,.card>label input,.card>label textarea,.card>label select{margin-top:4px}
+.card>label{margin-top:10px}.card>label:first-child{margin-top:0}
+.sw{display:flex;flex-wrap:wrap;gap:9px}
+.sw button{width:36px;height:36px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--linea);padding:0}
+.sw button.on{box-shadow:0 0 0 2.5px var(--oro)}
+.sw label{width:36px;height:36px;border-radius:50%;box-shadow:0 0 0 1px var(--linea);display:grid;place-items:center;
+background:conic-gradient(red,orange,yellow,green,cyan,blue,magenta,red);position:relative;overflow:hidden}
+.sw label input{position:absolute;inset:0;opacity:0}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tg label{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--linea);border-radius:10px;padding:9px 10px;font-size:.88rem}
+.tg input{accent-color:var(--oro);width:18px;height:18px}
+.card{background:#fff;border:1px solid var(--linea);border-radius:var(--r);padding:12px;margin-top:10px}
+.card.sel{border-color:var(--oro);box-shadow:0 0 0 2px rgba(200,154,59,.25)}
+.card h4{margin:0 0 4px;font-size:.95rem}
+.card p{margin:0 0 10px;font-size:.84rem;color:var(--suave)}
+.elhead{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.elhead .num{width:22px;height:22px;border-radius:50%;background:var(--tinta);color:var(--oro2);display:grid;place-items:center;font-size:.75rem;flex:none}
+.elhead b{flex:1;font-weight:500;font-size:.9rem}
+.mini{background:none;border:1px solid var(--linea);border-radius:8px;padding:4px 9px;font-size:.8rem;color:var(--suave)}
+.mini.del{color:var(--rojo)}
+.fch{background:#faf8f3;border:1px solid var(--linea);border-radius:10px;padding:6px 10px;font-size:1.05rem;white-space:nowrap;line-height:1.2}
+.fch small{display:block;font:10px Jost,sans-serif;color:var(--suave);letter-spacing:.3px}
+.fch.on{border-color:var(--oro);background:#fff7e6;box-shadow:0 0 0 1px var(--oro)}
+.rng{display:grid;grid-template-columns:78px 1fr 58px;align-items:center;gap:8px;margin-top:8px;font-size:.84rem;color:var(--suave)}
+.rng input{width:100%;accent-color:var(--oro)}
+.rng output{text-align:right;color:var(--texto);font-variant-numeric:tabular-nums}
+.nudge{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.nudge button{background:#faf8f3;border:1px solid var(--linea);border-radius:8px;min-width:40px;padding:6px 8px;font-size:.85rem}
+.plant{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.plant::-webkit-scrollbar{display:none}
+.plant button{flex:none;background:#fff;border:1px solid var(--linea);border-radius:12px;padding:6px;width:86px;font-size:.74rem;color:var(--suave)}
+.plant canvas{display:block;width:72px;height:96px;margin:0 auto 4px;border-radius:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.grid button{background:#fff;border:1px solid var(--linea);border-radius:12px;padding:8px 4px 6px;font-size:.66rem;color:var(--suave);line-height:1.15}
+.grid svg{display:block;width:30px;height:30px;margin:0 auto 5px;fill:var(--tinta)}
+.tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;padding-top:10px;border-top:1px dashed var(--linea)}
+.tot b{font-size:1.25rem;color:var(--tinta)}
+.tot span{font-size:.84rem;color:var(--suave)}
+.btn,.btn2,.btnwa{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:999px;padding:12px 16px;font-weight:600;font-size:.92rem;border:0;text-decoration:none}
+.btn{background:linear-gradient(135deg,var(--oro2),var(--oro));color:var(--tinta);box-shadow:0 8px 20px -8px rgba(200,154,59,.7)}
+.btn2{background:#fff;border:1.5px solid var(--tinta);color:var(--tinta)}
+.btnwa{background:var(--wa);color:#fff}
+.stack{display:flex;flex-direction:column;gap:8px}
+.bar{flex:none;display:flex;gap:8px;padding:10px 12px;padding-bottom:max(10px,env(safe-area-inset-bottom));
+background:#fff;border-top:1px solid var(--linea);box-shadow:0 -6px 18px rgba(26,34,56,.06)}
+.bar>*{flex:1}
+body.tecleando .bar{display:none}
+.cli-only{display:none}
+body.cliente .cli-only{display:revert}
+body.cliente .est-only{display:none!important}
+.intro{background:var(--tinta);color:#fff;border-radius:var(--r);padding:14px}
+.intro h3{margin:0 0 4px;font-family:"lg-playfair",Georgia,serif;font-style:italic;color:var(--oro2);font-weight:600}
+.intro p{margin:0;font-size:.88rem;opacity:.9}
+.precio{display:flex;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:1px solid rgba(227,194,126,.3);font-size:.9rem}
+.sheet{position:fixed;inset:0;z-index:20;background:rgba(10,14,28,.45);display:none;align-items:flex-end}
+.sheet.on{display:flex}
+.sheet .in{background:var(--crema);width:100%;max-height:88dvh;overflow-y:auto;border-radius:20px 20px 0 0;padding:16px 14px max(18px,env(safe-area-inset-bottom))}
+.sheet header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sheet header h3{margin:0;font-family:"lg-playfair",Georgia,serif;font-style:italic;font-weight:600;color:var(--tinta)}
+.sheet header button{background:none;border:0;font-size:1.4rem;color:var(--suave)}
+.dis{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;background:#fff;border:1px solid var(--linea);border-radius:12px;padding:8px;margin-top:8px}
+.dis img{width:62px;height:62px;object-fit:cover;border-radius:8px;background:var(--crema2)}
+.dis b{display:block;font-size:.9rem}
+.dis span{display:block;font-size:.76rem;color:var(--suave)}
+.est{font-size:.7rem;padding:3px 8px;border-radius:999px;background:var(--crema2);color:var(--tinta);white-space:nowrap}
+.est.aprobado,.est.anticipo{background:#e4f3e8;color:#1d6b35}.est.taller{background:#e6ecfa;color:#2748a0}
+.est.listo{background:#fff1d6;color:#8a5a00}.est.entregado{background:#eee;color:#555}
+.vacio{text-align:center;color:var(--suave);padding:26px 10px;font-size:.9rem}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);opacity:0;z-index:30;
+background:var(--tinta);color:#fff;padding:10px 16px;border-radius:12px;font-size:.88rem;max-width:88vw;transition:.25s;pointer-events:none;text-align:center}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.cargando{position:fixed;inset:0;z-index:40;background:var(--crema);display:grid;place-items:center;text-align:center;color:var(--suave)}
+.cargando b{display:block;font-family:Georgia,serif;font-style:italic;color:var(--tinta);font-size:1.3rem;margin-bottom:6px}
+@media (min-width:900px){
+ .app{flex-direction:row}
+ .stage{flex:1.25;height:auto;border-bottom:0;border-right:1px solid var(--linea)}
+ .side{flex:1;max-width:520px}
+ .sheet{align-items:center;justify-content:center}
+ .sheet .in{max-width:560px;border-radius:20px}
+}
+</style>
+</head>
+<body>
+<div class="cargando" id="cargando"><div><b>Luz y Gracia</b>Preparando el estudio…</div></div>
+
+<header class="top">
+  <div class="brand"><img src="corazon.png" alt=""><div><b>Estudio</b><span class="notranslate">Luz y Gracia</span></div></div>
+  <div class="acts est-only">
+    <button id="bNuevo">Nuevo</button>
+    <button id="bDisenos">Mis diseños</button>
+    <button id="bAjustes" aria-label="Ajustes">⚙︎</button>
+  </div>
+</header>
+
+<main class="app">
+  <section class="stage" id="stage">
+    <canvas id="cv"></canvas>
+    <div class="badge" id="badge"></div>
+    <div class="avisos est-only" id="avisos"></div>
+    <div class="hint" id="hint">Toca un texto o adorno y arrástralo</div>
+  </section>
+
+  <section class="side">
+    <nav class="tabs est-only" id="tabs">
+      <button data-t="biblia" class="on">Biblia</button>
+      <button data-t="texto">Texto</button>
+      <button data-t="adornos">Adornos</button>
+      <button data-t="pedido">Pedido</button>
+    </nav>
+
+    <div class="panel" id="panel">
+      <!-- MODO CLIENTE -->
+      <div class="cli-only">
+        <div class="intro">
+          <h3 id="cliSaludo">Tu biblia personalizada</h3>
+          <p id="cliTexto">Así quedaría tu biblia. Puedes corregir el texto aquí abajo y ver el cambio al instante.</p>
+          <div class="precio" id="cliPrecio" hidden></div>
+        </div>
+        <label class="lbl">Revisa el texto <small>(ortografía, tildes y fecha: grabado no se puede corregir)</small></label>
+        <div id="cliLineas"></div>
+        <label class="lbl">Acabado</label>
+        <div class="chips" id="cliFin"></div>
+        <p class="sub">La imagen es una representación: el tono de la tapa y el brillo del acabado pueden variar levemente en la biblia real.</p>
+      </div>
+
+      <!-- BIBLIA -->
+      <div class="pn est-only" data-p="biblia">
+        <label class="lbl">Modelo</label>
+        <select id="selModelo"></select>
+        <div class="sub" id="modeloInfo"></div>
+
+        <label class="lbl">Medida de la tapa <small>· mídela con regla la primera vez; queda guardada</small></label>
+        <div class="chips" id="chTam"></div>
+        <div class="row2" style="margin-top:10px">
+          <label>Ancho (mm)<input id="inW" type="number" inputmode="decimal" min="60" max="320" step="1"></label>
+          <label>Alto (mm)<input id="inH" type="number" inputmode="decimal" min="80" max="420" step="1"></label>
+        </div>
+
+        <label class="lbl">Color de la tapa</label>
+        <div class="sw" id="sw"></div>
+
+        <label class="lbl">Superficie</label>
+        <div class="chips" id="chTex"></div>
+
+        <label class="lbl">Detalles</label>
+        <div class="tg">
+          <label><input type="checkbox" id="tgCierre">Cierre</label>
+          <label><input type="checkbox" id="tgCanto">Canto dorado</label>
+          <label><input type="checkbox" id="tgCostura">Costura</label>
+          <label><input type="checkbox" id="tgLomo">Bisagra del lomo</label>
+        </div>
+
+        <div class="card">
+          <h4>📷 Montar el diseño sobre la biblia real</h4>
+          <p>Toma la foto de frente y desde arriba, con luz de día y sin reflejos. Luego toca «Ajustar tapa» y arrastra el recuadro hasta que coincida con los bordes.</p>
+          <div class="stack">
+            <label class="btn2">Usar foto de la biblia<input type="file" accept="image/*" id="inFoto" hidden></label>
+            <button class="btn2" id="bFotoCat" hidden>Usar foto del catálogo</button>
+            <div class="row2" id="fotoCtl" hidden>
+              <button class="btn2" id="bAjTapa">Ajustar tapa</button>
+              <button class="btn2" id="bQuitarFoto">Quitar foto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEXTO -->
+      <div class="pn est-only" data-p="texto" hidden>
+        <label class="lbl">Técnica del taller</label>
+        <div class="chips" id="chFin"></div>
+        <div class="sub" id="finDesc"></div>
+
+        <label class="lbl">Plantillas <small>· conservan el nombre que ya escribiste</small></label>
+        <div class="plant" id="plant"></div>
+
+        <label class="lbl">Líneas de texto</label>
+        <div id="listaTxt"></div>
+        <div class="chips" style="margin-top:10px" id="addTxt">
+          <button class="chip" data-add="nombre">+ Nombre</button>
+          <button class="chip" data-add="fecha">+ Fecha</button>
+          <button class="chip" data-add="versiculo">+ Versículo</button>
+          <button class="chip" data-add="titulo">+ Santa Biblia</button>
+          <button class="chip" data-add="libre">+ Línea libre</button>
+        </div>
+      </div>
+
+      <!-- ADORNOS -->
+      <div class="pn est-only" data-p="adornos" hidden>
+        <label class="lbl">Íconos y ornamentos <small>· toca para añadir</small></label>
+        <div class="grid" id="gridIco"></div>
+
+        <label class="lbl">Marco</label>
+        <div class="chips" id="chMarco"></div>
+        <div class="rng" id="rngMarco" hidden><span>Margen</span><input type="range" id="inMarco" min="4" max="20" step="0.5"><output id="outMarco"></output></div>
+
+        <div id="listaIco"></div>
+      </div>
+
+      <!-- PEDIDO -->
+      <div class="pn est-only" data-p="pedido" hidden>
+        <div class="card">
+          <div class="row2">
+            <label>N.º de orden<input id="pId" type="text"></label>
+            <label>Estado<select id="pEstado"></select></label>
+          </div>
+          <label>Cliente<input id="pCli" type="text" autocomplete="off" placeholder="Nombre de quien encarga"></label>
+          <label>WhatsApp del cliente<input id="pTel" type="tel" inputmode="tel" placeholder="312 000 0000 · o con indicativo si es del exterior"></label>
+          <label>Ocasión<input id="pOc" type="text" list="ocasiones" placeholder="Bautizo, cumpleaños, pastor…"></label>
+          <datalist id="ocasiones"><option>Bautizo</option><option>Cumpleaños</option><option>Día del pastor</option><option>Boda</option><option>Quinceaños</option><option>Primera comunión</option><option>Día de la madre</option><option>Día del padre</option><option>Graduación</option><option>Navidad</option></datalist>
+        </div>
+
+        <div class="card">
+          <div class="row3">
+            <label>Cantidad<input id="pCant" type="number" inputmode="numeric" min="1" step="1"></label>
+            <label>Valor unitario<input id="pPrecio" type="number" inputmode="numeric" min="0" step="100"></label>
+            <label>Extra<input id="pExtra" type="number" inputmode="numeric" min="0" step="100" placeholder="0"></label>
+          </div>
+          <div class="row2" style="margin-top:10px">
+            <label>Anticipo %<input id="pAnt" type="number" inputmode="numeric" min="0" max="100" step="5"></label>
+            <label>Entrega deseada<input id="pEntrega" type="date"></label>
+          </div>
+          <div class="tot"><span id="totAnt"></span><b id="totVal"></b></div>
+          <div class="tg" style="margin-top:10px;grid-template-columns:1fr">
+            <label><input type="checkbox" id="pMostrarPrecio">Mostrar el valor al cliente en la propuesta</label>
+          </div>
+        </div>
+
+        <div class="card">
+          <label>Notas para el taller<textarea id="pNotas" rows="2" placeholder="Ej.: foil dorado brillante, no mate. Revisar tilde en «María»."></textarea></label>
+        </div>
+
+        <div class="card stack">
+          <button class="btn2" id="bGuardar">💾 Guardar en Mis diseños</button>
+          <button class="btnwa" id="bEnlace">Enviar solo el enlace al cliente</button>
+          <button class="btn2" id="bArchivos">⬇︎ Descargar archivos (imagen, ficha, PDF, SVG)</button>
+          <p class="sub" style="margin:0">El cliente recibe la imagen y un enlace donde puede ver el diseño, corregir el texto y aprobarlo. La ficha y el PDF 1:1 son para el taller y <b>no</b> llevan datos del cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bar">
+  <button class="btn est-only" id="bCliente">Enviar al cliente</button>
+  <button class="btn2 est-only" id="bTaller">Orden al taller</button>
+  <button class="btnwa cli-only" id="bAprobar">✅ Aprobar diseño</button>
+  <button class="btn2 cli-only" id="bCambios">✏️ Enviar cambios</button>
+</footer>
+
+<div class="sheet" id="shDisenos"><div class="in">
+  <header><h3>Mis diseños</h3><button data-cerrar>✕</button></header>
+  <div id="listaDis"></div>
+  <div class="row2" style="margin-top:14px">
+    <button class="btn2" id="bRespaldo">Copia de seguridad</button>
+    <label class="btn2">Restaurar copia<input type="file" id="inRespaldo" accept="application/json,.json" hidden></label>
+  </div>
+  <p class="sub">Los diseños se guardan en este teléfono. Haz una copia de seguridad de vez en cuando y guárdala en Drive o envíatela por WhatsApp.</p>
+</div></div>
+
+<div class="sheet" id="shAjustes"><div class="in">
+  <header><h3>Ajustes</h3><button data-cerrar>✕</button></header>
+  <div class="card">
+    <label>Tu WhatsApp (donde el cliente aprueba)<input id="ajWa" type="tel" inputmode="tel"></label>
+    <label>Anticipo por defecto (%)<input id="ajAnt" type="number" inputmode="numeric" min="0" max="100" step="5"></label>
+  </div>
+  <div class="card">
+    <h4>Taller de marcación</h4>
+    <p>A este número va la orden con la ficha técnica y el archivo 1:1. Se guarda solo en este teléfono.</p>
+    <label>Nombre del taller<input id="ajTaller" type="text" autocomplete="off"></label>
+    <label>WhatsApp del taller<input id="ajTallerTel" type="tel" inputmode="tel" placeholder="Ej.: 310 000 0000"></label>
+  </div>
+  <p class="sub">Para tenerlo como aplicación: en Chrome toca ⋮ → «Instalar aplicación» (o «Agregar a la pantalla principal»). En iPhone: Compartir → «Agregar a inicio».</p>
+</div></div>
+
+<div class="toast" id="toast"></div>
+
+<script src="opentype.min.js"></script>
+<script src="iconos.js"></script>
+<script src="catalogo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
