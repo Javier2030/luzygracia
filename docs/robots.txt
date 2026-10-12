@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /ebooks/
 Sitemap: https://luzygracia.com/sitemap.xml
 
 # Contenido protegido (Ley 23 de 1982, Decisión Andina 351). No se autoriza copiar este sitio
